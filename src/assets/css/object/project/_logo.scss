@@ -1,0 +1,57 @@
+/* ****************************************************************************************************
+
+  # logo
+  category: project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+// ```
+// div.c-logo.p-logo.p-logo--type_header
+//   a.c-logo__inner(href=`global.${_relativePath}`)
+//     img.c-logo__item(src=`global.${_relativePath}assets/img/logo/logo.svg` alt="logo")
+// ```
+
+.p-logo {
+  position: relative;
+  display: block;
+}
+
+/* ## header
+---------------------------------------------------------------------- */
+.p-logo.p-logo--type_header {
+  @include global.z-index(over-gnav);
+
+  position: relative;
+  width: 15rem;
+  margin: 0 auto;
+  transform: translateX(2rem);
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-logo.p-logo--type_header {
+    width: 38rem;
+    padding: 0 4rem;
+    border-right: 1px solid #f1f1f1;
+  }
+}
+
+/* ## footer
+---------------------------------------------------------------------- */
+.p-logo.p-logo--type_footer {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto 3.2rem;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-logo.p-logo--type_footer {
+    margin: 0 0 2rem;
+  }
+}
+
+/* ======================================================================
+
+  ## c-logo__inner
+
+====================================================================== */
+.p-logo .c-logo__inner {
+  @include global.fitted-image($ratioWidth: 174, $ratioHeight: 40);
+}

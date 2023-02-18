@@ -1,0 +1,865 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "home";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-home-kv
+    div.l-home-kv__container
+      div.l-home-kv__container__title
+        img.l-home-kv__container__title__star(src=`${relativePath}assets/img/kv/star.png` alt="")
+        img.l-home-kv__container__title__title(src=`${relativePath}assets/img/kv/txt-summer.svg` alt="")
+        h2.l-home-kv__container__title__txt ENJOY
+          //- img.l-home-kv__container__title__txt__decoration(src=`${relativePath}assets/img/kv/plus.svg` alt="")
+        div.swiper-container.slider-kv-thumbnail
+          ul.swiper-wrapper
+            li.swiper-slide
+              h2.l-home-kv__container__title__txt SKY DIVING
+            li.swiper-slide
+              h2.l-home-kv__container__title__txt GLAMPING
+            li.swiper-slide
+              h2.l-home-kv__container__title__txt BBQ
+            li.swiper-slide
+              h2.l-home-kv__container__title__txt SEAFOOD
+            li.swiper-slide
+              h2.l-home-kv__container__title__txt MARINE SPORTS
+            li.swiper-slide
+              h2.l-home-kv__container__title__txt BUGGY
+        p.l-home-kv__container__title__txt__content
+          span.green 遊
+          | んで、
+          span.pink 食
+          | べて、
+          span.purple 泊
+          | まって
+        p.l-home-kv__container__title__txt__content
+          span.blue 空
+          | も
+          span.blue 海
+          | も
+          span.blue 陸
+          | も満喫しよう！
+      div.l-home-kv__image
+        div.slider-kv
+          ul.swiper-wrapper
+            li.swiper-slide
+              picture
+                source(media='(min-width:768px)' srcset=`${relativePath}assets/img/kv/hero1_sky-diving_pc.png`)
+                source(media='(min-width:350px)' srcset=`${relativePath}assets/img/kv/hero1_sky-diving_sp.png`)
+                img(src=`${relativePath}assets/img/kv/hero1_sky-diving_pc.png` alt="")
+            li.swiper-slide
+              picture
+                source(media='(min-width:768px)' srcset=`${relativePath}assets/img/kv/hero2_glamping_pc.png`)
+                source(media='(min-width:350px)' srcset=`${relativePath}assets/img/kv/hero2_glamping_sp.png`)
+                img(src=`${relativePath}assets/img/kv/hero2_glamping_pc.png` alt="")
+            li.swiper-slide
+              picture
+                source(media='(min-width:768px)' srcset=`${relativePath}assets/img/kv/hero3_bbq_pc.png`)
+                source(media='(min-width:350px)' srcset=`${relativePath}assets/img/kv/hero3_bbq_sp.png`)
+                img(src=`${relativePath}assets/img/kv/hero3_BBQ_pc.png` alt="")
+            li.swiper-slide
+              picture
+                source(media='(min-width:768px)' srcset=`${relativePath}assets/img/kv/hero4_seafood_pc.png`)
+                source(media='(min-width:350px)' srcset=`${relativePath}assets/img/kv/hero4_seafood_sp.png`)
+                img(src=`${relativePath}assets/img/kv/hero4_seafood_pc.png` alt="")
+            li.swiper-slide
+              picture
+                source(media='(min-width:768px)' srcset=`${relativePath}assets/img/kv/hero5_marine-sports_pc.png`)
+                source(media='(min-width:350px)' srcset=`${relativePath}assets/img/kv/hero5_marine-sports_sp.png`)
+                img(src=`${relativePath}assets/img/kv/hero5_marine-sports_pc.png` alt="")
+            li.swiper-slide
+              picture
+                source(media='(min-width:768px)' srcset=`${relativePath}assets/img/kv/hero6_buggy_pc.png`)
+                source(media='(min-width:350px)' srcset=`${relativePath}assets/img/kv/hero6_buggy_pc.png`)
+                img(src=`${relativePath}assets/img/kv/hero6_buggy_pc.png` alt="")
+
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-10.u-z-index-1
+    img.u-mt-5(src=`${relativePath}assets/img/section/kv-summer.png` alt="")
+  div#js-header-trg
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- news
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-0.t-bg-orange
+    div.l-container
+      div.p-top-news
+        div.p-top-news__item.u-hide-mq-max-md.c-fade-up.js-inview
+          img.p-top-news__item__tree(src=`${relativePath}assets/img/news/illust-leaf.png` alt="")
+          div.p-top-news__item__title-box
+            h2.p-top-news__item__title-box__title NEWS
+            p.p-top-news__item__title-box__ruby ニュース
+            a.c-more-btn.u-mt6(href="#")
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+        div.c-title.u-hide-mq-min-md.u-mt6.c-fade-up.js-inview
+          h1 NEWS
+          p ニュース
+        div.p-top-news__list.c-fade-up.js-inview
+          ul.c-news-list
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.t-bg-orange
+    img(src=`${relativePath}assets/img/section/around-w.svg` alt="")
+    div.p-decoration.p-decoration--concept.c-fade-up.js-inview
+      img.p-decoration__concept-girl(src=`${relativePath}assets/img/news/illust-girl-summer.png` alt="")
+    div.p-decoration.p-decoration--concept.c-fade-up.js-inview
+      img.p-decoration__concept-flag(src=`${relativePath}assets/img/news/illust-flag.png` alt="")
+  //- **********************************************************************
+  //- concept
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-l.l-section--gap_bottom-0
+    div.l-container
+      div.c-title.c-fade-up.js-inview
+        h1 CONCEPT
+        p コンセプト
+      h2.p-concept-title.c-fade-up.js-inview
+        span.p-concept-title__back BEST HOLIDAY
+        span.p-concept-title__front あなただけの最高の休日を、
+          span 伊勢志摩の田曽白浜で
+    div.l-container.l-container--full
+      div.p-concept-contact
+        div.p-concept-contact__img-box.c-fade-up.js-inview
+          img.p-concept-contact__img-box__img(src=`${relativePath}assets/img/concept/main-summer.png` alt="")
+          img.p-concept-contact__img-box__img-label.p-concept-contact__img-box__img-label--summer(src=`${relativePath}assets/img/concept/illust-tent.png` alt="")
+        div.p-concept-contact__txt-box.c-fade-up.js-inview
+          p.p-concept-contact__txt-box__txt.c-fade-up.js-inview TASO SHIRAHAMA RESORT〔田曽白浜リゾート〕には、カヤックやSUP、スリル満点のスカイダイビング、国立公園を駆け巡るバギーツアーなど、自然の恵を全身で感じる遊びが充実。
+          p.p-concept-contact__txt-box__txt.c-fade-up.js-inview 伊勢志摩の海鮮や山の恵みをふんだんに使ったBBQや、本場アメリカンスタイルの豪快なステーキ、リュクスな完全プライベート空間でのキャンプや、和モダンテイストのバケーションレンタルなど、一度では味わい尽くせない魅力が満載です。
+          p.p-concept-contact__txt-box__txt.c-fade-up.js-inview これらの豊富な体験スポットを、目的や日程、人数にあわせ、ヘリコプターやクルーザーなど、柔軟かつお得にコーディネートできるのが「TASO SHIRAHAMA RESORT〔田曽白浜リゾート〕」ならではの楽しみ方。
+          p.p-concept-contact__txt-box__txt.c-fade-up.js-inview ご家族で、友人同志で、そして特別な人と、最高の休日をここ伊勢志摩、田曽白浜リゾートで。
+    div.l-container
+      div.p-concept-map-title.c-fade-up.js-inview
+        img(src=`${relativePath}assets/img/concept/title.png` alt="")
+        p 豊富な体験スポットを組み合わせて
+          span お楽しみください
+    div.l-container.l-container--full
+      div.p-concept-map.c-fade-up.js-inview
+        img.p-concept-map__label(src=`${relativePath}assets/img/map/label.png` alt="")
+        img.p-concept-map__map(src=`${relativePath}assets/img/map/map.png` alt="")
+        a.p-concept-map__forestmar(href=`${relativePath}stay/marina`)
+          img(src=`${relativePath}assets/img/map/forestmar.svg` alt="")
+        a.p-concept-map__stay(href=`${relativePath}stay/camp`)
+          img(src=`${relativePath}assets/img/map/stay.svg` alt="")
+        a.p-concept-map__lodge(href=`https://www.tasobeachhouse.com/` target='_blank')
+          img(src=`${relativePath}assets/img/map/lodge.svg` alt="")
+        a.p-concept-map__food(href=`${relativePath}eat`)
+          img(src=`${relativePath}assets/img/map/food.svg` alt="")
+        a.p-concept-map__skydiving(href=`${relativePath}activity/skydiving`)
+          img(src=`${relativePath}assets/img/map/skydiving.svg` alt="")
+        a.p-concept-map__buggy(href=`${relativePath}activity/buggy`)
+          img(src=`${relativePath}assets/img/map/buggy.svg` alt="")
+        a.p-concept-map__villa(href=`${relativePath}stay/villa`)
+          img(src=`${relativePath}assets/img/map/villa.svg` alt="")
+        a.p-concept-map__surfing(href=`${relativePath}activity/marine`)
+          img(src=`${relativePath}assets/img/map/surfing.svg` alt="")
+    div.l-container
+      p.c-container-title.c-fade-up.js-inview 総合受付のご案内
+      div.p-concept-description.c-fade-up.js-inview
+        img.p-concept-description__img(src=`${relativePath}assets/img/concept/img-02.jpg` alt="")
+        div.p-concept-description__txt-box
+          h2.p-concept-description__txt-box__title 田曽白浜リゾートにお越しの際は、まずセンターハウスにお越しください。
+          p.p-concept-description__txt-box__txt こちらでご宿泊・お食事・アクティビティの総合受付をいたしております。
+          p.p-concept-description__txt-box__txt また、センターハウスでは、ゆったりお過ごしいただけるスペースやゲームの貸し出し、三重県及び地元、南伊勢町のお土産なども販売しております。
+
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-l.l-section--gap_bottom-0
+    div.l-container.l-container--full
+      div.p-activity-kv
+        div.p-activity-kv__kv-box
+          img.p-activity-kv__kv-box__label.c-fade-up.js-inview(src=`${relativePath}assets/img/play/text-play.png` alt="")
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}assets/img/play/main.png`)
+            source(media='(min-width:350px)' srcset=`${relativePath}assets/img/play/main-sp.png`)
+            img(src=`${relativePath}assets/img/play/main.png` alt="")
+    div.l-container.t-bg-sky-blue
+      div.p-activity
+        div.p-activity__content
+          div.p-activity__content__txt.c-fade-up.js-inview
+            img.u-hide-mq-min-md.p-activity__content__img-box__img(src=`${relativePath}assets/img/play/illust-bird-09.png` alt="")
+            h2.p-activity__content__txt__title
+              span.p-activity__content__txt__title__back ACTIVITY
+              span.p-activity__content__txt__title__front 空に海に陸!
+                span 五感で味わい尽くす田曽白浜
+            p.p-activity__content__txt__p 田曽白浜リゾートは関西で指折りの、スカイダイビングができる場所です。
+            p.p-activity__content__txt__p また、波静かな田曽白浜の海では、SUPやカヤックなどのマリンアクティビティが楽しめます。
+            p.p-activity__content__txt__p さらに、オフロードバギーも楽しむことができます。
+            p.p-activity__content__txt__p 自然豊かな田曽白浜ならではの体験がいっぱい！
+            a.c-more-btn.u-mt4.u-ml-auto.u-hide-mq-min-md(href=`${relativePath}activity`)
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+          div.p-activity__content__img-box
+            img.p-activity__content__img-box__img(src=`${relativePath}assets/img/play/illust-bird-09.png` alt="")
+            a#js-match-align.c-more-btn.u-mt6.u-ml-auto(href=`${relativePath}activity`)
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+        ul.c-activity-everytime
+          li.c-activity-everytime__item.c-fade-up.js-inview
+            a(href=`${relativePath}activity/skydiving`)
+              div.c-activity-everytime__item__img-box
+                img(src=`${relativePath}assets/img/play/banner-1.jpg` alt="")
+                p.c-activity-everytime__item__img-box__label.sky 空
+                p.c-activity-everytime__item__img-box__period.sky 期間:通年
+              div.c-activity-everytime__item__txt-box
+                h2.c-activity-everytime__item__txt-box__title スカイダイビング/ヘリ
+                p.c-activity-everytime__item__txt-box__content 伊勢志摩スカイダイビングクラブでは、プロのインストラクターとのタンデムスカイダイビングを体験いただけます。また、ヘリコプター遊覧プランもあります！
+                div.c-more-btn.c-more-btn--mini.u-mt1.u-ml-auto
+                  p.c-more-btn__txt 詳しく見る
+                  div.c-more-btn__arrow.c-more-btn__arrow--mini
+            a.c-activity-everytime__item__btn(href="")
+              img.c-activity-everytime__item__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt="")
+              p#js-match-align-everytime.c-activity-everytime__item__btn__txt 今すぐ予約する
+
+          li.c-activity-everytime__item.c-fade-up.js-inview
+            a(href=`${relativePath}activity/marine`)
+              div.c-activity-everytime__item__img-box
+                img(src=`${relativePath}assets/img/play/banner-2.jpg` alt="")
+                p.c-activity-everytime__item__img-box__label.sea 海
+                p.c-activity-everytime__item__img-box__period.sea マリンスポーツ
+                  span [全種2時間遊び放題]
+              div.c-activity-everytime__item__txt-box
+                h2.c-activity-everytime__item__txt-box__title スカイダイビング/ヘリ
+                p.c-activity-everytime__item__txt-box__content 田曽白浜リゾートの豊富なアクティビティをお得に遊び尽くせるプランです。バナナボートやSUP、シーカヤック、水上トランポリンなど●種類のスポーツが体験し放題。
+                div.c-more-btn.c-more-btn--mini.u-mt1.u-ml-auto
+                  p.c-more-btn__txt 詳しく見る
+                  div.c-more-btn__arrow.c-more-btn__arrow--mini
+            a.c-activity-everytime__item__btn.c-activity-everytime__item__btn--disable(href="")
+              img.c-activity-everytime__item__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt="")
+              p#js-match-everytime.c-activity-everytime__item__btn__txt 夏期限定アクティビティ（現在停止中）
+
+          li.c-activity-everytime__item.c-fade-up.js-inview
+            a(href=`${relativePath}activity/buggy`)
+              div.c-activity-everytime__item__img-box
+                img(src=`${relativePath}assets/img/play/banner-3.jpg` alt="")
+                p.c-activity-everytime__item__img-box__label.land 陸
+                p.c-activity-everytime__item__img-box__period.land 期間:通年
+              div.c-activity-everytime__item__txt-box
+                h2.c-activity-everytime__item__txt-box__title バギー
+                p.c-activity-everytime__item__txt-box__content 緑豊かな伊勢志摩国立公園に位置する南伊勢の田曽地区。海からの風が心地よいこの山林をオフロードバギーで駆け抜ける爽快なアトラクションが登場！
+                div.c-more-btn.c-more-btn--mini.u-mt1.u-ml-auto
+                  p.c-more-btn__txt 詳しく見る
+                  div.c-more-btn__arrow.c-more-btn__arrow--mini
+            a.c-activity-everytime__item__btn(href="")
+              img.c-activity-everytime__item__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt="")
+              p#js-match-align-everytime.c-activity-everytime__item__btn__txt 今すぐ予約する
+        p.c-container-title.u-mt8 アクティビティ&体験一覧
+        ul.c-activity-season
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/sky-diving.jpg` alt="")
+              p.c-activity-season__item__txt スカイ
+                span ダイビング
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/buggy.jpg` alt="")
+              p.c-activity-season__item__txt バギー
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/sup.png` alt="")
+              p.c-activity-season__item__txt SUP
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/kayak.png` alt="")
+              p.c-activity-season__item__txt シーカヤック
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/trampoline.png` alt="")
+              p.c-activity-season__item__txt 水上
+                span トランポリン
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/ducky.png` alt="")
+              p.c-activity-season__item__txt 伊勢志摩
+                span ダッキー君
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/banana.png` alt="")
+              p.c-activity-season__item__txt バナナボート
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/bouldering.jpg` alt="")
+              p.c-activity-season__item__txt ボルダリング
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/surfing.png` alt="")
+              p.c-activity-season__item__txt スキムボード
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/beach-cruiser.jpg` alt="")
+              p.c-activity-season__item__txt ビーチ
+                span クルーザー
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/long-skate.jpg` alt="")
+              p.c-activity-season__item__txt ロング
+                span スケート
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/parasol.png` alt="")
+              p.c-activity-season__item__txt ビーチ
+                span パラソル
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/wine.jpg` alt="")
+              p.c-activity-season__item__txt ワイン
+                span 作り体験
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/fire.jpg` alt="")
+              p.c-activity-season__item__txt 焚き火
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/marshmallow.jpg` alt="")
+              p.c-activity-season__item__txt マシュマロ
+                span 焼き体験
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/board-game.jpg` alt="")
+              p.c-activity-season__item__txt ボードゲーム
+          li.c-activity-season__item.c-fade-up.js-inview
+            a(href="")
+              img(src=`${relativePath}assets/img/play/beach-volleyball.png` alt="")
+              p.c-activity-season__item__txt ビーチバレー
+
+  section.l-section.l-section--gap_top-lg.l-section--gap_bottom-0.t-bg-sky-blue
+    div.l-container.l-container--full
+      picture
+        source(media='(min-width:768px)' srcset=`${relativePath}assets/img/section/sky-red-pink.svg`)
+        source(media='(min-width:350px)' srcset=`${relativePath}assets/img/section/sky-red-pink-sp.svg`)
+        img(src=`${relativePath}assets/img/section/sky-red-pink.svg` alt="")
+  //- **********************************************************************
+  //- eat
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-0.t-bg-light-pink
+    div.l-container.l-container--right-full
+      div.p-eat
+        div.p-eat__content
+          div.p-eat__content__txt.c-fade-up.js-inview
+            div.p-eat__content__txt__eat.u-hide-mq-max-md
+              img(src=`${relativePath}assets/img/eat/text-eat.png` alt="")
+            h2.p-eat__content__txt__title
+              span.p-eat__content__txt__title__back EAT
+              span.p-eat__content__txt__title__front 手ぶらで楽しめるBBQ♪
+                span カフェとしてのご利用も！
+            p.p-eat__content__txt__p.c-fade-up.js-inview 三重県 南伊勢町 田曽白浜海岸にあるビーチサイドカフェ。厚切T-BONEステーキを本場アメリカンスタイルで召し上がれ。
+            p.p-eat__content__txt__p.c-fade-up.js-inview また、伊勢の海鮮や豪華なお肉が楽しめる、BBQの食材提供もおこなっております。
+            a.c-more-btn.u-mt6.u-mt-sp3.u-ml-sp-auto(href=`${relativePath}eat`)
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+          div.p-eat__content__img-box
+            div.p-eat__content__txt__eat.u-hide-mq-min-md
+              img(src=`${relativePath}assets/img/eat/text-eat.png` alt="")
+            img.p-eat__content__img-box__wine(src=`${relativePath}assets/img/eat/illust-drink.png` alt="")
+            img.p-eat__content__img-box__beef(src=`${relativePath}assets/img/eat/illust-meat.png` alt="")
+            picture
+              source(media='(min-width:768px)' srcset=`${relativePath}assets/img/eat/main.jpg`)
+              source(media='(min-width:350px)' srcset=`${relativePath}assets/img/eat/main-sp.png`)
+              img.p-eat__content__img-box__img(src=`${relativePath}assets/img/eat/main.jpg` alt="")
+    div.l-container
+      ul.c-eat-card-list
+        li.c-eat-card-list__item.c-fade-up.js-inview
+          a(href=`${relativePath}eat`)
+            div.c-eat-card-list__item__img-box
+              img.c-eat-card-list__item__img-box__label(src=`${relativePath}assets/img/eat/illust-cafe.png` alt="")
+              img(src=`${relativePath}assets/img/eat/img-1.jpg` alt="")
+            div#js-match-align-eat.c-eat-card-list__item__txt-box
+              h2.c-eat-card-list__item__txt-box__title 朝食・昼食・カフェ
+              p.c-eat-card-list__item__txt-box__content T-BONEステーキをはじめ各種サンド、生ハムやタコスなどのメニューや、南国情緒あふれるお飲み物もご用意しております。
+              div.c-more-btn.c-more-btn--mini.u-mt1.u-ml-auto
+                p.c-more-btn__txt 詳しく見る
+                div.c-more-btn__arrow.c-more-btn__arrow--mini
+          a.c-eat-card-list__item__btn(href="")
+            img.c-eat-card-list__item__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+            p.c-eat-card-list__item__btn__txt 今すぐ予約する
+
+        li.c-eat-card-list__item.c-fade-up.js-inview
+          a(href=`${relativePath}eat/#bbq`)
+            div.c-eat-card-list__item__img-box
+              img.c-eat-card-list__item__img-box__label(src=`${relativePath}assets/img/eat/illust-bbq.png` alt="")
+              img(src=`${relativePath}assets/img/eat/img-2.jpg` alt="")
+            div#js-match-eat.c-eat-card-list__item__txt-box
+              h2.c-eat-card-list__item__txt-box__title 食材提供（手ぶらBBQ&海鮮）
+              p.c-eat-card-list__item__txt-box__content グランピングを楽しむお客間限定でご用意！お勧めのBBQ食材です。海産はもちろん、ゴージャスなT-BONEステーキ、伊勢ワインなど、充実したメニューをご提供いたします。
+              div.c-more-btn.c-more-btn--mini.u-mt1.u-ml-auto
+                p.c-more-btn__txt 詳しく見る
+                div.c-more-btn__arrow.c-more-btn__arrow--mini
+          a.c-eat-card-list__item__btn(href="")
+            img.c-eat-card-list__item__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+            p.c-eat-card-list__item__btn__txt 今すぐ予約する
+  section.l-section.l-section--gap_top-lg.l-section--gap_bottom-0.t-bg-light-pink
+    div.l-container.l-container--full
+      picture
+        source(media='(min-width:768px)' srcset=`${relativePath}assets/img/section/purple-w.svg`)
+        source(media='(min-width:350px)' srcset=`${relativePath}assets/img/section/purple-sp.svg`)
+        img(src=`${relativePath}assets/img/section/purple-w.svg` alt="")
+    div.p-decoration
+      img.p-decoration__stay-flag-pc(src=`${relativePath}assets/img/stay/illust-flag-pc.svg` alt="")
+
+  //- **********************************************************************
+  //- stay
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-l.l-section--gap_bottom-0.u-pt-sp0
+    div.l-container.l-container--left-full
+      div.p-stay
+        div.p-stay__content
+          div.p-stay__content__img-box.c-fade-up.js-inview
+            picture
+              source(media='(min-width:768px)' srcset=`${relativePath}assets/img/stay/main.jpg`)
+              source(media='(min-width:350px)' srcset=`${relativePath}assets/img/stay/main-sp.png`)
+              img.p-stay__content__img-box__img(src=`${relativePath}assets/img/stay/main.jpg` alt="")
+            img.p-stay__content__img-box__label(src=`${relativePath}assets/img/stay/text-hotel.png` alt="")
+            img.p-decoration__stay-flag-sp(src=`${relativePath}assets/img/stay/illust-flag-sp.svg` alt="")
+          div.p-stay__content__txt.c-fade-up.js-inview
+            img.p-stay__content__txt__star(src=`${relativePath}assets/img/stay/illust-star.png` alt="")
+            h2.p-stay__content__txt__title
+              span.p-stay__content__txt__title__back HOTEL
+              span.p-stay__content__txt__title__front 一棟貸しの場所で
+                span 素敵なひとときを…
+            p.p-stay__content__txt__p.u-mt3 どうか腕時計は外して、あなただけの、あなたのための時間と空間を満喫してください。デッキチェアで一日中、部屋に積みっぱなしになっていた本に読みふけるのもよし。木立の隙間から見える美しい海をボーッと眺めているだけでも、充ち足りた気分になることでしょう。お風呂や電気・空調設備もととのった場所でゆったりしたひとときを。
+            a.c-more-btn.u-mt6.u-mt-sp3.u-ml-sp-auto(href=`${relativePath}stay`)
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+    div.l-container
+      p.c-container-title.u-mt8.c-fade-up.js-inview 一棟貸し
+      ul.c-camp-list
+        li.c-camp-list__item.c-fade-up.js-inview
+          h3.c-camp-list__item__title 田曽フォレストキャンプ
+          div.c-camp-list__item__wrap
+            div.c-camp-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-camp-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-camp/img-camp-1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-camp/img-camp-2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-camp/img-camp-3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-camp/img-camp-4.jpg`  alt='')
+                div.c-camp-list-swiper-button-next.swiper-button-next
+                div.c-camp-list-swiper-button-prev.swiper-button-prev
+                div.c-camp-list-swiper-pagination.swiper-pagination
+            div.c-camp-list__item__wrap__content
+              div.c-camp-list__item__wrap__content__logo
+                img(src=`${relativePath}assets/img/stay/logo-camp.svg` alt='')
+              div.c-camp-list__item__wrap__content__description
+                a(href=`${relativePath}stay/camp`)
+                  ul.c-camp-list__item__wrap__content__description__wrap
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title エリア
+                      p.c-camp-list__item__wrap__content__description__txt__content フォレストサイド
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title コンセプト
+                      p.c-camp-list__item__wrap__content__description__txt__content リュクスでエキサイティング
+                        span な体験
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 価格
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟 35,000円〜
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 最大人数
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟あたり最大8人 /
+                        span 3棟でMAX24名まで
+                    div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-sp1
+                      div.c-more-btn__arrow.c-more-btn__arrow--mini
+                      p.c-more-btn__txt 詳しく見る
+                a.c-camp-list__item__wrap__content__btn(href="")
+                  img.c-camp-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                  p.c-camp-list__item__wrap__content__btn__txt 今すぐ予約する
+
+        li.c-camp-list__item.c-fade-up.js-inview
+          h3.c-camp-list__item__title 田曽フォレストマリーナ
+          div.c-camp-list__item__wrap
+            div.c-camp-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-camp-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-4.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-5.jpg`  alt='')
+
+                div.c-camp-list-swiper-button-next.swiper-button-next
+                div.c-camp-list-swiper-button-prev.swiper-button-prev
+                div.c-camp-list-swiper-pagination.swiper-pagination
+            div.c-camp-list__item__wrap__content
+              div.c-camp-list__item__wrap__content__logo
+                img(src=`${relativePath}assets/img/stay/logo-marina.svg` alt='')
+              div.c-camp-list__item__wrap__content__description
+                a(href=`${relativePath}stay/marine`)
+                  ul.c-camp-list__item__wrap__content__description__wrap
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title エリア
+                      p.c-camp-list__item__wrap__content__description__txt__content フォレストサイド
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title コンセプト
+                      p.c-camp-list__item__wrap__content__description__txt__content 日本初 森のヨット型
+                        span グランピング
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 価格
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟 30,000円〜
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 最大人数
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟あたり最大8人 /
+                        span 3棟でMAX24名まで
+                    div.c-more-btn.c-more-btn--mini.u-ml-auto.u-ml-auto.u-mt-sp1
+                      div.c-more-btn__arrow.c-more-btn__arrow--mini
+                      p.c-more-btn__txt 詳しく見る
+                a.c-camp-list__item__wrap__content__btn(href="")
+                  img.c-camp-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                  p.c-camp-list__item__wrap__content__btn__txt 今すぐ予約する
+
+        li.c-camp-list__item.c-fade-up.js-inview
+          h3.c-camp-list__item__title オーシャンヴィラ倭
+          div.c-camp-list__item__wrap
+            div.c-camp-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-camp-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-4.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-5.jpg`  alt='')
+                div.c-camp-list-swiper-button-next.swiper-button-next
+                div.c-camp-list-swiper-button-prev.swiper-button-prev
+                div.c-camp-list-swiper-pagination.swiper-pagination
+            div.c-camp-list__item__wrap__content
+              div.c-camp-list__item__wrap__content__logo.c-camp-list__item__wrap__content__logo--mini
+                img(src=`${relativePath}assets/img/stay/logo-oceanVirlla.svg` alt='')
+              div.c-camp-list__item__wrap__content__description
+                a(href=`${relativePath}stay/villa`)
+                  ul.c-camp-list__item__wrap__content__description__wrap
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title エリア
+                      p.c-camp-list__item__wrap__content__description__txt__content 浜から3分
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title コンセプト
+                      p.c-camp-list__item__wrap__content__description__txt__content 和のヴィラリゾート
+                        span 和モダンの休日
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 価格
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟 35,000円〜
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 最大人数
+                      p.c-camp-list__item__wrap__content__description__txt__content 最大14名様まで
+                    div.c-more-btn.c-more-btn--mini.u-ml-auto.u-ml-auto.u-mt-sp1
+                      div.c-more-btn__arrow.c-more-btn__arrow--mini
+                      p.c-more-btn__txt 詳しく見る
+                a.c-camp-list__item__wrap__content__btn(href="")
+                  img.c-camp-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                  p.c-camp-list__item__wrap__content__btn__txt 今すぐ予約する
+
+    //- div.l-container
+    //-   p.c-container-title.u-mt8.u-mt-sp4.c-fade-up.js-inview フリーキャンプ
+    //-   ul.c-free-camp
+    //-     li.c-free-camp__item.c-fade-up.js-inview
+    //-       div.c-free-camp__item__img-box
+    //-         img(src=`${relativePath}assets/img/stay/free-camp/free-camp-sea.jpg` alt="")
+    //-         h3.c-free-camp__item__txt-box__title.u-hide-mq-min-md シーサイド
+    //-       div.c-free-camp__item__txt-box
+    //-         h3.c-free-camp__item__txt-box__title.u-hide-mq-max-md シーサイド
+    //-         div.c-free-camp__item__txt-box__content
+    //-           a.c-free-camp__item__txt-box__content__link(href="")
+    //-             ul.c-free-camp__item__txt-box__content__list
+    //-               li.c-free-camp__item__txt-box__content__list__item
+    //-                 p.c-free-camp__item__txt-box__content__list__item__title 価格
+    //-                 p.c-free-camp__item__txt-box__content__list__item__txt 1区画 8,000円〜
+    //-               li.c-free-camp__item__txt-box__content__list__item
+    //-                 p.c-free-camp__item__txt-box__content__list__item__title 最大人数
+    //-                 p.c-free-camp__item__txt-box__content__list__item__txt 1区画あたり最大6名様まで
+    //-               div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-3.u-mt-sp1
+    //-                 div.c-more-btn__arrow.c-more-btn__arrow--mini
+    //-                 p.c-more-btn__txt 詳しく見る
+    //-           a.c-free-camp__item__txt-box__content__btn(href="")
+    //-             img.c-free-camp__item__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+    //-             p.c-free-camp__item__txt-box__content__btn__txt 予約する
+    //-     li.c-free-camp__item.c-fade-up.js-inview
+    //-       div.c-free-camp__item__img-box
+    //-         img(src=`${relativePath}assets/img/stay/free-camp/free-camp-forest.jpg` alt="")
+    //-         h3.c-free-camp__item__txt-box__title.u-hide-mq-min-md フォレストサイド
+    //-       div.c-free-camp__item__txt-box
+    //-         h3.c-free-camp__item__txt-box__title.u-hide-mq-max-md フォレストサイド
+    //-         div.c-free-camp__item__txt-box__content
+    //-           a.c-free-camp__item__txt-box__content__link(href="")
+    //-             ul.c-free-camp__item__txt-box__content__list
+    //-               li.c-free-camp__item__txt-box__content__list__item
+    //-                 p.c-free-camp__item__txt-box__content__list__item__title 価格
+    //-                 p.c-free-camp__item__txt-box__content__list__item__txt 2時間 10,000円/1名様
+    //-               li.c-free-camp__item__txt-box__content__list__item
+    //-                 p.c-free-camp__item__txt-box__content__list__item__title 最大人数
+    //-                 p.c-free-camp__item__txt-box__content__list__item__txt 1区画あたり最大6名様まで
+    //-               div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-3.u-mt-sp1
+    //-                 div.c-more-btn__arrow.c-more-btn__arrow--mini
+    //-                 p.c-more-btn__txt 詳しく見る
+    //-           a.c-free-camp__item__txt-box__content__btn(href="")
+    //-             img.c-free-camp__item__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+    //-             p.c-free-camp__item__txt-box__content__btn__txt 予約する
+  section.l-section.l-section--gap_top-lg.l-section--gap_bottom-0
+    div.l-container.l-container--full
+      img(src=`${relativePath}assets/img/section/orange-light.svg` alt="")
+    div.p-decoration
+      img.p-decoration__enjoy-tree(src=`${relativePath}assets/img/enjoy/illust-tree1.png` alt="")
+
+  //- **********************************************************************
+  //- enjoy
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-lg.l-section--gap_bottom-0.t-bg-orange
+    div.l-container.l-container--left-full
+      div.c-title.u-mt-sp3.c-fade-up.js-inview
+        h1 ENJOY
+        p 過ごし方
+      div.p-enjoy
+        div.p-enjoy__content
+          div.p-enjoy__content__img-box.c-fade-up.js-inview
+            picture
+              source(media='(min-width:768px)' srcset=`${relativePath}assets/img/enjoy/main.jpg`)
+              source(media='(min-width:350px)' srcset=`${relativePath}assets/img/enjoy/main-summer-sp.png`)
+              img.p-enjoy__content__img-box__img(src=`${relativePath}assets/img/enjoy/main.jpg` alt="")
+            img.p-enjoy__content__img-box__label(src=`${relativePath}assets/img/enjoy/illust-girls-summer.png` alt="")
+          div.p-enjoy__content__txt.c-fade-up.js-inview
+            h2.p-enjoy__content__txt__title
+              span.p-enjoy__content__txt__title__back VARIOUS
+              span.p-enjoy__content__txt__title__front 手ぶらでキャンプ
+                span アウトドアを満喫して♪
+            p.p-enjoy__content__txt__p.u-mt3 マリンスポーツやスカイダイビングなど、南伊勢の豊かな自然を堪能する体験があなたを待っています。遊び疲れたら、BBQカフェで、おいしいお肉に舌鼓をうつのもよいでしょう。そして夜には、いままで見たこともないような満点の星空。周囲に気兼ねなく仲間たちと思う存分ワイワイ楽しんでください。
+            a.c-more-btn.u-mt6.u-mt-sp3.u-ml-sp-auto(href=`${relativePath}enjoy`)
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+    div.l-container.l-container--full
+      div.p-enjoy__swiper.c-fade-up.js-inview
+        div.top-enjoy-swiper-to-l
+          ul.top-enjoy-swiper-wrapper.swiper-wrapper
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-01.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-02.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-03.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-04.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-05.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-06.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-07.jpg` alt='')
+        div.top-enjoy-swiper-to-r
+          ul.top-enjoy-swiper-wrapper.swiper-wrapper
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-08.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-09.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-10.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-11.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-12.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-13.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-14.jpg` alt='')
+
+  section.l-section.l-section--gap_top-lg.l-section--gap_bottom-0.t-bg-orange
+    div.l-container.l-container--full
+      img(src=`${relativePath}assets/img/section/r-up-w.svg` alt="")
+    div.p-decoration
+      img.p-decoration__enjoy-bottom-tree(src=`${relativePath}assets/img/enjoy/illust-tree2.png` alt="")
+    div.p-decoration
+      img.p-decoration__enjoy-car(src=`${relativePath}assets/img/enjoy/illust-car.png` alt="")
+  //- **********************************************************************
+  //- バナー
+  //- **********************************************************************
+  section.l-section
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href="")
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}assets/img/enjoy/banner-big.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}assets/img/enjoy/banner-big-sp.jpg`)
+            img(src=`${relativePath}assets/img/enjoy/banner-big.jpg` alt="")
+    div.l-container.l-container--full
+      div.p-bnr-list
+        h2.p-bnr-list__title 東海エリアグループ施設
+          span.p-bnr-list__title__img.p-bnr-list__title__img--long
+            img(src=`${relativePath}assets/img/enjoy/illust-leaf-long.png` alt="")
+        div.p-environ
+          ul.p-environ__list
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 三重県
+                img(src=`${relativePath}assets/img/area/item1.jpg` alt="")
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 三重県
+                img(src=`${relativePath}assets/img/area/item2.jpg` alt="")
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 三重県
+                img(src=`${relativePath}assets/img/area/item3.jpg` alt="")
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 三重県
+                img(src=`${relativePath}assets/img/area/item4.jpg` alt="")
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 三重県
+                img(src=`${relativePath}assets/img/area/item5.jpg` alt="")
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 愛知県
+                img(src=`${relativePath}assets/img/area/item6.jpg` alt="")
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 岐阜県
+                img(src=`${relativePath}assets/img/area/item7.jpg` alt="")
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 岐阜県
+                img(src=`${relativePath}assets/img/area/item8.jpg` alt="")
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 岐阜県
+                img(src=`${relativePath}assets/img/area/item9.jpg` alt="")
+            li.p-environ__list__item
+              a(href="" target="_blank")
+                p.p-environ__list__item__title 岐阜県
+                img(src=`${relativePath}assets/img/area/item10.jpg` alt="")
+    div.l-container.l-container--full
+      div.p-bnr-list
+        h2.p-bnr-list__title 関連情報
+          span.p-bnr-list__title__img
+            img(src=`${relativePath}assets/img/enjoy/illust-leaf.png` alt="")
+        div.p-bnr-list
+          ul.p-bnr-list__list
+            li.p-bnr-list__list__item
+              a(href="")
+                img(src=`${relativePath}assets/img/enjoy/banner-1.jpg` alt="")
+            li.p-bnr-list__list__item
+              a(href="")
+                img(src=`${relativePath}assets/img/enjoy/banner-1.jpg` alt="")
+
+        //- div.bnr-list-swiper
+        //-   ul.swiper-wrapper
+        //-     li.swiper-slide
+        //-       img(src=`${relativePath}assets/img/enjoy/banner-1.jpg` alt="")
+        //-     li.swiper-slide
+        //-       img(src=`${relativePath}assets/img/enjoy/banner-2.jpg` alt="")
+        //-   //-   li.swiper-slide
+          //-     img(src=`${relativePath}assets/img/enjoy/banner-1.jpg` alt="")
+          //-   li.swiper-slide
+          //-     img(src=`${relativePath}assets/img/enjoy/banner-2.jpg` alt="")
+          //-   li.swiper-slide
+          //-     img(src=`${relativePath}assets/img/enjoy/banner-1.jpg` alt="")
+          //-   li.swiper-slide
+          //-     img(src=`${relativePath}assets/img/enjoy/banner-2.jpg` alt="")
+          //- div.bnr-list-swiper__options
+          //-   div.bnr-list-swiper-button-prev.swiper-button-prev
+          //-   div.bnr-list-swiper-pagination.swiper-pagination
+          //-   div.bnr-list-swiper-button-next.swiper-button-next
+
+  //- **********************************************************************
+  //- map
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-l.l-section--gap_bottom-0.u-pt-sp0
+    div.l-container.l-container--full
+      div.c-title.u-hide-mq-max-md
+        h1 ACCESS
+        p アクセス
+      div.p-top-gmap
+        div.p-top-gmap__txt-box.t-bg-orange
+          div.c-title.u-hide-mq-min-md.u-mb3
+            h1 ACCESS
+            p アクセス
+          div.p-top-gmap__txt-box__inner
+            ul.p-top-gmap__txt-box__inner__list
+              li.p-top-gmap__txt-box__inner__list__item
+                p.p-top-gmap__txt-box__inner__list__item__title 住 所
+                p.p-top-gmap__txt-box__inner__list__item__content 〒516-0222
+                  span.br 三重県度会郡南伊勢町田曽浦119-1
+              li.p-top-gmap__txt-box__inner__list__item
+                p.p-top-gmap__txt-box__inner__list__item__title アクセス
+                p.p-top-gmap__txt-box__inner__list__item__content
+                  span.br - 近鉄「鵜方駅」から車で約20分
+                  span.br - 伊勢神宮から車で約50分
+                  span.br - 近鉄「鵜方駅」から車で約20分
+                  span.br - 名古屋から車で約2時間
+                  span.br - 京都から車で約2時間15分
+                  span.br - 大阪から車で約2時間45分
+              li.p-top-gmap__txt-box__inner__list__item
+                p.p-top-gmap__txt-box__inner__list__item__title その他
+                p.p-top-gmap__txt-box__inner__list__item__content ヘリコプターのアクセスも可能
+                  span.br 詳しくは
+                  span.br お電話　0599-77-0266
+                  span.br またはHPからお問い合わせください。
+                  span.br リンク先
+                  span.br
+                    a.link(href="https://www.nhs-inc.co.jp/" target="_blank") https://www.nhs-inc.co.jp/
+                  //- span.br
+                  //-   span
+                  //-     a.c-more-btn.c-more-btn--mini.u-mt1(href="#")
+                  //-       span.c-more-btn__txt 詳しく見る
+                  //-       span.c-more-btn__arrow.c-more-btn__arrow--mini
+              a.p-top-gmap__txt-box__btn(href="https://www.google.co.jp/maps/place/%E3%80%92516-0222+%E4%B8%89%E9%87%8D%E7%9C%8C%E5%BA%A6%E4%BC%9A%E9%83%A1%E5%8D%97%E4%BC%8A%E5%8B%A2%E7%94%BA%E7%94%B0%E6%9B%BD%E6%B5%A6%EF%BC%91%EF%BC%91%EF%BC%99%E2%88%92%EF%BC%91/@34.301028,136.709858,17z/data=!3m1!4b1!4m5!3m4!1s0x6005acfc475d4d27:0x7035d7b806d23b61!8m2!3d34.3010236!4d136.7124329?hl=ja" target='_blank')
+                img.p-top-gmap__txt-box__btn__icon(src=`${relativePath}assets/img/icon/toggle.svg` alt="")
+                p.p-top-gmap__txt-box__btn__txt google mapを見る
+        div.p-top-gmap__main
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3295.9417689160064!2d136.70985797708698!3d34.301028004550574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6005acfc475d4d27%3A0x7035d7b806d23b61!2z44CSNTE2LTAyMjIg5LiJ6YeN55yM5bqm5Lya6YOh5Y2X5LyK5Yui55S655Sw5pu95rWm77yR77yR77yZ4oiS77yR!5e0!3m2!1sja!2sjp!4v1671521634931!5m2!1sja!2sjp" width="750" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-8
+    img(src=`${relativePath}assets/img/section/dark-g.svg` alt="")

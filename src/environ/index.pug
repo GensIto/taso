@@ -1,0 +1,350 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "environ";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv
+    div.l-kv__container
+      div.p-kv-title
+        h1.p-kv-title__item.p-kv-title__item--activity ENVIRON
+        p.p-kv-title__p 周辺施設
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/activity/kv-sky.jpg` alt="")
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-6
+    img(src=`${relativePath}assets/img/section/white-dark-blue.svg` alt="")
+  section.l-section.l-section--gap_top-0.u-pt-sp6
+    div.l-container
+      div.c-title.c-fade-up.js-inview
+        h1 TOURISM
+        p 周辺観光
+      p.c-container-title.u-mt8.u-mt-sp4.c-fade-up.js-inview グループ観光施設（三重県）
+      ul.c-environ-list
+        li.c-environ-list__item.c-fade-up.js-inview
+          h3.c-environ-list__item__title
+            img(src=`${relativePath}assets/img/environ/ninja-logo.jpg`  alt='')
+          div.c-environ-list__item__wrap.green
+            div.c-environ-list__item__wrap__slider.slider-wrap.green
+              div.swiper-container.c-environ-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/kingdom/kingdom-item1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/kingdom/kingdom-item2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/kingdom/kingdom-item3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/kingdom/kingdom-item4.jpg`  alt='')
+                div.c-environ-list-swiper-button-next.swiper-button-next
+                div.c-environ-list-swiper-button-prev.swiper-button-prev
+                div.c-environ-list-swiper-pagination.swiper-pagination
+            div.c-environ-list__item__wrap__content
+              h3.c-environ-list__item__wrap__content__title 伊勢忍者キングダム
+              p.c-environ-list__item__wrap__content__p 時代の街並みの中に江戸庭園や風景盆栽を創作しており、四季折々の花や緑の空間を感じて頂ける施設です。園芸の城下街で珍しい花・植木・盆栽のお買い物をしたり、庭を見ながらこだわりの美食を味わったりしてお楽しみいただけます。
+              p.c-environ-list__item__wrap__content__p 城下街では忍者ショーや山田奉行所のお芝居が見れたり、忍者となって森の上を行き交うアトラクションや新感覚のゲーム等をご家族やご友人と一緒に体験することもできます。家族みんなで忍者気分が楽しめるアクティビティを伊勢忍者キングダムで体験ください！
+              div.c-environ-list__item__wrap__content__description
+                a(href="")
+                  ul.c-environ-list__item__wrap__content__description__wrap
+                    li.c-environ-list__item__wrap__content__description__txt
+                      p.c-environ-list__item__wrap__content__description__txt__title.green 電話番号
+                      p.c-environ-list__item__wrap__content__description__txt__content 059-643-2300
+                    li.c-environ-list__item__wrap__content__description__txt
+                      p.c-environ-list__item__wrap__content__description__txt__title.green アクセス
+                      p.c-environ-list__item__wrap__content__description__txt__content 〒519-0603
+                        span 三重県伊勢市二見町三津1201番地1
+                a.c-environ-list__item__wrap__content__btn.green(href="")
+                  img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                  p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+
+      p.c-container-title.u-mt8.u-mt-sp4.c-fade-up.js-inview グループ宿泊施設（三重県）
+      ul.c-environ-list
+        li.c-environ-list__item.c-fade-up.js-inview
+          h3.c-environ-list__item__title
+            img(src=`${relativePath}assets/img/environ/shinwa-logo.jpg`  alt='')
+          div.c-environ-list__item__wrap.green
+            div.c-environ-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-environ-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/shinwaguso/shinwaguso-item1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/shinwaguso/shinwaguso-item2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/shinwaguso/shinwaguso-item3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/shinwaguso/shinwaguso-item4.jpg`  alt='')
+                div.c-environ-list-swiper-button-next.swiper-button-next
+                div.c-environ-list-swiper-button-prev.swiper-button-prev
+                div.c-environ-list-swiper-pagination.swiper-pagination
+            div.c-environ-list__item__wrap__content
+              h3.c-environ-list__item__wrap__content__title 料理旅館 新和具荘
+              p.c-environ-list__item__wrap__content__p 伊勢志摩・奥志摩の料理旅館で、海鮮料理が自慢の宿です。夏場はアワビ料理、冬場は伊勢海老料理と和具漁港で水揚げされた新鮮な魚介類をご賞味いただけます。
+              p.c-environ-list__item__wrap__content__p またお部屋からは太平洋が一望でき、大島や小島が見れます。
+              p.c-environ-list__item__wrap__content__p いつもお客様との会話を大切にしているアットホームな旅館です。
+              p.c-environ-list__item__wrap__content__p 又来たいなと思っていただけるような旅館をと思っています。
+              p.c-environ-list__item__wrap__content__p ぜひ、伊勢志摩のご旅行の際にはご利用下さい。
+              div.c-environ-list__item__wrap__content__description
+                a(href="")
+                  ul.c-environ-list__item__wrap__content__description__wrap
+                    li.c-environ-list__item__wrap__content__description__txt
+                      p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                      p.c-environ-list__item__wrap__content__description__txt__content 0599-85-0765
+                    li.c-environ-list__item__wrap__content__description__txt
+                      p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                      p.c-environ-list__item__wrap__content__description__txt__content 〒517-0703
+                        span 三重県志摩市志摩町和具 1537-4
+                a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                  img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                  p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+        li.c-environ-list__item.c-fade-up.js-inview
+          h3.c-environ-list__item__title
+            img(src=`${relativePath}assets/img/environ/wagu-beach-logo.jpg`  alt='')
+          div.c-environ-list__item__wrap.green
+            div.c-environ-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-environ-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/wagu-beach-house/wagu-beach-house-item1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/wagu-beach-house/wagu-beach-house-item2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/wagu-beach-house/wagu-beach-house-item3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/wagu-beach-house/wagu-beach-house-item4.jpg`  alt='')
+                div.c-environ-list-swiper-button-next.swiper-button-next
+                div.c-environ-list-swiper-button-prev.swiper-button-prev
+                div.c-environ-list-swiper-pagination.swiper-pagination
+            div.c-environ-list__item__wrap__content
+              h3.c-environ-list__item__wrap__content__title 和具ビーチハウス
+              p.c-environ-list__item__wrap__content__p 三重県志摩市は志摩半島の中心に位置する “和具”。 北を英虞湾、南を熊野灘に挟まれた、海がとても身近なエリアです。雄大な熊野灘を遥かに見渡す、のどかなビーチサイドにWAGU BEACH HOUSE Japonicaはあります。 1棟貸切の本館は最大58名様がご宿泊可能。企業研修やゼミ、サークルの合宿はもちろん、大規模なイベントの会場兼宿泊施設としてご利用いただけます。ビーチに降りて、浜風にこころ洗われるもよし。和スタイルBBQに舌鼓をうつもよし。ラジウム鉱泉に浸って、疲れをゆっくり癒すもよし。ヴァケイションレンタルならではの、きままなスタイルで志摩の滞在を満喫いただけます。
+              div.c-environ-list__item__wrap__content__description
+                a(href="")
+                  ul.c-environ-list__item__wrap__content__description__wrap
+                    li.c-environ-list__item__wrap__content__description__txt
+                      p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                      p.c-environ-list__item__wrap__content__description__txt__content 0599-52-0266
+                    li.c-environ-list__item__wrap__content__description__txt
+                      p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                      p.c-environ-list__item__wrap__content__description__txt__content 〒517-0703
+                        span 三重県志摩市志摩町和具 1593
+                a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                  img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                  p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+        li.c-environ-list__item.c-fade-up.js-inview
+          h3.c-environ-list__item__title
+            img(src=`${relativePath}assets/img/environ/heart-land-logo.jpg`  alt='')
+          div.c-environ-list__item__wrap.green
+            div.c-environ-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-environ-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/heart/heart-item1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/heart/heart-item2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/heart/heart-item3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/heart/heart-item4.jpg`  alt='')
+                div.c-environ-list-swiper-button-next.swiper-button-next
+                div.c-environ-list-swiper-button-prev.swiper-button-prev
+                div.c-environ-list-swiper-pagination.swiper-pagination
+            div.c-environ-list__item__wrap__content
+              h3.c-environ-list__item__wrap__content__title ハートランドテラス伊勢 貸し別荘
+              p.c-environ-list__item__wrap__content__p ハートランドTerraceは国立公園にあり、大自然を感じていただける場所。全ての棟が異なるため、各棟良さがあり、お客様にあったお部屋をお選び頂けます。また、一棟貸しで仲間や家族、皆様でゆったりプライベート空間をお過ごし頂けます。
+              p.c-environ-list__item__wrap__content__p ペットと一緒に、お子様連れも安心してご利用頂けます。楽しみ方もBBQ・ロッジ内での卓球、カラオケ等色々あり、夜にはたくさんの星を近くに感じられます。
+              p.c-environ-list__item__wrap__content__p 自然豊かな場所で、誰にも気を使うことなく、あなただけのプライベートな休日を過ごしませんか？
+              div.c-environ-list__item__wrap__content__description
+                a(href="")
+                  ul.c-environ-list__item__wrap__content__description__wrap
+                    li.c-environ-list__item__wrap__content__description__txt
+                      p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                      p.c-environ-list__item__wrap__content__description__txt__content 0599-66-2100
+                    li.c-environ-list__item__wrap__content__description__txt
+                      p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                      p.c-environ-list__item__wrap__content__description__txt__content 〒516-0106
+                        span 三重県度会郡南伊勢町木谷５８２−８
+                a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                  img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                  p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+        li.c-environ-list__item.c-fade-up.js-inview
+          h3.c-environ-list__item__title
+            img(src=`${relativePath}assets/img/environ/ise-wagu-logo.jpg`  alt='')
+          div.c-environ-list__item__wrap.green
+            div.c-environ-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-environ-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/ise-wagu-marina/ise-wagu-marina-item1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/ise-wagu-marina/ise-wagu-marina-item2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/ise-wagu-marina/ise-wagu-marina-item3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/environ/ise-wagu-marina/ise-wagu-marina-item4.jpg`  alt='')
+                div.c-environ-list-swiper-button-next.swiper-button-next
+                div.c-environ-list-swiper-button-prev.swiper-button-prev
+                div.c-environ-list-swiper-pagination.swiper-pagination
+            div.c-environ-list__item__wrap__content
+              h3.c-environ-list__item__wrap__content__title 伊勢和具マリーナ
+              p.c-environ-list__item__wrap__content__p 志摩市の南部、前島半島の中央に位置する和具にある宿泊施設です。大人数（最大37人まで）で1棟貸切が可能です。
+              p.c-environ-list__item__wrap__content__p 施設の目の前には、伊勢志摩国立公園の一部で、さまざまな形の島や半島が美しい海岸線をつくる英虞湾（あごわん）が広がっています。
+              p.c-environ-list__item__wrap__content__p 目の前に広がる英虞湾の風景を楽しみながらご利用いただけます。
+              p.c-environ-list__item__wrap__content__p お友達同士や家族などのプライベート利用からサークル、企業研修などに、ぜひご利用してみませんか？
+              p.c-environ-list__item__wrap__content__p ＊素泊まり
+              p.c-environ-list__item__wrap__content__p ＊お風呂は隣接する＜ホテル一楽＞さんをご利用いただけます。
+              div.c-environ-list__item__wrap__content__description
+                a(href="")
+                  ul.c-environ-list__item__wrap__content__description__wrap
+                    //- li.c-environ-list__item__wrap__content__description__txt
+                    //-   p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                    //-   p.c-environ-list__item__wrap__content__description__txt__content 0599-85-0765
+                    li.c-environ-list__item__wrap__content__description__txt
+                      p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                      p.c-environ-list__item__wrap__content__description__txt__content 〒517-0703
+                        span 三重県志摩市志摩町和具2582-50
+                a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                  img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                  p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+  section.l-section.l-section--gap_top-0.u-pt-sp6
+    div.l-container
+      p.c-container-title.u-mt6.u-mt-sp3 三重県以外のグループ観光施設・宿泊施設
+      div.c-environ-list
+        ul.c-environ-list__grid
+          li.c-environ-list__grid__card.c-fade-up.js-inview
+            div.c-environ-list__grid__card__img
+              p.c-environ-list__grid__card__img__label 愛知県
+              img(src=`${relativePath}assets/img/environ/item1.jpg`  alt='')
+            div.c-environ-list__grid__card__content#js-match-everytime
+              h2.c-environ-list__grid__card__content__title スタンザベルデ名古屋
+              p.c-environ-list__grid__card__content__p ペントハウス（175平米）を2タイプ用意した、ハイクラス・スタイルの施設です。広々モダンなお部屋で、最大8名様迄ご宿泊可能です。矢場町駅徒歩1分の好立地です。駅周辺には24Hのコンビニやスーパー､飲食店が多数あり､不自由なくお過ごしいただけます｡
+            div.c-environ-list__item__wrap__content__description
+              a(href="")
+                ul.c-environ-list__item__wrap__content__description__wrap
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                    p.c-environ-list__item__wrap__content__description__txt__content 0599-85-0765
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                    p.c-environ-list__item__wrap__content__description__txt__content 〒517-0703
+                      span 三重県志摩市志摩町和具2582-50
+              a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+          li.c-environ-list__grid__card.c-fade-up.js-inview
+            div.c-environ-list__grid__card__img
+              p.c-environ-list__grid__card__img__label 岐阜県
+              img(src=`${relativePath}assets/img/environ/item2.jpg`  alt='')
+            div.c-environ-list__grid__card__content#js-match-align-everytime
+              h2.c-environ-list__grid__card__content__title ほしとせせらぎのぐらんぴんぐ
+              p.c-environ-list__grid__card__content__p 岐阜県中津川にあるグランピング施設です。天然温泉やプールなどの設備も充実しており、手ぶらで安心して快適にキャンプが楽しめます。併設するクアリゾート湯舟沢のご利用も可能です。
+            div.c-environ-list__item__wrap__content__description
+              a(href="")
+                ul.c-environ-list__item__wrap__content__description__wrap
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                    p.c-environ-list__item__wrap__content__description__txt__content 0573-69-5000
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                    p.c-environ-list__item__wrap__content__description__txt__content 〒508-0007
+                      span 岐阜県中津川市神坂280番地
+              a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+          li.c-environ-list__grid__card.c-fade-up.js-inview
+            div.c-environ-list__grid__card__img
+              p.c-environ-list__grid__card__img__label 愛知県
+              img(src=`${relativePath}assets/img/environ/item1.jpg`  alt='')
+            div.c-environ-list__grid__card__content#js-match-align-everytime
+              h2.c-environ-list__grid__card__content__title スタンザベルデ名古屋
+              p.c-environ-list__grid__card__content__p ペントハウス（175平米）を2タイプ用意した、ハイクラス・スタイルの施設です。広々モダンなお部屋で、最大8名様迄ご宿泊可能です。矢場町駅徒歩1分の好立地です。駅周辺には24Hのコンビニやスーパー､飲食店が多数あり､不自由なくお過ごしいただけます｡
+            div.c-environ-list__item__wrap__content__description
+              a(href="")
+                ul.c-environ-list__item__wrap__content__description__wrap
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                    p.c-environ-list__item__wrap__content__description__txt__content 0599-85-0765
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                    p.c-environ-list__item__wrap__content__description__txt__content 〒517-0703
+                      span 三重県志摩市志摩町和具2582-50
+              a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+          li.c-environ-list__grid__card.c-fade-up.js-inview
+            div.c-environ-list__grid__card__img
+              p.c-environ-list__grid__card__img__label 岐阜県
+              img(src=`${relativePath}assets/img/environ/item3.jpg`  alt='')
+            div.c-environ-list__grid__card__content#js-match-align-everytime
+              h2.c-environ-list__grid__card__content__title ホテル花更紗
+              p.c-environ-list__grid__card__content__p 日本百名山「恵那山」を望むことができる、大自然に囲まれた温泉リゾート「ホテル花更紗」。 お客様一人一人の過ごし方を大切にしております。 中山道 馬籠宿に近く、岐阜観光の拠点としても最適です。
+            div.c-environ-list__item__wrap__content__description
+              a(href="")
+                ul.c-environ-list__item__wrap__content__description__wrap
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                    p.c-environ-list__item__wrap__content__description__txt__content 0573-69-5111
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                    p.c-environ-list__item__wrap__content__description__txt__content 〒508-0007
+                      span 岐阜県中津川市神坂280
+              a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+          li.c-environ-list__grid__card.c-fade-up.js-inview
+            div.c-environ-list__grid__card__img
+              p.c-environ-list__grid__card__img__label 岐阜県
+              img(src=`${relativePath}assets/img/environ/item4.jpg`  alt='')
+            div.c-environ-list__grid__card__content#js-match-align-everytime
+              h2.c-environ-list__grid__card__content__title 日帰り天然温泉 バーデンパークSOGI
+              p.c-environ-list__grid__card__content__p 土岐にある温泉施設バーデンパークSOGI。露天風呂を備えた天然温泉、温泉水を使ったバーデプール、トレーニングジム、エステなどが楽しめます。また、地産地消四季折々のお料理で団体様のご予約も承っております。
+            div.c-environ-list__item__wrap__content__description
+              a(href="")
+                ul.c-environ-list__item__wrap__content__description__wrap
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                    p.c-environ-list__item__wrap__content__description__txt__content 0572-52-1126
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                    p.c-environ-list__item__wrap__content__description__txt__content 〒509-5402
+                      span 岐阜県土岐市曽木町１３００−１
+              a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                p.c-environ-list__item__wrap__content__btn__txt サイトを見る
+          li.c-environ-list__grid__card.c-fade-up.js-inview
+            div.c-environ-list__grid__card__img
+              p.c-environ-list__grid__card__img__label 岐阜県
+              img(src=`${relativePath}assets/img/environ/item5.jpg`  alt='')
+            div.c-environ-list__grid__card__content#js-match-align-everytime
+              h2.c-environ-list__grid__card__content__title クアリゾート湯舟沢
+              p.c-environ-list__grid__card__content__p 岐阜県中津川市神坂にある温泉施設「クアリゾート湯舟沢 中津川温泉」では天然温泉や温水プール、お子様も大喜びの屋内キッズパークなどが楽しめます。
+              p.c-environ-list__grid__card__content__p 訪れた方々に最上のリゾート気分を満喫していただけます。
+            div.c-environ-list__item__wrap__content__description
+              a(href="")
+                ul.c-environ-list__item__wrap__content__description__wrap
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title 電話番号
+                    p.c-environ-list__item__wrap__content__description__txt__content 0573-69-5000
+                  li.c-environ-list__item__wrap__content__description__txt
+                    p.c-environ-list__item__wrap__content__description__txt__title アクセス
+                    p.c-environ-list__item__wrap__content__description__txt__content 〒508-0007
+                      span 岐阜県中津川市神坂280番地
+              a.c-environ-list__item__wrap__content__btn(href="" target='_blank')
+                img.c-environ-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/window.svg` alt="")
+                p.c-environ-list__item__wrap__content__btn__txt サイトを見る

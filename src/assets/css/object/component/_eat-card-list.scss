@@ -1,0 +1,127 @@
+/* ****************************************************************************************************
+
+  # eat-card
+  - component
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.c-eat-card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 10rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-eat-card-list {
+    grid-template-columns: 1fr;
+    margin-top: 6rem;
+  }
+}
+
+.c-eat-card-list__item {
+  flex: 1;
+}
+
+.c-eat-card-list__item__img-box {
+  position: relative;
+}
+
+.c-eat-card-list__item__img-box__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  transform: translate(10%, -40%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-eat-card-list__item__img-box__label {
+    width: 7rem;
+  }
+}
+
+.c-eat-card-list__item__btn {
+  position: relative;
+  display: block;
+  background-color: global.$color-pink;
+}
+
+.c-eat-card-list__item__btn__icon {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  display: block;
+  width: 2.2rem;
+  transform: translate(-50%, -50%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-eat-card-list__item__btn__icon {
+    width: 2rem;
+  }
+}
+
+.c-eat-card-list__item__btn__txt {
+  position: relative;
+  padding: 0.8rem 0;
+  font-family: global.$font-family-noto;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: global.$color-white;
+  text-align: center;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-eat-card-list__item__btn__txt {
+    font-size: 1.6rem;
+  }
+}
+
+.c-eat-card-list__item__txt-box {
+  padding: 4rem 2rem 2rem;
+  background-color: #fff;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-eat-card-list__item__txt-box {
+    padding: 3rem 2rem 2rem;
+  }
+}
+
+.c-eat-card-list__item__txt-box__title {
+  position: relative;
+  padding-bottom: 1rem;
+  font-family: global.$font-family-noto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: global.$color-txt;
+  border-bottom: 1px dashed global.$color-blue;
+
+  span {
+    font-size: 1.6rem;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-eat-card-list__item__txt-box__title {
+    font-size: 1.8rem;
+  }
+}
+
+.c-eat-card-list__item__txt-box__content {
+  position: relative;
+  padding-top: 1.5rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: global.$color-txt;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-eat-card-list__item__txt-box__content {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+}

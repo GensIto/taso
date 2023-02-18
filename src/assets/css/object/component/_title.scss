@@ -1,0 +1,74 @@
+/* ======================================================================
+
+  # title
+  - component
+
+====================================================================== */
+@use '../../foundation/tool/global';
+
+.c-title {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 22rem;
+    height: 7rem;
+    content: '';
+    background-image: url('../img/icon/title.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    transform: translate(-50%, -100%);
+  }
+
+  h1 {
+    font-family: global.$font-family-garamond;
+    font-size: 6.2rem;
+    font-weight: 500;
+    color: global.$color-txt;
+    text-align: center;
+  }
+
+  p {
+    font-family: global.$font-family-noto;
+    font-size: 2rem;
+    font-weight: bold;
+    color: global.$color-txt;
+    text-align: center;
+  }
+}
+
+.c-title.c-title--lg {
+  &::after {
+    width: 50%;
+  }
+}
+
+.c-title.c-title--to-r {
+  transform: translateX(4.5vw);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-title {
+    &::after {
+      width: 15rem;
+      height: 5rem;
+      transform: translate(-50%, -100%);
+    }
+    h1 {
+      font-size: 3.6rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  .c-title.c-title--to-r {
+    transform: translateX(0);
+  }
+}

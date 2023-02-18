@@ -1,0 +1,93 @@
+/* ****************************************************************************************************
+
+  # bg
+  - theme
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.t-bg-white {
+  background-color: #fff !important;
+}
+
+.t-bg-skelton {
+  background-color: transparent !important;
+}
+
+.t-bg-yellow {
+  background-color: global.$color-yellow;
+}
+
+.t-bg-blue {
+  background-color: global.$color-blue;
+}
+
+.t-bg-sky-blue {
+  background-color: global.$color-sky-blue;
+}
+
+.t-bg-activity-sky {
+  background-color: global.$color-activity-sky;
+}
+
+.t-bg-stay-marina {
+  background-color: #e6f4f1;
+}
+
+.t-bg-stay-villa {
+  background-color: #f3f4f7;
+}
+
+.t-bg-activity-marine {
+  background-color: global.$color-activity-marine;
+}
+
+.t-bg-light-pink {
+  background-color: global.$color-pink-light;
+}
+
+.t-bg-light-green {
+  background-color: global.$color-green-light;
+}
+
+.t-bg-orange {
+  background-color: global.$color-orange;
+}
+
+.t-bg-cafe {
+  background-image: url(../img/eat/bg-cafe.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.t-bg-bbq {
+  background-image: url(../img/eat/bg-bbq.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba($color: #7e5737, $alpha: 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}

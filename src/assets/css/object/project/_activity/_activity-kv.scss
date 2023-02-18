@@ -1,0 +1,28 @@
+/* ****************************************************************************************************
+
+  # activity
+  - project
+
+**************************************************************************************************** */
+@use '../../../foundation/tool/global';
+// ```
+.p-activity-kv__kv-box__label {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-30%, 0%);
+  width: 20%;
+  max-width: 2 0rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-kv__kv-box__label {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-20%, -50%);
+    width: 11rem;
+  }
+}

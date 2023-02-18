@@ -1,0 +1,196 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "activity";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv.l-kv--lg
+    div.l-kv__container.l-kv__container--lg
+      div.p-kv-title
+        div.p-kv-title__logo.p-kv-title__logo--lg
+          img.js-ofi(src=`${relativePath}assets/img/activity/marine.svg` alt="")
+        p.p-kv-title__p.u-mt2 田曽白浜ビーチ
+          span アクティビティ2時間遊び放題
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/activity/kv-marine.jpg` alt="")
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-6
+    img(src=`${relativePath}assets/img/section/activity-marine.svg` alt="")
+    div.p-decoration
+      img.p-decoration__activity(src=`${relativePath}assets/img/play/text-play.png` alt="")
+  section.l-section.l-section--gap_top-0.t-bg-activity-marine.u-pt-sp6
+    div.l-container.l-container--left-full
+      div.p-decoration
+        img.p-decoration__activity-bird(src=`${relativePath}assets/img/activity/illust-bird.png` alt="")
+      div.c-title.c-title--to-r.c-fade-up.js-inview
+        h1 MARINE SPORTS
+        p マリンスポーツ
+      div.p-activity-page.u-mt4.c-fade-up.js-inview
+        div.p-activity-page__img-box
+          p.p-activity-page__img-box__label.sea 海
+          p.p-activity-page__img-box__season.sea 期間：夏季
+          img(src=`${relativePath}assets/img/activity/marine.jpg` alt="")
+        div.p-activity-page__txt-box
+          h2.p-activity-page__txt-box__title
+            span.p-activity-page__txt-box__title__back MARINE
+            span.p-activity-page__txt-box__title__front
+              | 田曽白浜マリンスポーツ
+              span 2時間遊び放題
+          p.p-activity-page__txt-box__p.u-mt6.u-mb2 田曽白浜の豊富なアクティビティをお得に遊び尽くせるプランです。バナナボートやSUP、シーカヤック、水上トランポリンなど●種類のスポーツが体験し放題。
+          div.p-activity-page__txt-box__content
+            ul.p-activity-page__txt-box__content__list
+              li.p-activity-page__txt-box__content__list__item
+                p.p-activity-page__txt-box__content__list__item__title.sea 体験時間
+                p.p-activity-page__txt-box__content__list__item__content 約2時間
+              li.p-activity-page__txt-box__content__list__item
+                p.p-activity-page__txt-box__content__list__item__title.sea 予約条件
+                p.p-activity-page__txt-box__content__list__item__content 要予約 2名様より
+              li.p-activity-page__txt-box__content__list__item.p-activity-page__txt-box__content__list__item--start
+                p.p-activity-page__txt-box__content__list__item__title.sea 予約可能日
+                p.p-activity-page__txt-box__content__list__item__content
+                  span 0/00・0/00〜0/00
+                  span 0/00・0/00〜0/00
+            h2.p-activity-page__txt-box__content__money
+              span.black 2時間
+              span.red.font-lg 10,000
+              span.red.yen 円
+              span.black (税込)/1名様
+            h2.p-activity-page__txt-box__content__money
+              span.font-sm.red.font-bold 宿ご利用で
+              span.font-md.red.font-bold 2,000
+              span.font-sm.red.font-bold 円OFF
+          a.p-activity-page__txt-box__content__btn.sea.u-mt2(href='')
+            img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt='')
+            p.p-activity-page__txt-box__content__btn__txt 今すぐ予約する
+  section.l-section.t-bg-activity-marine
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}/assets/img/banner/marine.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}/assets/img/banner/marine-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/marine.jpg` alt='')
+  section.l-section.t-bg-activity-marine
+    div.l-container
+      div.p-top-news
+        div.p-top-news__item.u-hide-mq-max-md.c-fade-up.js-inview
+          img.p-top-news__item__tree(src=`${relativePath}assets/img/news/illust-leaf.png` alt="")
+          div.p-top-news__item__title-box
+            h2.p-top-news__item__title-box__title NEWS
+            p.p-top-news__item__title-box__ruby ニュース
+            a.c-more-btn.u-mt6(href="#")
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+        div.c-title.u-hide-mq-min-md.u-mt6.c-fade-up.js-inview
+          h1 NEWS
+          p ニュース
+        div.p-top-news__list.c-fade-up.js-inview
+          ul.c-news-list
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.t-bg-activity-marine
+    img(src=`${relativePath}assets/img/section/purple-white.svg` alt="")
+  section.l-section.l-section--gap_top-0
+    div.l-container
+      p.c-container-title.c-fade-up.js-inview 遊び放題に含まれるもの
+      ul.p-activity-page-list.p-activity-page-list--grid
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/sup.png` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid SUP
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/kayak.png` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid シーカヤック
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/trampoline.png` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid 水上トランポリン
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/ducky.png` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid 伊勢志摩ダッキー君
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/banana.png` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid バナナボート
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/bouldering.jpg` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid ボルダリング
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/surfing.png` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid スキムボード
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/beach-cruiser.jpg` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid ビーチクルーザー
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/parasol.png` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid ビーチパラソル
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/long-skate.jpg` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid ロングスケート
+        li.p-activity-page-list__item.p-activity-page-list__item--grid.c-fade-up.js-inview
+          div.p-activity-page-list__item__img.p-activity-page-list__item__img--grid
+            img(src=`${relativePath}assets/img/play/beach-volleyball.png` alt="")
+          div.p-activity-page-list__item__txt-box--grid.p-activity-page-list__item__txt-box--grid
+            h2.p-activity-page-list__item__txt-box__title.p-activity-page-list__item__txt-box__title--grid ビーチバレー
+  section.l-section.l-section--gap_top-0.l-section--gap_bottom-0
+    div.l-container.l-container--full
+      div.p-activity-page-movie
+        div.p-activity-page-movie__label
+          img(src=`${relativePath}assets/img/activity/label.png` alt="")
+        div.p-activity-page-movie__content
+          img.p-activity-page-movie__content__img(src=`${relativePath}assets/img/activity/movie-marine.png` alt="")
+        div.p-activity-page-movie__bg
+          img(src=`${relativePath}assets/img/activity/movie-marine-bg.jpg` alt="")
+  section.l-section
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}/assets/img/banner/marine.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}/assets/img/banner/marine-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/marine.jpg` alt='')

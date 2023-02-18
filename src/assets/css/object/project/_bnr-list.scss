@@ -1,0 +1,169 @@
+/* ****************************************************************************************************
+
+  # bnr-lists
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-bnr-list {
+  margin-top: 8rem;
+}
+
+.p-bnr-list__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.p-bnr-list__list__item {
+  width: 25%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-bnr-list__list__item {
+    width: 50%;
+  }
+}
+
+.p-bnr-list__title {
+  font-size: 3.2rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-bnr-list__title {
+    font-size: 2rem;
+  }
+}
+
+.p-bnr-list__title__img {
+  width: 30rem;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 40%);
+}
+
+.p-bnr-list__title__img.p-bnr-list__title__img--long {
+  width: 45rem;
+  transform: translate(-45%, 40%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-bnr-list__title__img {
+    width: 20rem;
+  }
+  .p-bnr-list__title__img.p-bnr-list__title__img--long {
+    width: 30rem;
+    transform: translate(-47%, 40%);
+  }
+}
+
+.bnr-list-swiper {
+  margin-top: 8rem;
+  transform: translateX(-10%); // 真ん中寄せよう
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .bnr-list-swiper {
+    margin-top: 6rem;
+  }
+}
+
+.bnr-list-swiper__options {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 50%;
+  margin: 5rem auto 0;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .bnr-list-swiper__options {
+    width: 100%;
+    justify-content: center;
+    margin: 3rem auto 0;
+    gap: 2rem;
+  }
+}
+
+.bnr-list-swiper-button-next.swiper-button-next {
+  position: relative;
+  top: 1rem;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background-image: url('../img/icon/toggle-green.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(50%);
+
+  &::after {
+    content: none;
+  }
+}
+
+.bnr-list-swiper-button-prev.swiper-button-prev {
+  position: relative;
+  top: 1rem;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background-image: url('../img/icon/toggle-green.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+
+  &::after {
+    content: none;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .bnr-list-swiper-button-prev.swiper-button-prev {
+    left: 0;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .bnr-list-swiper-button-prev.swiper-button-prev,
+  .bnr-list-swiper-button-next.swiper-button-next {
+    width: 3rem;
+    height: 3rem;
+    top: 1.5rem;
+  }
+}
+
+.bnr-list-swiper-pagination.swiper-pagination {
+  position: relative;
+  bottom: 0 !important;
+  text-align: center;
+
+  .swiper-pagination-bullet {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 1rem !important;
+    background: transparent;
+    border: 2px solid global.$color-blue;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: global.$color-blue;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .bnr-list-swiper-pagination.swiper-pagination {
+    width: fit-content;
+  }
+}

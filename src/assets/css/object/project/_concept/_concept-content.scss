@@ -1,0 +1,121 @@
+/* ****************************************************************************************************
+
+  # concept-content
+  - project
+
+**************************************************************************************************** */
+@use '../../../foundation/tool/global';
+
+.p-concept-contact {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-top: 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-contact {
+    flex-direction: column;
+  }
+}
+
+.p-concept-contact__img-box {
+  position: relative;
+  width: 50%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-contact__img-box {
+    width: 100%;
+  }
+}
+
+.p-concept-contact__img-box__img-label {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  left: 30%;
+}
+
+.p-concept-contact__img-box__img-label.p-concept-contact__img-box__img-label--winter {
+  width: 30rem;
+  transform: translate(-50%, 60%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-contact__img-box__img-label.p-concept-contact__img-box__img-label--winter {
+    width: 12rem;
+    transform: translate(-30%, 40%);
+  }
+}
+
+.p-concept-contact__img-box__img-label.p-concept-contact__img-box__img-label--summer {
+  width: 15rem;
+  transform: translate(-50%, 40%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-contact__img-box__img-label.p-concept-contact__img-box__img-label--summer {
+    width: 6rem;
+    transform: translate(-50%, 30%);
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-contact__img-box__img-label {
+    left: auto;
+    right: 0;
+    width: 15rem;
+    transform: translate(-20%, 30%);
+  }
+}
+
+.p-concept-contact__img-box__img {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-contact__img-box__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.p-concept-contact__txt-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 1rem 4rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-contact__txt-box {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 4rem;
+  }
+}
+
+.p-concept-contact__txt-box__txt {
+  position: relative;
+  font-family: global.$font-family-noto;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: global.$color-txt;
+}
+
+.p-concept-contact__txt-box__txt + .p-concept-contact__txt-box__txt {
+  margin-top: 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-contact__txt-box__txt {
+    font-size: 1.5rem;
+  }
+  .p-concept-contact__txt-box__txt + .p-concept-contact__txt-box__txt {
+    margin-top: 3rem;
+  }
+}

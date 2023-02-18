@@ -1,0 +1,49 @@
+/* ****************************************************************************************************
+
+  # container-title
+  - component
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.c-container-title {
+  position: relative;
+  padding-bottom: 0.3rem;
+  padding-left: 6rem;
+  font-family: global.$font-family-noto;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: global.$color-txt;
+  border-bottom: 1px solid global.$color-blue;
+
+  &::before {
+    position: absolute;
+    top: 62%;
+    left: 0%;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    content: '';
+    background-image: url('../img/icon/flag.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transform: translateY(-50%);
+  }
+}
+
+.c-container-title.c-container-title---white {
+  color: global.$color-white;
+  border-bottom: 1px solid global.$color-white;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-container-title {
+    padding-left: 4.5rem;
+    font-size: 2rem;
+    &::before {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+}

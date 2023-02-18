@@ -1,0 +1,228 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "stay";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv.l-kv--lg
+    div.l-kv__container
+      div.p-kv-title
+        h1.p-kv-title__item.p-kv-title__item--stay STAY
+        p.p-kv-title__p.u-mt2 宿泊施設一覧
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/activity/kv-marine.jpg` alt="")
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-4
+    img(src=`${relativePath}assets/img/section/purple-w.svg` alt="")
+    div.p-decoration
+      img.p-decoration__stay(src=`${relativePath}assets/img/stay/text-hotel.png` alt="")
+  section.l-section.l-section--gap_top-0.u-pt-sp1
+    div.l-container
+      div.p-stay-page
+        div.p-stay-page__txt.c-fade-up.js-inview
+          img.p-stay-page__img-box__img(src=`${relativePath}assets/img/stay/illust-star.png` alt="")
+          h2.p-stay-page__txt__title
+            span.p-stay-page__txt__title__back HOTEL
+            span.p-stay-page__txt__title__front 一棟貸しの場所で素敵なひとときを…
+          p.p-stay-page__txt__p どうか腕時計は外して、あなただけの、あなたのための時間と空間を満喫してください。デッキチェアで一日中、部屋に積みっぱなしになっていた本に読みふけるのもよし。木立の隙間から見える美しい海をボーッと眺めているだけでも、充ち足りた気分になることでしょう。お風呂や電気・空調設備もととのった場所でゆったりしたひとときを。
+
+    div.l-container
+      p.c-container-title.u-mt8.u-mt-sp4.c-fade-up.js-inview 一棟貸し
+      ul.c-camp-list
+        li.c-camp-list__item
+          h3.c-camp-list__item__title.c-fade-up.js-inview 田曽フォレストキャンプ
+          div.c-camp-list__item__wrap.c-fade-up.js-inview
+            div.c-camp-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-camp-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-camp/img-camp-1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-camp/img-camp-2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-camp/img-camp-3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-camp/img-camp-4.jpg`  alt='')
+                div.c-camp-list-swiper-button-next.swiper-button-next
+                div.c-camp-list-swiper-button-prev.swiper-button-prev
+                div.c-camp-list-swiper-pagination.swiper-pagination
+            div.c-camp-list__item__wrap__content.c-fade-up.js-inview
+              div.c-camp-list__item__wrap__content__logo
+                img(src=`${relativePath}assets/img/stay/logo-camp.svg` alt='')
+              div.c-camp-list__item__wrap__content__description
+                a(href=`${relativePath}stay/camp`)
+                  ul.c-camp-list__item__wrap__content__description__wrap
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title エリア
+                      p.c-camp-list__item__wrap__content__description__txt__content フォレストサイド
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title コンセプト
+                      p.c-camp-list__item__wrap__content__description__txt__content リュクスでエキサイティング
+                        span な体験
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 価格
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟 35,000円〜
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 最大人数
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟あたり最大8人 /
+                        span 3棟でMAX24名まで
+                    div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-sp1
+                      div.c-more-btn__arrow.c-more-btn__arrow--mini
+                      p.c-more-btn__txt 詳しく見る
+                a.c-camp-list__item__wrap__content__btn(href="")
+                  img.c-camp-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                  p.c-camp-list__item__wrap__content__btn__txt 今すぐ予約する
+
+        li.c-camp-list__item
+          h3.c-camp-list__item__title.c-fade-up.js-inview 田曽フォレストマリーナ
+          div.c-camp-list__item__wrap.c-fade-up.js-inview
+            div.c-camp-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-camp-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-4.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/forest-marina/img-camp-5.jpg`  alt='')
+
+                div.c-camp-list-swiper-button-next.swiper-button-next
+                div.c-camp-list-swiper-button-prev.swiper-button-prev
+                div.c-camp-list-swiper-pagination.swiper-pagination
+            div.c-camp-list__item__wrap__content.c-fade-up.js-inview
+              div.c-camp-list__item__wrap__content__logo
+                img(src=`${relativePath}assets/img/stay/logo-marina.svg` alt='')
+              div.c-camp-list__item__wrap__content__description
+                a(href=`${relativePath}stay/marine`)
+                  ul.c-camp-list__item__wrap__content__description__wrap
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title エリア
+                      p.c-camp-list__item__wrap__content__description__txt__content フォレストサイド
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title コンセプト
+                      p.c-camp-list__item__wrap__content__description__txt__content 日本初 森のヨット型
+                        span グランピング
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 価格
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟 30,000円〜
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 最大人数
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟あたり最大8人 /
+                        span 3棟でMAX24名まで
+                    div.c-more-btn.c-more-btn--mini.u-ml-auto.u-ml-auto.u-mt-sp1
+                      div.c-more-btn__arrow.c-more-btn__arrow--mini
+                      p.c-more-btn__txt 詳しく見る
+                a.c-camp-list__item__wrap__content__btn(href="")
+                  img.c-camp-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                  p.c-camp-list__item__wrap__content__btn__txt 今すぐ予約する
+
+        li.c-camp-list__item
+          h3.c-camp-list__item__title.c-fade-up.js-inview オーシャンヴィラ倭
+          div.c-camp-list__item__wrap.c-fade-up.js-inview
+            div.c-camp-list__item__wrap__slider.slider-wrap
+              div.swiper-container.c-camp-list-slider.slider
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-1.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-2.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-3.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-4.jpg`  alt='')
+                  li.swiper-slide
+                    img(src=`${relativePath}assets/img/stay/ocean-villa/img-villa-5.jpg`  alt='')
+                div.c-camp-list-swiper-button-next.swiper-button-next
+                div.c-camp-list-swiper-button-prev.swiper-button-prev
+                div.c-camp-list-swiper-pagination.swiper-pagination
+            div.c-camp-list__item__wrap__content.c-fade-up.js-inview
+              div.c-camp-list__item__wrap__content__logo.c-camp-list__item__wrap__content__logo--mini
+                img(src=`${relativePath}assets/img/stay/logo-oceanVirlla.svg` alt='')
+              div.c-camp-list__item__wrap__content__description
+                a(href=`${relativePath}stay/villa`)
+                  ul.c-camp-list__item__wrap__content__description__wrap
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title エリア
+                      p.c-camp-list__item__wrap__content__description__txt__content 浜から3分
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title コンセプト
+                      p.c-camp-list__item__wrap__content__description__txt__content 和のヴィラリゾート
+                        span 和モダンの休日
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 価格
+                      p.c-camp-list__item__wrap__content__description__txt__content 1棟 35,000円〜
+                    li.c-camp-list__item__wrap__content__description__txt
+                      p.c-camp-list__item__wrap__content__description__txt__title 最大人数
+                      p.c-camp-list__item__wrap__content__description__txt__content 最大14名様まで
+                    div.c-more-btn.c-more-btn--mini.u-ml-auto.u-ml-auto.u-mt-sp1
+                      div.c-more-btn__arrow.c-more-btn__arrow--mini
+                      p.c-more-btn__txt 詳しく見る
+                a.c-camp-list__item__wrap__content__btn(href="")
+                  img.c-camp-list__item__wrap__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                  p.c-camp-list__item__wrap__content__btn__txt 今すぐ予約する
+
+    //- div.l-container
+    //-   p.c-container-title.u-mt8.u-mt-sp4.c-fade-up.js-inview フリーキャンプ
+    //-   ul.c-free-camp
+    //-     li.c-free-camp__item.c-fade-up.js-inview
+    //-       div.c-free-camp__item__img-box
+    //-         img(src=`${relativePath}assets/img/stay/free-camp/free-camp-sea.jpg` alt="")
+    //-         h3.c-free-camp__item__txt-box__title.u-hide-mq-min-md シーサイド
+    //-       div.c-free-camp__item__txt-box
+    //-         h3.c-free-camp__item__txt-box__title.u-hide-mq-max-md シーサイド
+    //-         div.c-free-camp__item__txt-box__content
+    //-           a.c-free-camp__item__txt-box__content__link(href="")
+    //-             ul.c-free-camp__item__txt-box__content__list
+    //-               li.c-free-camp__item__txt-box__content__list__item
+    //-                 p.c-free-camp__item__txt-box__content__list__item__title 価格
+    //-                 p.c-free-camp__item__txt-box__content__list__item__txt 1区画 8,000円〜
+    //-               li.c-free-camp__item__txt-box__content__list__item
+    //-                 p.c-free-camp__item__txt-box__content__list__item__title 最大人数
+    //-                 p.c-free-camp__item__txt-box__content__list__item__txt 1区画あたり最大6名様まで
+    //-               div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-3.u-mt-sp1
+    //-                 div.c-more-btn__arrow.c-more-btn__arrow--mini
+    //-                 p.c-more-btn__txt 詳しく見る
+    //-           a.c-free-camp__item__txt-box__content__btn(href="")
+    //-             img.c-free-camp__item__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+    //-             p.c-free-camp__item__txt-box__content__btn__txt 予約する
+    //-     li.c-free-camp__item.c-fade-up.js-inview
+    //-       div.c-free-camp__item__img-box
+    //-         img(src=`${relativePath}assets/img/stay/free-camp/free-camp-forest.jpg` alt="")
+    //-         h3.c-free-camp__item__txt-box__title.u-hide-mq-min-md フォレストサイド
+    //-       div.c-free-camp__item__txt-box
+    //-         h3.c-free-camp__item__txt-box__title.u-hide-mq-max-md フォレストサイド
+    //-         div.c-free-camp__item__txt-box__content
+    //-           a.c-free-camp__item__txt-box__content__link(href="")
+    //-             ul.c-free-camp__item__txt-box__content__list
+    //-               li.c-free-camp__item__txt-box__content__list__item
+    //-                 p.c-free-camp__item__txt-box__content__list__item__title 価格
+    //-                 p.c-free-camp__item__txt-box__content__list__item__txt 2時間 10,000円/1名様
+    //-               li.c-free-camp__item__txt-box__content__list__item
+    //-                 p.c-free-camp__item__txt-box__content__list__item__title 最大人数
+    //-                 p.c-free-camp__item__txt-box__content__list__item__txt 1区画あたり最大6名様まで
+    //-               div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-3.u-mt-sp1
+    //-                 div.c-more-btn__arrow.c-more-btn__arrow--mini
+    //-                 p.c-more-btn__txt 詳しく見る
+    //-           a.c-free-camp__item__txt-box__content__btn(href="")
+    //-             img.c-free-camp__item__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+    //-             p.c-free-camp__item__txt-box__content__btn__txt 予約する

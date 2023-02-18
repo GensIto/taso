@@ -1,0 +1,182 @@
+/* ****************************************************************************************************
+
+  # eat-page
+  - project
+
+**************************************************************************************************** */
+@use '../../../foundation/tool/global';
+
+.p-eat-page-bottom {
+}
+
+.p-eat-page-bottom__top__grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 3rem;
+}
+
+.p-eat-page-bottom__top__grid.p-eat-page-bottom__top__grid--tow {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat-page-bottom__top__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.p-eat-page-bottom__top__grid__item__txt-box {
+  background-color: #fff;
+  padding: 3rem 2rem;
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat-page-bottom__top__grid__item__txt-box {
+    padding: 2rem 1rem;
+  }
+}
+.p-eat-page-bottom__top__grid__item__txt-box__title {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.p-eat-page-bottom__top__grid__item__txt-box__title__circle {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: #f2dc3e;
+  margin-top: 2px;
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat-page-bottom__top__grid__item__txt-box__title__circle {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: 4px;
+  }
+}
+.p-eat-page-bottom__top__grid__item__txt-box__title__txt {
+  line-height: 1;
+}
+.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title {
+  font-size: 2rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-txt;
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat-page-bottom__top__grid__item__txt-box__title__txt__title {
+    font-size: 1.6rem;
+  }
+}
+
+.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money {
+  font-size: 2.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  position: relative;
+  display: block;
+  line-height: 1.5;
+  span {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat-page-bottom__top__grid__item__txt-box__title__txt__money {
+    font-size: 1.8rem;
+    span {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.p-eat-page-bottom__top__grid__item__txt-box__p {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 400;
+  color: global.$color-txt;
+  position: relative;
+}
+
+.p-eat-page-bottom__top__grid__item__txt-box__p
+  + .p-eat-page-bottom__top__grid__item__txt-box__p {
+  margin-top: 0;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat-page-bottom__top__grid__item__txt-box__p {
+    font-size: 1.4rem;
+  }
+}
+
+/* ****************************************************************************************************
+
+ # hoge
+
+**************************************************************************************************** */
+.p-eat-page-bottom__bottom__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 3rem;
+}
+
+.p-eat-page-bottom__bottom__grid.p-eat-page-bottom__bottom__grid--three {
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat-page-bottom__bottom__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.p-eat-page-bottom__bottom__grid__item {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.p-eat-page-bottom__bottom__grid__item
+  + .p-eat-page-bottom__bottom__grid__item {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.p-eat-page-bottom__bottom__grid__item__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat-page-bottom__bottom__grid__item__flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.p-eat-page-bottom__bottom__grid__item__flex__item {
+  position: relative;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.p-eat-page-bottom__top__grid__item {
+  position: relative;
+}
+
+.p-eat-page-bottom__bottom__grid__item__flex__item__must {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 5rem;
+  max-width: 5rem;
+}

@@ -1,0 +1,340 @@
+/* ****************************************************************************************************
+
+  # sitemap
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-sitemap {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ======================================================================
+
+  ## list
+
+====================================================================== */
+.p-sitemap__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__list {
+    margin-top: 3rem;
+  }
+}
+
+/* ======================================================================
+
+  ## divider
+
+====================================================================== */
+.p-sitemap__divider {
+  display: block;
+  width: 100%;
+}
+
+.p-sitemap__divider + .p-sitemap__divider {
+  margin-top: 1rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__divider {
+    border-top: 1px solid #fff;
+    &:last-child {
+      border-bottom: 1px solid #fff;
+    }
+  }
+  .p-sitemap__divider + .p-sitemap__divider {
+    margin-top: 0;
+  }
+}
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.p-sitemap__item {
+  width: 100%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item {
+    width: 100%;
+  }
+}
+
+/* ======================================================================
+
+  ## summary
+
+====================================================================== */
+.p-sitemap__item__summary {
+  position: relative;
+  & ::after {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(../img/icon/toggle.svg);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: 0.4s;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__summary {
+    padding-left: 2rem;
+  }
+}
+
+.p-sitemap__item[open] {
+  .p-sitemap__item__summary {
+    & ::after {
+      transition: 0.4s;
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+}
+.p-sitemap__item__summary__txt {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-white;
+  position: relative;
+  width: fit-content;
+  padding-left: 2.5rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__summary__txt {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* ======================================================================
+
+  ## flex
+
+====================================================================== */
+.p-sitemap__item__flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-top: 1rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__flex {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+  }
+}
+
+.p-sitemap__item__flex__inner {
+  padding-left: 2rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__flex__inner {
+    padding-left: 0;
+  }
+}
+
+.p-sitemap__item__flex__inner + .p-sitemap__item__flex__inner {
+  margin-top: 2rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__flex__inner + .p-sitemap__item__flex__inner {
+    margin-top: 0;
+  }
+}
+
+.p-sitemap__item__flex__item {
+  width: 50%;
+  opacity: 0;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__flex__item {
+    width: 100%;
+  }
+}
+
+.p-sitemap__item[open] {
+  .p-sitemap__item__flex__item {
+    transition: 1s;
+    opacity: 1;
+  }
+}
+
+/* ======================================================================
+
+  ## list
+
+====================================================================== */
+.p-sitemap__item__list-title {
+  position: relative;
+  width: 100%;
+  padding-left: 3.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  & ::after {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(../img/icon/toggle.svg);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    transition: 0.4s;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__list-title {
+    padding-left: 4.5rem;
+    & ::after {
+      left: 2rem;
+    }
+  }
+}
+
+.p-sitemap__item__list-title.green {
+  background-color: global.$color-green;
+}
+.p-sitemap__item__list-title.pink {
+  background-color: global.$color-pink;
+}
+.p-sitemap__item__list-title.purple {
+  background-color: global.$color-purple;
+}
+
+.p-sitemap__item__list-title__txt {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-white;
+}
+
+.p-sitemap__item__flex__inner[open] {
+  .p-sitemap__item__list-title {
+    & ::after {
+      transition: 0.4s;
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+}
+
+.p-sitemap__item__list {
+  background-color: #d7edec;
+}
+.p-sitemap__item__list__item {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-white;
+  position: relative;
+  width: 100%;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 3.5rem;
+  a {
+    font-size: 1.6rem;
+    font-family: global.$font-family-noto;
+    font-weight: 400;
+    color: global.$color-txt;
+  }
+  &:has(details) {
+    padding-left: 0;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__list__item {
+    padding-left: 4.5rem;
+  }
+}
+
+.p-sitemap__item__list__item + .p-sitemap__item__list__item {
+  border-top: 1px solid #fff;
+}
+
+.p-sitemap__item__list__item__child-list {
+  margin-top: 0.5rem;
+}
+
+.p-sitemap__item__list__item__child-list__item {
+  font-size: 1.4rem;
+  padding-left: 3.5rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-white;
+  position: relative;
+  width: 100%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__list__item__child-list__item {
+    padding-left: 4.5rem;
+  }
+}
+
+.p-sitemap__item__list__item__details__summary {
+  padding-left: 3.5rem;
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 400;
+  color: global.$color-txt;
+  position: relative;
+  &::after {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(../img/icon/toggle.svg);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    transition: 0.4s;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-sitemap__item__list__item__details__summary {
+    padding-left: 4.5rem;
+    &::after {
+      left: 2rem;
+    }
+  }
+}
+
+.p-sitemap__item__list__item__details[open] {
+  .p-sitemap__item__list__item__details__summary {
+    &::after {
+      transition: 0.4s;
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+}

@@ -1,0 +1,75 @@
+/* ****************************************************************************************************
+
+  # concept-description
+  - project
+
+**************************************************************************************************** */
+@use '../../../foundation/tool/global';
+
+.p-concept-description {
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+  border-bottom: 1px dashed global.$color-blue;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-description {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.p-concept-description__img {
+  width: 40%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-description__img {
+    width: 100%;
+  }
+}
+
+.p-concept-description__txt-box {
+  width: 60%;
+  padding: 1rem 0;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-description__txt-box {
+    width: 100%;
+  }
+}
+
+.p-concept-description__txt-box__title {
+  position: relative;
+  font-family: global.$font-family-noto;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: global.$color-txt;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-description__txt-box__title {
+    font-size: 1.8rem;
+  }
+}
+
+.p-concept-description__txt-box__txt {
+  position: relative;
+  margin-top: 3rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: global.$color-txt;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-description__txt-box__txt {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,158 @@
+/* ****************************************************************************************************
+
+  # top-gmap
+  - component
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-top-gmap {
+  display: flex;
+  align-items: stretch;
+  margin-top: 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-gmap {
+    flex-direction: column;
+  }
+}
+
+.p-top-gmap__txt-box {
+  width: 50%;
+  padding: 2rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-gmap__txt-box {
+    width: 100%;
+    padding: 10rem 2rem 6rem;
+  }
+}
+
+.p-top-gmap__txt-box__inner {
+  height: 100%;
+  border: 2px solid #fff;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-gmap__txt-box__inner {
+    border: none;
+  }
+}
+
+.p-top-gmap__txt-box__inner__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: center;
+  width: 43rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-gmap__txt-box__inner__list {
+    width: 100%;
+  }
+}
+
+.p-top-gmap__txt-box__inner__list__item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-gmap__txt-box__inner__list__item {
+    gap: 1rem;
+  }
+}
+
+.p-top-gmap__txt-box__inner__list__item__title {
+  position: relative;
+  width: 15rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: global.$color-txt;
+  text-align: center;
+  background-color: #fffaeb;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-gmap__txt-box__inner__list__item__title {
+    width: 8rem;
+    font-size: 1.2rem;
+  }
+}
+
+.p-top-gmap__txt-box__inner__list__item__content {
+  position: relative;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: global.$color-txt;
+  span {
+    font-weight: 400;
+  }
+  .br {
+    display: block;
+  }
+  .link {
+    color: global.$color-blue;
+    text-decoration: underline;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-gmap__txt-box__inner__list__item__content {
+    font-size: 1.5rem;
+  }
+}
+
+.p-top-gmap__txt-box__btn {
+  background-color: global.$color-blue;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.p-top-gmap__txt-box__btn__icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  width: 1.8rem;
+  transform: translate(-50%, -50%);
+}
+
+.p-top-gmap__txt-box__btn__txt {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-white;
+  position: relative;
+  text-align: center;
+  padding: 0.8rem 1rem;
+}
+
+.p-top-gmap__main {
+  width: 50%;
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-gmap__main {
+    width: 100%;
+    iframe {
+      height: 750px;
+    }
+  }
+}

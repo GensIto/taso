@@ -1,0 +1,148 @@
+/* ****************************************************************************************************
+
+  # activity
+  - project
+
+**************************************************************************************************** */
+@use '../../../foundation/tool/global';
+// ```
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity {
+    padding-top: 4rem;
+  }
+}
+
+.p-activity__content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.p-activity__content__txt {
+  width: 75%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity__content__txt {
+    width: 100%;
+  }
+}
+
+.p-activity__content__txt__title {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity__content__txt__title {
+    margin-bottom: 7rem;
+    line-height: 1;
+  }
+}
+
+.p-activity__content__txt__title__back {
+  font-size: 13rem;
+  font-family: global.$font-family-garamond;
+  font-weight: 500;
+  color: global.$color-white;
+  position: relative;
+  left: -7%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity__content__txt__title__back {
+    font-size: 4.9rem;
+    left: 0;
+  }
+}
+
+.p-activity__content__txt__title__front {
+  font-size: 3.2rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  display: block;
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  span {
+    display: block;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity__content__txt__title__front {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    bottom: -80%;
+  }
+}
+
+.p-activity__content__txt__p {
+  font-size: 1.8rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-txt;
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity__content__txt__p {
+    font-size: 1.5rem;
+  }
+}
+
+.p-activity__content__img-box {
+  width: 25%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity__content__img-box {
+    display: none;
+  }
+}
+
+.p-activity__content__img-box__img {
+  width: 60%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity__content__img-box__img {
+    width: 30%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-10%, -40%);
+  }
+}
+
+.p-activity___everytime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  margin-top: 8rem;
+}
+
+.p-activity__attention {
+  font-size: 2rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  position: relative;
+  margin-top: 2rem;
+  span {
+    display: block;
+    a {
+      color: blue;
+    }
+  }
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity__attention {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+}

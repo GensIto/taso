@@ -1,0 +1,82 @@
+/* ****************************************************************************************************
+
+  # more-btn
+  - components
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.c-more-btn {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-more-btn {
+    gap: 1rem;
+  }
+}
+
+.c-more-btn.c-more-btn--mini {
+  gap: 1rem;
+}
+
+.c-more-btn__txt {
+  position: relative;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: global.$color-txt;
+}
+
+.c-more-btn__arrow {
+  position: relative;
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 2px solid global.$color-blue;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    content: '';
+    border-top: 2px solid global.$color-blue;
+    border-right: 2px solid global.$color-blue;
+    transform: rotate(45deg) translateY(-50%);
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-more-btn__arrow {
+    width: 4.5rem;
+    height: 4.5rem;
+    &::before {
+      width: 0.7rem;
+      height: 0.7rem;
+    }
+  }
+}
+
+.c-more-btn__arrow.c-more-btn__arrow--mini {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: none;
+
+  &::before {
+    content: none;
+  }
+  &::after {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-image: url(../img/icon/toggle-green.svg);
+    content: '';
+  }
+}

@@ -1,0 +1,175 @@
+/* ****************************************************************************************************
+
+  # eat
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-eat__content {
+  display: flex;
+  gap: 5rem;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content {
+    flex-direction: column-reverse;
+  }
+}
+
+.p-eat__content__txt {
+  width: 35%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__txt {
+    width: 100%;
+    @include global.content-width-padding();
+  }
+}
+
+.p-eat__content__txt__eat {
+  position: relative;
+  left: -7%;
+  width: 70%;
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__txt__eat {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 15rem;
+    transform: translateY(-50%);
+  }
+}
+
+.p-eat__content__txt__title {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__txt__title {
+    margin-bottom: 6rem;
+  }
+}
+
+.p-eat__content__txt__title__back {
+  position: relative;
+  left: -7%;
+  font-family: global.$font-family-garamond;
+  font-size: 13rem;
+  font-weight: 500;
+  color: global.$color-white;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__txt__title__back {
+    left: 0;
+    font-size: 4.9rem;
+    line-height: 1;
+  }
+}
+
+.p-eat__content__txt__title__front {
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  display: block;
+  font-family: global.$font-family-noto;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: global.$color-txt;
+  span {
+    display: block;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__txt__title__front {
+    bottom: -80%;
+    left: 0;
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+}
+
+.p-eat__content__txt__p {
+  position: relative;
+  font-family: global.$font-family-noto;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: global.$color-txt;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__txt__p {
+    font-size: 1.5rem;
+  }
+}
+
+.p-eat__content__img-box {
+  position: relative;
+  width: 60%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__img-box {
+    width: 100%;
+    margin-top: -4rem;
+  }
+}
+
+.p-eat__content__img-box__img {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__img-box__img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.p-eat__content__img-box__wine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 15%;
+  transform: translate(-50%, 20%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__img-box__wine {
+    left: auto;
+    right: 0;
+    width: 8rem;
+    transform: translate(-20%, 20%);
+  }
+}
+
+.p-eat__content__img-box__beef {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 15%;
+  transform: translate(-50%, -50%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-eat__content__img-box__beef {
+    top: auto;
+    bottom: 0;
+    right: auto;
+    left: 0;
+    display: block;
+    width: 7rem;
+    transform: translate(10%, 30%);
+  }
+}

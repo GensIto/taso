@@ -1,0 +1,68 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "shingle";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv
+    div.l-kv__container
+      div.p-kv-title
+        h1.p-kv-title__item.p-kv-title__item--news NEWS
+        p.p-kv-title__p.u-mt2 ニュース
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/activity/kv-sky.jpg` alt="")
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- enjoy
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-5
+    img(src=`${relativePath}assets/img/section/white-dark-blue.svg` alt="")
+  section.l-section.l-section--gap_top-0.u-pt-sp8
+    div.l-container
+      div.p-notification
+        div.p-notification__main
+          p.c-container-title.c-fade-up.js-inview ニュースのジャンル
+          div.p-top-news__list
+          ul.c-news-list.c-news-list--notification.c-fade-up.js-inview
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box.c-news-list__item__content__txt-box--notification
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+          div.p-notification__main__pagination
+            a(href="").p-notification__main__pagination__prev
+              p 前の記事へ
+            ui.p-notification__main__pagination__num
+              li.p-notification__main__pagination__num__item.current
+                a(href="") 1
+              li.p-notification__main__pagination__num__item
+                a(href="") 1
+              li.p-notification__main__pagination__num__item
+                a(href="") 1
+            a(href="").p-notification__main__pagination__next
+              p 次の記事へ
+        div.p-notification__side-bar
+          p.p-notification__side-bar__title 最新記事
+          ul.p-notification__side-bar__list
+            li.p-notification__side-bar__list__item
+              p.p-notification__side-bar__list__item__p 全て
+            li.p-notification__side-bar__list__item
+              p.p-notification__side-bar__list__item__p 全て
+            li.p-notification__side-bar__list__item
+              ul.p-notification__side-bar__list__item__in-list
+                li.p-notification__side-bar__list__item__in-list__item
+                  p.p-notification__side-bar__list__item__in-list__item__p 遊ぶ

@@ -1,0 +1,434 @@
+/* ======================================================================
+
+  # environ-list
+  - component
+
+====================================================================== */
+@use '../../foundation/tool/global';
+
+.c-environ-list {
+  margin-top: 4rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list {
+    margin-top: 2rem;
+  }
+}
+
+.c-environ-list__item + .c-environ-list__item {
+  margin-top: 3rem;
+}
+
+.c-environ-list__item__title {
+  width: 40rem;
+  margin: 0 auto;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__title {
+    width: 20rem;
+  }
+}
+
+.c-environ-list__item__wrap {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+  margin-top: 3rem;
+  border-bottom: 1px dashed global.$color-blue;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap {
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.c-environ-list__item__wrap__slider {
+  position: relative;
+  width: 50%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__slider {
+    width: 100%;
+  }
+}
+
+.c-environ-list__item__wrap__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 46%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__content {
+    width: 100%;
+  }
+}
+
+.c-environ-list__item__wrap__content__title {
+  font-size: 2.2rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__content__title {
+    font-size: 1.8rem;
+  }
+}
+
+.c-environ-list__item__wrap__content__p {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 400;
+  color: global.$color-txt;
+  position: relative;
+}
+
+.c-environ-list__item__wrap__content__p
+  + .c-environ-list__item__wrap__content__p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__content__p {
+    font-size: 1.4rem;
+  }
+}
+
+.c-environ-list__item__wrap__content__description {
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__content__description {
+    margin-top: 1rem;
+  }
+}
+
+.c-environ-list__item__wrap__content__description__wrap {
+  padding: 2rem 3rem;
+  background-color: global.$color-blue-light;
+}
+
+.c-environ-list__item__wrap__content__description__wrap.green {
+  background-color: #d7edec;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__content__description__wrap {
+    padding: 2rem;
+  }
+}
+
+.c-environ-list__item__wrap__content__description__txt {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  &:last-child {
+    align-items: flex-start;
+  }
+}
+
+.c-environ-list__item__wrap__content__description__txt.c-environ-list__item__wrap__content__description__txt--start {
+  align-items: flex-start;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__content__description__txt {
+    &:has(span) {
+      margin-top: 1rem;
+      align-items: flex-start;
+    }
+  }
+}
+
+.c-environ-list__item__wrap__content__description__txt__title {
+  display: block;
+  width: 8rem;
+  padding: 0.1rem 1rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: global.$color-white;
+  text-align: center;
+  background-color: global.$color-purple;
+  border-radius: 0.3rem;
+}
+
+.c-environ-list__item__wrap__content__description__txt__title.green {
+  background-color: #009e91;
+}
+
+.c-environ-list__item__wrap__content__description__txt__content {
+  padding-bottom: 0.2rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: global.$color-txt;
+  span {
+    display: block;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__content__description__txt__content {
+    font-size: 1.2rem;
+  }
+}
+/* ****************************************************************************************************
+
+ # 予約ボタン
+
+**************************************************************************************************** */
+
+.c-environ-list__item__wrap__content__btn {
+  position: relative;
+  display: block;
+  background-color: global.$color-purple;
+}
+
+.c-environ-list__item__wrap__content__btn.green {
+  position: relative;
+  display: block;
+  background-color: #009e91;
+}
+
+.c-environ-list__item__wrap__content__btn.c-environ-list__item__wrap__content__btn--blank {
+  border: 1px solid global.$color-purple;
+  background-color: global.$color-white;
+  &::after,
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border: 1px solid global.$color-purple;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  &::after {
+    top: 45%;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+  &::before {
+    top: 55%;
+    transform: translateY(-50%);
+    left: 1.5rem;
+  }
+}
+
+.c-environ-list__item__wrap__content__btn__icon {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  display: block;
+  width: 2.2rem;
+  transform: translate(-50%, -50%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__content__btn__icon {
+    width: 2rem;
+  }
+}
+
+.c-environ-list__item__wrap__content__btn__txt {
+  position: relative;
+  padding: 0.8rem 0;
+  font-family: global.$font-family-noto;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: global.$color-white;
+  text-align: center;
+}
+
+.c-environ-list__item__wrap__content__btn__txt.c-environ-list__item__wrap__content__btn__txt__blank {
+  color: global.$color-purple;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__item__wrap__content__btn__txt {
+    font-size: 1.4rem;
+  }
+}
+
+/* ****************************************************************************************************
+
+ # swiper関連
+
+**************************************************************************************************** */
+
+.swiper-container.c-environ-list-slider {
+  overflow: hidden;
+}
+
+.c-environ-list-swiper-button-next {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  z-index: 10;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background-image: url('../img/icon/toggle-green.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(50%) translateY(-50%);
+
+  &::after {
+    content: none;
+  }
+}
+
+.c-environ-list-swiper-button-prev {
+  position: absolute;
+  bottom: 55%;
+  left: 0;
+  z-index: 10;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background-image: url('../img/icon/toggle-green.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg) translateX(50%) translateY(-50%);
+
+  &::after {
+    content: none;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list-swiper-button-prev,
+  .c-environ-list-swiper-button-next {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.c-environ-list-swiper-pagination {
+  position: relative;
+  bottom: 0 !important;
+  margin-top: 2rem;
+  text-align: center;
+
+  .swiper-pagination-bullet {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 1rem !important;
+    background: transparent;
+    border: 2px solid global.$color-blue;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: global.$color-blue;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list-swiper-pagination {
+    margin-top: 1rem;
+  }
+}
+
+/* ****************************************************************************************************
+
+ # grid
+
+**************************************************************************************************** */
+
+.c-environ-list__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__grid {
+    grid-template-columns: 1fr;
+    gap: 4em;
+  }
+}
+
+.c-environ-list__grid__card {
+  border-left: 1px solid #d9dce6;
+  border-right: 1px solid #d9dce6;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__grid__card {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.c-environ-list__grid__card__img {
+  position: relative;
+}
+.c-environ-list__grid__card__img__label {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 9rem;
+  text-align: center;
+  padding: 0.2rem 1.6rem;
+  background-color: #fff;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__grid__card__img__label {
+    font-size: 1.4rem;
+    width: 9rem;
+  }
+}
+
+.c-environ-list__grid__card__content {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.c-environ-list__grid__card__content__title {
+  font-size: 2.2rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__grid__card__content__title {
+    font-size: 1.8rem;
+  }
+}
+
+.c-environ-list__grid__card__content__p {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 400;
+  color: global.$color-txt;
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-environ-list__grid__card__content__p {
+    font-size: 1.4rem;
+  }
+}

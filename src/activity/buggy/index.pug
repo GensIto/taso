@@ -1,0 +1,265 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "activity";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv.l-kv--lg
+    div.l-kv__container.l-kv__container--lg
+      div.p-kv-title
+        div.p-kv-title__logo.p-kv-title__logo--sm
+          img.js-ofi(src=`${relativePath}assets/img/activity/buggy.svg` alt="")
+        p.p-kv-title__p.u-mt2 バギーツアー
+    div.l-kv__movie
+      div.l-kv__movie__box
+        //- video(poster=`${relativePath}` webkit-playsinline playsinline muted autoplay loop)
+        video(webkit-playsinline playsinline muted autoplay loop)
+          source(src=`${relativePath}assets/video/buggy.mp4` type="video/mp4")
+        //- <iframe width="560" height="315" src="https://www.youtube.com/embed/fPtBF1cbyXs?autoplay=1&mute=1&playsinline=1&loop=1&playlist=fPtBF1cbyXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-6
+    img(src=`${relativePath}assets/img/section/activity-buggy.svg` alt="")
+    div.p-decoration
+      img.p-decoration__activity(src=`${relativePath}assets/img/play/text-play.png` alt="")
+  section.l-section.l-section--gap_top-0.t-bg-yellow.u-pt-sp6
+    div.l-container.l-container--left-full
+      div.p-decoration
+        img.p-decoration__activity-bird(src=`${relativePath}assets/img/activity/illust-bird.png` alt="")
+      div.c-title.c-title--to-r.c-fade-up.js-inview
+        h1 BUGGY
+        p バギーツアー
+      div.p-activity-page.u-mt4
+        div.p-activity-page__img-box.c-fade-up.js-inview
+          p.p-activity-page__img-box__label.buggy 陸
+          p.p-activity-page__img-box__season.buggy 期間：通年
+          img(src=`${relativePath}assets/img/activity/buggy.jpg` alt="")
+        div.p-activity-page__txt-box
+          h2.p-activity-page__txt-box__title
+            span.p-activity-page__txt-box__title__back BUGGY
+            span.p-activity-page__txt-box__title__front
+              | 選べる3コース！伊勢志摩
+              span 国立公園をぶっとばせ!
+          p.p-activity-page__txt-box__p.u-mt6.u-mb2 緑豊かな伊勢志摩国立公園に位置する南伊勢の田曽地区。海からの風が心地よいこの山林をオフロードバギーで駆け抜ける爽快なアトラクションが登場！ 仲間で、家族で、理屈抜きに安全に楽しめるアウトドア体験をぜひ味わってください。
+          div.p-activity-page__txt-box__content
+            ul.p-activity-page__txt-box__content__list
+              li.p-activity-page__txt-box__content__list__item
+                p.p-activity-page__txt-box__content__list__item__title.buggy 体験時間
+                p.p-activity-page__txt-box__content__list__item__content 約50分〜
+              li.p-activity-page__txt-box__content__list__item.p-activity-page__txt-box__content__list__item-start
+                p.p-activity-page__txt-box__content__list__item__title.buggy 参加資格
+                p.p-activity-page__txt-box__content__list__item__content
+                  span 18歳以上
+                  span (要普通自動車免許)
+            h2.p-activity-page__txt-box__content__money
+              span.black 2時間
+              span.red.font-lg 10,000
+              span.red.yen 円
+              span.black (税込)/1名様
+            h2.p-activity-page__txt-box__content__money
+              span.font-sm.red.font-bold 宿ご利用で
+              span.font-md.red.font-bold 2,000
+              span.font-sm.red.font-bold 円OFF
+          a.p-activity-page__txt-box__content__btn.buggy.u-mt2(href='')
+            //- img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt='')
+            img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt='')
+            p.p-activity-page__txt-box__content__btn__txt 今すぐ予約する
+  section.l-section.t-bg-yellow
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}/assets/img/banner/buggy.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}/assets/img/banner/buggy-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/buggy.jpg` alt='')
+  section.l-section.t-bg-yellow
+    div.l-container
+      div.p-top-news
+        div.p-top-news__item.u-hide-mq-max-md.c-fade-up.js-inview
+          img.p-top-news__item__tree(src=`${relativePath}assets/img/news/illust-leaf.png` alt="")
+          div.p-top-news__item__title-box
+            h2.p-top-news__item__title-box__title NEWS
+            p.p-top-news__item__title-box__ruby ニュース
+            a.c-more-btn.u-mt6(href="#")
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+        div.c-title.u-hide-mq-min-md.u-mt6.c-fade-up.js-inview
+          h1 NEWS
+          p ニュース
+        div.p-top-news__list.c-fade-up.js-inview
+          ul.c-news-list
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.t-bg-yellow
+    img(src=`${relativePath}assets/img/section/dark-green-white.svg` alt="")
+  section.l-section.l-section--gap_top-0
+    div.l-container
+      p.c-container-title.c-fade-up.js-inview ビギナーからエキスパートまで
+      ul.p-activity-page-list.p-activity-page-list--buggy
+        li.p-activity-page-list__item-buggy.c-fade-up.js-inview
+          p.p-activity-page-list__item-buggy__title
+            span.p-activity-page-list__item-buggy__title__main バギー
+            span.p-activity-page-list__item-buggy__title__sub OCEAN PACIFIC COURSE
+          p.p-activity-page-list__item-buggy__level 難易度★
+          div.p-activity-page-list__item-buggy__content
+            div.p-activity-page-list__item-buggy__content__map
+              img(src=`${relativePath}assets/img/activity/buggy-item-map1.jpg` alt="")
+            div.p-activity-page-list__item-buggy__content__txt-box
+              p.p-activity-page-list__item-buggy__content__txt-box__title オフロード未体験の方でも気軽にチャレンジできる初心者向けコースです。山頂展望台にてコーヒーかソフトドリンクをサービス。
+              div.p-activity-page-list__item-buggy__content__txt-box__content
+                ul.p-activity-page-list__item-buggy__content__txt-box__content__ul
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 所用時間
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約50分
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 体験時間
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約20分
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 高低差
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約60m
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 走行距離
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約2.5km
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 参加資格
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 18歳以上（要普通自動車免許）
+                p.p-activity-page-list__item-buggy__content__txt-box__content__money
+                  span 7,000
+                  span.yen 円
+                  span.black (税込)〜
+              div.p-activity-page-list__item-buggy__content__img
+                img(src=`${relativePath}assets/img/activity/buggy-item1.jpg` alt="")
+                img(src=`${relativePath}assets/img/activity/buggy-item2.jpg` alt="")
+              a.p-activity-page__txt-box__content__btn.buggy.u-mt1(href='')
+                //- img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt='')
+                img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt='')
+                p.p-activity-page__txt-box__content__btn__txt 今すぐ予約する
+        li.p-activity-page-list__item-buggy.c-fade-up.js-inview
+          p.p-activity-page-list__item-buggy__title
+            span.p-activity-page-list__item-buggy__title__main バギー
+            span.p-activity-page-list__item-buggy__title__sub WILD BOAR COURSE
+          p.p-activity-page-list__item-buggy__level 難易度★★
+          div.p-activity-page-list__item-buggy__content
+            div.p-activity-page-list__item-buggy__content__map
+              img(src=`${relativePath}assets/img/activity/buggy-item-map2.jpg` alt="")
+            div.p-activity-page-list__item-buggy__content__txt-box
+              p.p-activity-page-list__item-buggy__content__txt-box__title 柑橘類の果樹園のために整備された農道をリノベーションした、環境に優しい本格的ダートコース。初めての方でも安心して走破できるコースです。
+              div.p-activity-page-list__item-buggy__content__txt-box__content
+                ul.p-activity-page-list__item-buggy__content__txt-box__content__ul
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 所用時間
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約60分
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 体験時間
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約30分
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 高低差
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約50m
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 走行距離
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約4.3km
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 参加資格
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 18歳以上（要普通自動車免許）
+                p.p-activity-page-list__item-buggy__content__txt-box__content__money
+                  span 10,000
+                  span.yen 円
+                  span.black (税込)〜
+              div.p-activity-page-list__item-buggy__content__img
+                img(src=`${relativePath}assets/img/activity/buggy-item3.jpg` alt="")
+                img(src=`${relativePath}assets/img/activity/buggy-item4.jpg` alt="")
+              a.p-activity-page__txt-box__content__btn.buggy.u-mt1(href='')
+                //- img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt='')
+                img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt='')
+                p.p-activity-page__txt-box__content__btn__txt 今すぐ予約する
+        li.p-activity-page-list__item-buggy.c-fade-up.js-inview
+          p.p-activity-page-list__item-buggy__title
+            span.p-activity-page-list__item-buggy__title__main バギー
+            span.p-activity-page-list__item-buggy__title__sub TASO PEAK COURSE
+          p.p-activity-page-list__item-buggy__level 難易度★★★
+          div.p-activity-page-list__item-buggy__content
+            div.p-activity-page-list__item-buggy__content__map
+              img(src=`${relativePath}assets/img/activity/buggy-item-map3.jpg` alt="")
+            div.p-activity-page-list__item-buggy__content__txt-box
+              p.p-activity-page-list__item-buggy__content__txt-box__title 田曽の森の最頂部を目指すエキスパートコースです。初心者コース経験者の方は、安心して乗り越えることができます。山頂展望台でコーヒーかソフトドリンクをサービス。
+              div.p-activity-page-list__item-buggy__content__txt-box__content
+                ul.p-activity-page-list__item-buggy__content__txt-box__content__ul
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 所用時間
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約70分
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 体験時間
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約40分
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 高低差
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約145m
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 走行距離
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 約5.3km
+                  li.p-activity-page-list__item-buggy__content__txt-box__content__li
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__title 参加資格
+                    p.p-activity-page-list__item-buggy__content__txt-box__content__p__content 18歳以上（要普通自動車免許）
+                p.p-activity-page-list__item-buggy__content__txt-box__content__money
+                  span 12,000
+                  span.yen 円
+                  span.black (税込)〜
+              div.p-activity-page-list__item-buggy__content__img
+                img(src=`${relativePath}assets/img/activity/buggy-item5.jpg` alt="")
+                img(src=`${relativePath}assets/img/activity/buggy-item6.jpg` alt="")
+              a.p-activity-page__txt-box__content__btn.buggy.u-mt1(href='')
+                //- img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt='')
+                img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt='')
+                p.p-activity-page__txt-box__content__btn__txt 今すぐ予約する
+
+  section.l-section.l-section--gap_top-0
+    div.l-container.c-fade-up.js-inview
+      p.c-container-title 万一怪我や事故があったら？
+      p.p-activity__attention AEDや、レスキューヘリなど、万全の体勢を整えておりますが、事前にレジャー保険のご加入をおすすめしております。
+        span レジャー保険：
+          a(href="https://www.hokende.com/damage-insurance/leisure" target='_blank') https://www.hokende.com/damage-insurance/leisure
+  section.l-section.l-section--gap_top-0.l-section--gap_bottom-0
+    div.l-container.l-container--full
+      div.p-activity-page-movie
+        div.p-activity-page-movie__label
+          img(src=`${relativePath}assets/img/activity/label.png` alt="")
+        div.p-activity-page-movie__content
+          img.p-activity-page-movie__content__img(src=`${relativePath}assets/img/activity/movie-buggy.png` alt="")
+          //- a.p-activity-page-movie__content__btn.buggy(href="")
+          //-   p.p-activity-page-movie__content__btn__txt.buggy 詳しくは伊勢志摩アドベンチャー特設サイトへ
+        div.p-activity-page-movie__bg
+          img(src=`${relativePath}assets/img/activity/movie-buggy-bg.jpg` alt="")
+  section.l-section
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}/assets/img/banner/buggy.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}/assets/img/banner/buggy-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/buggy.jpg` alt='')

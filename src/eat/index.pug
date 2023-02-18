@@ -1,0 +1,306 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "eat";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv
+    div.l-kv__container
+      div.p-kv-title
+        div.p-kv-title__logo.p-kv-title__logo--md
+          img.js-ofi(src=`${relativePath}assets/img/eat/logo.svg` alt="")
+        p.p-kv-title__p.u-mt2 Tボーンステーキカフェ
+    div.l-kv__movie#eat-video
+      div.l-kv__movie__box#youtube-movie-body
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jKjiL0zawxU?autoplay=1&mute=1&playsinline=1&loop=1&playlist=jKjiL0zawxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      //- img(src=`${relativePath}assets/img/eat/kv.jpg` alt="")
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- enjoy
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-5
+    img(src=`${relativePath}assets/img/section/eat.svg` alt="")
+    div.p-decoration
+      img.p-decoration__concept-flag.p-decoration__concept-flag--eat(src=`${relativePath}assets/img/news/illust-flag.png` alt="")
+    div.p-decoration
+      img.p-decoration__enjoy-eat(src=`${relativePath}assets/img/eat/text-eat.png` alt="")
+  section.l-section.l-section--gap_top-0.t-bg-light-pink.u-pt-sp8
+    div.l-container.l-container--left-full
+      div.c-title.c-title--to-r.c-fade-up.js-inview
+        h1 BBQ & CAFE
+        p バーベキュー & カフェ
+      div.p-eat-page.c-fade-up.js-inview
+        div.p-eat-page__content
+          div.p-eat-page__content__img-box
+            div.p-eat-page__content__img-box__label
+              img(src=`${relativePath}assets/img/eat/illust-meat.png` alt="")
+            img(src=`${relativePath}assets/img/eat/eat-page-main.jpg` alt="")
+          div.p-eat-page__content__txt-box
+            h2.p-eat-page__content__txt-box__title
+              span.p-eat-page__content__txt-box__title__back EAT
+              span.p-eat-page__content__txt-box__title__front
+                | 手ぶらで楽しめるBBQ♪
+                span カフェとしてのご利用も！
+            p.p-eat-page__content__txt-box__p.u-mt6 T BONE STEAK CAFE WOOD MEAT STEAK BEERは、三重県 南伊勢町 田曽白浜海岸にあるビーチサイドカフェ。厚切T-BONEステーキを本場アメリカンスタイルで召し上がれ。
+            p.p-eat-page__content__txt-box__p また、伊勢の海鮮や豪華なお肉が楽しめる、BBQの食材提供もおこなっております。
+
+  section.l-section.t-bg-light-pink
+    div.l-container
+      div.p-eat-page__bottom
+        ul.p-eat-page__bottom__cards
+          li.p-eat-page__bottom__cards__item.c-fade-up.js-inview
+            a.p-eat-page__bottom__cards__item__inner.p-eat-page__bottom__cards__item__inner--col(href="#")
+              div.p-eat-page__bottom__cards__label.p-eat-page__bottom__cards__label--img
+                img(src=`${relativePath}assets/img/eat/illust-cafe.png` alt="朝食・昼食・カフェ")
+              img.p-eat-page__bottom__cards__item__img.p-eat-page__bottom__cards__item__img--full(src=`${relativePath}assets/img/nav/eat-1.jpg` alt="朝食・昼食・カフェ")
+              p.p-eat-page__bottom__cards__item__txt 朝食・昼食・カフェ
+            ul.p-eat-page__bottom__cards__item__link-list
+              li.p-eat-page__bottom__cards__item__link-list__item
+                a.p-eat-page__bottom__cards__item__inner(href=`${relativePath}eat/#lunch`)
+                  p.p-eat-page__bottom__cards__item__link-list__item__txt 昼食
+              li.p-eat-page__bottom__cards__item__link-list__item
+                a.p-eat-page__bottom__cards__item__inner(href=`${relativePath}eat/cafe`)
+                  p.p-eat-page__bottom__cards__item__link-list__item__txt カフェ
+              li.p-eat-page__bottom__cards__item__link-list__item
+                a.p-eat-page__bottom__cards__item__inner(href=`${relativePath}eat/#morning`)
+                  p.p-eat-page__bottom__cards__item__link-list__item__txt 朝食
+          li.p-eat-page__bottom__cards__item.c-fade-up.js-inview
+            a.p-eat-page__bottom__cards__item__inner.p-eat-page__bottom__cards__item__inner--col(href="#")
+              div.p-eat-page__bottom__cards__label.p-eat-page__bottom__cards__label--img
+                img(src=`${relativePath}assets/img/eat/illust-bbq.png` alt="食材提供（手ぶらBBQ&海鮮）")
+              img.p-eat-page__bottom__cards__item__img.p-eat-page__bottom__cards__item__img--full(src=`${relativePath}assets/img/nav/eat-2.jpg` alt="食材提供（手ぶらBBQ&海鮮）")
+              p.p-eat-page__bottom__cards__item__txt 食材提供（手ぶらBBQ&海鮮）
+            ul.p-eat-page__bottom__cards__item__link-list.p-eat-page__bottom__cards__item__link-list--two
+              li.p-eat-page__bottom__cards__item__link-list__item
+                a.p-eat-page__bottom__cards__item__inner(href=`${relativePath}eat/#meet`)
+                  p.p-eat-page__bottom__cards__item__link-list__item__txt お肉
+              li.p-eat-page__bottom__cards__item__link-list__item
+                a.p-eat-page__bottom__cards__item__inner(href=`${relativePath}eat#sea`)
+                  p.p-eat-page__bottom__cards__item__link-list__item__txt 海鮮
+
+
+  //- **********************************************************************
+  //- cafe
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.t-bg-light-pink#cafe
+    img(src=`${relativePath}assets/img/section/yellow-white.svg` alt="")
+  section.l-section.l-section--gap_top-0.l-section--gap_bottom-lg.u-pt-sp6
+    div.l-container
+      div.p-eat-page-section.c-fade-up.js-inview
+        div.p-eat-page-section__content.p-eat-page-section__content--reverse
+          div.p-eat-page-section__content__txt.u-pl-sp0.u-pr-sp0.u-mt-5
+            div.p-eat-page-section__content__txt__label
+              img(src=`${relativePath}assets/img/eat/cafe-label.png` alt="")
+            h2.p-eat-page-section__content__txt__title
+              span.p-eat-page-section__content__txt__title__back CAFE
+              span.p-eat-page-section__content__txt__title__front 本場アメリカンスタイル
+                span のメニューが充実!
+            p.p-eat-page-section__content__txt__p T-BONEステーキやトマホークステーキなど、ステーキメニューが充実♪心ゆくまでお肉を楽しみたいお客様におすすめです。さらに、フィッシュ＆チップスや、各種サンド、南国情緒あふれるお飲み物もご用意しております。
+            p.p-eat-page-section__content__txt__p 美しい田曽白浜海岸のビーチと海を眺めながら、最高のひとときをお楽しみください。
+          div.p-eat-page-section__content__img-box
+            div.p-eat-page-section__content__img-box__label
+              img(src=`${relativePath}assets/img/eat/illust-drink.png` alt="")
+            picture
+              img.p-eat-page-section__content__img-box__img(src=`${relativePath}assets/img/enjoy/meat.jpg` alt="")
+  section.l-section.t-bg-cafe
+    div.l-container
+      div.p-eat-page-bottom
+        div.p-eat-page-bottom__top#lunch.c-fade-up.js-inview
+          p.c-container-title.u-mt8.u-mt-sp0 おすすめランチメニュー
+          div.p-eat-page-bottom__top__grid
+            div.p-eat-page-bottom__top__grid__item
+              img(src=`${relativePath}assets/img/eat/lunch-1.jpg` alt="")
+              div.p-eat-page-bottom__top__grid__item__txt-box
+                h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title フィッシュバーガー
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 1,500
+                      span 円（ポテト・ドリンク付）
+                p.p-eat-page-bottom__top__grid__item__txt-box__p 地元で取れた魚を使用しレタス、トマト、チーズを挟み食べ応え抜群のバーガーとなっております。
+            div.p-eat-page-bottom__top__grid__item
+              img(src=`${relativePath}assets/img/eat/lunch-2.jpg` alt="")
+              div.p-eat-page-bottom__top__grid__item__txt-box
+                h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title ホットドック
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 1,500
+                      span 円（ポテト・ドリンク付）
+                p.p-eat-page-bottom__top__grid__item__txt-box__p 1本でもお腹が満たされるジャンボフランクをパリッ焼いたバケットに挟んだ食べ甲斐のあるホットドッグです。
+            div.p-eat-page-bottom__top__grid__item
+              img(src=`${relativePath}assets/img/eat/lunch-3.jpg` alt="")
+              div.p-eat-page-bottom__top__grid__item__txt-box
+                h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title ステーキサンド
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 1,500
+                      span 円（ポテト・ドリンク付）
+                p.p-eat-page-bottom__top__grid__item__txt-box__p バケットにアメリカ産肩ロースをサンドした食べ応えのあるステーキサンドです
+          div.p-eat-page-bottom__bottom__grid
+            div.p-eat-page-bottom__bottom__grid__item.c-fade-up.js-inview
+              p.c-container-title.u-mt3.u-mb3 おすすめカフェメニュー
+              div.p-eat-page-bottom__bottom__grid__item__flex
+                div.p-eat-page-bottom__bottom__grid__item__flex__item
+                  img(src=`${relativePath}assets/img/eat/cafe-1.jpg` alt="")
+                  div.p-eat-page-bottom__top__grid__item__txt-box#js-match-align-eat
+                    h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                        span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title グレープフルーツカジュッタ
+                        span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 500
+                          span 円
+                    p.p-eat-page-bottom__top__grid__item__txt-box__p ソフトドリンク、種類豊富にございます。モンテヨーガや、南国気分を味わえるフレッシュジュースがおすすめ！
+                div.p-eat-page-bottom__bottom__grid__item__flex__item
+                  img(src=`${relativePath}assets/img/eat/cafe-2.jpg` alt="")
+                  div.p-eat-page-bottom__top__grid__item__txt-box#js-match-align-eat
+                    h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                        span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title アルコール
+                        span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 600
+                          span 円
+                    p.p-eat-page-bottom__top__grid__item__txt-box__p コロナビール・ハートランドビール・伊勢志摩ハイボール・スミノフレモネードなど取り揃えております。
+            div.p-eat-page-bottom__bottom__grid__item#morning.c-fade-up.js-inview
+              p.c-container-title.u-mt3.u-mt-sp0.u-mb3 朝食メニュー
+              div.p-eat-page-bottom__bottom__grid__item__flex__item
+                img.p-eat-page-bottom__bottom__grid__item__flex__item__must(src=`${relativePath}assets/img/icon/must-label.svg` alt="")
+                img(src=`${relativePath}assets/img/eat/morning.jpg` alt="")
+                div.p-eat-page-bottom__top__grid__item__txt-box#js-match-eat
+                  h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title 朝食セット
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 1,500
+                        span 円
+                  p.p-eat-page-bottom__top__grid__item__txt-box__p ボリューム満点のアクティブな朝ごはん
+                  p.p-eat-page-bottom__top__grid__item__txt-box__p ※前日までにご予約ください。
+                  p.p-eat-page-bottom__top__grid__item__txt-box__p ※テイクアウト不可
+    div.l-container.u-mt8
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}assets/img/banner/cafe.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}assets/img/banner/cafe-sp.jpg`)
+            img(src=`${relativePath}assets/img/banner/cafe.jpg` alt='')
+    div.l-container.u-mt8
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}assets/img/banner/takeout-reservation-pc.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}assets/img/banner/takeout-reservation-sp.jpg`)
+            img(src=`${relativePath}assets/img/banner/takeout-reservation-pc.jpg` alt='')
+  section.l-section.l-section--gap_top-lg.l-section--gap_bottom-0.t-bg-cafe
+    div.l-container.l-container--full#bbq
+      picture
+        img(src=`${relativePath}assets/img/section/brown-white.svg` alt="")
+  //- **********************************************************************
+  //- bbq
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-lg
+    div.l-container
+      div.p-eat-page-section.c-fade-up.js-inview
+        div.p-eat-page-section__content.p-eat-page-section__content--reverse
+          div.p-eat-page-section__content__txt.u-pl-sp0.u-pr-sp0.u-mt-5
+            div.p-eat-page-section__content__txt__label
+              img(src=`${relativePath}assets/img/eat/bbq-label.png` alt="")
+            h2.p-eat-page-section__content__txt__title
+              span.p-eat-page-section__content__txt__title__back BBQ
+              span.p-eat-page-section__content__txt__title__front 本場アメリカンスタイル
+                span のお肉や伊勢海鮮などの
+                span 食材をご提供
+            p.p-eat-page-section__content__txt__p 地元南伊勢町の旬の海産はもちろん、ゴージャスなT-BONEステーキや伊勢ワインなど、充実したメニューを取りそろえております。
+          div.p-eat-page-section__content__img-box
+            div.p-eat-page-section__content__img-box__label
+              img(src=`${relativePath}assets/img/eat/illust-meat.png` alt="")
+            picture
+              img.p-eat-page-section__content__img-box__img(src=`${relativePath}assets/img/eat/bbq.jpg` alt="")
+  section.l-section.l-section--gap_bottom-lg.t-bg-bbq
+    div.l-container
+      div.p-eat-page-bottom
+        div.p-eat-page-bottom__top
+          p.c-container-title.c-container-title---white.u-mt8.u-mt-sp0 おすすめのお肉食材
+          div.p-eat-page-bottom__top__grid.p-eat-page-bottom__top__grid--tow
+            div.p-eat-page-bottom__top__grid__item.c-fade-up.js-inview
+              img(src=`${relativePath}assets/img/eat/meet-1.jpg` alt="")
+              div.p-eat-page-bottom__top__grid__item__txt-box
+                h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title Tボーンステーキ
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 5,000
+                      span 円/1枚
+                p.p-eat-page-bottom__top__grid__item__txt-box__p T字型の骨がついたままのビーフステーキ。骨の片側にはサーロイン、もう一方にはテンダーロインがついており、両方の味を贅沢に楽しむことができます。
+            div.p-eat-page-bottom__top__grid__item.c-fade-up.js-inview
+              img(src=`${relativePath}assets/img/eat/meet-2.jpg` alt="")
+              div.p-eat-page-bottom__top__grid__item__txt-box
+                h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                  span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title トマホークステーキ
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 9,800
+                      span 円/1枚
+                p.p-eat-page-bottom__top__grid__item__txt-box__p 肩ロースとサーロインの中間に位置するリブアイを使った、見た目にも豪華なステーキ。
+                p.p-eat-page-bottom__top__grid__item__txt-box__p インパクトも最上級なスペシャルステーキです。
+
+          div.p-eat-page-bottom__top.c-fade-up.js-inview
+            p.c-container-title.c-container-title---white.u-mt8.u-mt-sp0 おすすめのお肉食材
+            div.p-eat-page-bottom__top__grid
+              div.p-eat-page-bottom__top__grid__item
+                img(src=`${relativePath}assets/img/eat/seafood-1.jpg` alt="")
+                div.p-eat-page-bottom__top__grid__item__txt-box#js-match-align-bbq
+                  h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title オマール海老とロブスターセット
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 6,000
+                        span 円
+                  p.p-eat-page-bottom__top__grid__item__txt-box__p ロブスター界の二代巨頭の対決です。
+                  p.p-eat-page-bottom__top__grid__item__txt-box__p 味の違いをお楽しみください。
+              div.p-eat-page-bottom__top__grid__item
+                img(src=`${relativePath}assets/img/eat/seafood-2.jpg` alt="")
+                div.p-eat-page-bottom__top__grid__item__txt-box#js-match-bbq
+                  h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title 地元の豪華舟盛りセット
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 20,000
+                        span 円
+                  p.p-eat-page-bottom__top__grid__item__txt-box__p 日本有数の漁獲量を誇る南伊勢町の新鮮な魚介類を、ふんだんに盛り合わせました。（2人前4,000円〜ございます）
+              div.p-eat-page-bottom__top__grid__item
+                img(src=`${relativePath}assets/img/eat/seafood-3.jpg` alt="")
+                div.p-eat-page-bottom__top__grid__item__txt-box#js-match-align-bbq
+                  h2.p-eat-page-bottom__top__grid__item__txt-box__title
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__circle
+                    span.p-eat-page-bottom__top__grid__item__txt-box__title__txt
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__title 海鮮BBQセット
+                      span.p-eat-page-bottom__top__grid__item__txt-box__title__txt__money 8,000
+                        span 円
+                  p.p-eat-page-bottom__top__grid__item__txt-box__p 季節とご予算に合わせて、旬の魚介類をセレクト。南伊勢町の参庄水産からお届けします。
+    div.l-container.u-mt8.u-mt-sp3
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}assets/img/banner/sea.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}assets/img/banner/sea-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/sea.jpg` alt='')
+    div.l-container.u-mt8
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}assets/img/banner/food-reservation-pc.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}assets/img/banner/food-reservation-sp.jpg`)
+            img(src=`${relativePath}assets/img/banner/food-reservation-pc.jpg` alt='')

@@ -1,0 +1,36 @@
+/* ****************************************************************************************************
+
+  # _concept-map-title
+  - project
+
+**************************************************************************************************** */
+@use '../../../foundation/tool/global';
+
+.p-concept-map-title {
+  width: 45rem;
+  margin: 8rem auto 0;
+
+  p {
+    position: relative;
+    margin-top: 1rem;
+    font-family: global.$font-family-noto;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: global.$color-txt;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-map-title {
+    width: 90%;
+    margin: 3rem auto 0;
+    p {
+      font-size: 1.8rem;
+    }
+  }
+}

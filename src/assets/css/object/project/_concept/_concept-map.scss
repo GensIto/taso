@@ -1,0 +1,108 @@
+/* ****************************************************************************************************
+
+  # _concept-map
+  - project
+
+**************************************************************************************************** */
+@use '../../../foundation/tool/global';
+
+.p-concept-map {
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-concept-map {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.p-concept-map__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30%;
+  transform: translate(10%, 10%);
+}
+
+.p-concept-map__forestmar {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  display: block;
+  width: 22%;
+  transform: translate(-50%, -50%);
+}
+
+.p-concept-map__stay {
+  position: absolute;
+  top: 21%;
+  right: 4.5%;
+  display: block;
+  width: 16%;
+  transform: translate(-50%, -50%);
+}
+
+.p-concept-map__lodge {
+  position: absolute;
+  bottom: 10%;
+  left: 35%;
+  display: block;
+  width: 14%;
+  transform: translate(-50%, -50%);
+}
+
+.p-concept-map__food {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 13%;
+  transform: translate(-22%, -24%);
+}
+
+.p-concept-map__skydiving {
+  position: absolute;
+  top: 50%;
+  left: 27%;
+  display: block;
+  width: 17%;
+  transform: translate(-20%, -35%);
+}
+
+.p-concept-map__buggy {
+  position: absolute;
+  top: 41%;
+  left: 0;
+  display: block;
+  width: 11%;
+  transform: translate(60%, -30%);
+}
+
+.p-concept-map__villa {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  display: block;
+  width: 11%;
+  transform: translate(-22%, -42%);
+}
+
+.p-concept-map__surfing {
+  position: absolute;
+  right: 12%;
+  bottom: 5%;
+  display: block;
+  width: 16%;
+  transform: translate(-50%, -50%);
+}
+
+.p-concept-map__info {
+  position: absolute;
+  right: 10%;
+  top: 52%;
+  display: block;
+  width: 14%;
+  transform: translate(-50%, -50%);
+}

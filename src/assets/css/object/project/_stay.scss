@@ -1,0 +1,165 @@
+/* ****************************************************************************************************
+
+  # stay
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-stay__content {
+  display: flex;
+  gap: 5rem;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content {
+    flex-direction: column;
+  }
+}
+
+.p-stay__content__txt {
+  width: 35%;
+  margin-top: -6rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content__txt {
+    width: 100%;
+    margin-top: 0;
+    @include global.content-width-padding();
+  }
+}
+
+.p-stay__content__txt__star {
+  display: block;
+  width: 30%;
+  margin-left: auto;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content__txt__star {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 0;
+    width: 30%;
+    transform: translate(-30%, -40%);
+  }
+  .p-stay__content__txt__star.p-stay__content__txt__star--page {
+    top: 60%;
+    transform: translate(-10%, -10%);
+  }
+}
+
+.p-stay__content__txt__title {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content__txt__title {
+    margin-bottom: 6rem;
+  }
+}
+
+.p-stay__content__txt__title__back {
+  position: relative;
+  left: -1%;
+  font-family: global.$font-family-garamond;
+  font-size: 13rem;
+  font-weight: 500;
+  color: #f4f5f8;
+  word-break: keep-all;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content__txt__title__back {
+    font-size: 4.9rem;
+  }
+}
+
+.p-stay__content__txt__title__front {
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  display: block;
+  font-family: global.$font-family-noto;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: global.$color-txt;
+
+  span {
+    display: block;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content__txt__title__front {
+    bottom: -40%;
+    left: 0;
+    line-height: 1.3;
+    font-size: 2.2rem;
+  }
+}
+
+.p-stay__content__txt__p {
+  position: relative;
+  font-family: global.$font-family-noto;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: global.$color-txt;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content__txt__p {
+    font-size: 1.5rem;
+  }
+}
+
+.p-stay__content__img-box {
+  position: relative;
+  width: 60%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content__img-box {
+    width: 100%;
+    margin-top: -6rem;
+  }
+}
+
+.p-stay__content__img-box__img {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content__img-box__img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.p-stay__content__img-box__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 40%;
+  max-width: 40rem;
+  transform: translate(30%, -50%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay__content__img-box__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 15rem;
+    max-width: none;
+    transform: translate(0%, -50%);
+  }
+}

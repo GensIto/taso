@@ -1,0 +1,358 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "stay";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv.l-kv--lg
+    div.l-kv__container.l-kv__container--lg
+      div.p-kv-title
+        div.p-kv-title__logo.p-kv-title__logo--lg
+          img.js-ofi(src=`${relativePath}assets/img/stay/kv-logo-camp.svg` alt="")
+        p.p-kv-title__p.u-mt2 田曽フォレストキャンプ
+    div.l-kv__movie#camp-video
+      div.l-kv__movie__box#youtube-movie-body
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2qD8LWdTSbU?autoplay=1&mute=1&playsinline=1&loop=1&playlist=2qD8LWdTSbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-6
+    img(src=`${relativePath}assets/img/section/stay-camp.svg` alt="")
+    div.p-decoration
+      img.p-decoration__stay(src=`${relativePath}assets/img/stay/text-hotel.png` alt="")
+  section.l-section.l-section--gap_top-0.t-bg-yellow.u-pt-sp4
+    div.l-container
+      div.p-decoration
+        img.p-decoration__stay-page(src=`${relativePath}assets/img/stay/illust-star.png` alt="")
+      div.c-title.c-fade-up.js-inview
+        h1 FOREST CAMP
+        p 森のグランピング
+
+      div.c-stay-shingle-page
+        h2.c-stay-shingle-page__title.c-fade-up.js-inview
+          span.c-stay-shingle-page__title__back EXCITING
+          span.c-stay-shingle-page__title__front リュクスでエキサイティングな体験
+    div.l-container.l-container--left-full
+      div.c-stay-shingle-page
+        div.c-stay-shingle-page__content
+          div.c-stay-shingle-page__content__swiper.c-fade-up.js-inview
+            div.c-stay-shingle-page__content__swiper-box.stay-shingle-page
+              ul.c-stay-shingle-page__content__swiper-wrap.swiper-wrapper
+                li.c-stay-shingle-page__content__swiper-slide.swiper-slide
+                  img(src=`${relativePath}assets/img/stay/camp-content1.jpg` alt="")
+                li.c-stay-shingle-page__content__swiper-slide.swiper-slide
+                  img(src=`${relativePath}assets/img/stay/camp-content1.jpg` alt="")
+                li.c-stay-shingle-page__content__swiper-slide.swiper-slide
+                  img(src=`${relativePath}assets/img/stay/camp-content1.jpg` alt="")
+            div.c-stay-shingle-page__content__swiper-pagination.swiper-pagination
+          div.c-stay-shingle-page__content__txt
+            p.c-stay-shingle-page__content__txt__p.c-fade-up.js-inview 伊勢神宮を詣で、サミットが行われた賢島を過ぎれば、観光客の喧騒もすこし落ち着き、ゆったりとした時間が流れる南伊勢町へ。どことなく翠みがかった海と白い砂浜のコントラストが美しい田曽白浜が静かに迎えてくれます。
+            p.c-stay-shingle-page__content__txt__p.c-fade-up.js-inview 海を見下ろす小高い丘の森の中に、TASO FOREST CAMPはあります。海風がそよふき、涼しい木陰が日差しを優しく和らげてくれます。テント内は電源とエアコン完備で、季節を問わずホテルのように快適にお過ごしいただけます。
+            p.c-stay-shingle-page__content__txt__p.c-fade-up.js-inview どうか腕時計は外して、あなただけの、あなたのための時間と空間を満喫してください。デッキチェアで一日中、部屋に積みっぱなしになっていた本に読みふけるのもよし。木立の隙間から見える美しい海をボーッと眺めているだけでも、充ち足りた気分になることでしょう。大切な人と、至高のひとときを、ここTASO FOREST CAMPで。
+    div.l-container
+      div.c-stay-shingle-page
+        div.c-stay-shingle-page__row-box
+          div.c-stay-shingle-page__row-box__item.c-fade-up.js-inview
+            img(src=`${relativePath}assets/img/stay/camp-content2.jpg` alt="")
+            p.c-stay-shingle-page__row-box__item__txt 地元の美味しい海鮮や、本場アメリカンスタイルのBBQもご用意しております。
+
+          div.c-stay-shingle-page__row-box__item.c-fade-up.js-inview
+            img(src=`${relativePath}assets/img/stay/camp-content3.jpg` alt="")
+            p.c-stay-shingle-page__row-box__item__txt 豊富なアクティビティや体験もご用意。スカイダイビングやマリンジェット、シュノーケリング、バギーなど、非日常を体感しませんか？
+  section.l-section.l-section--gap_top-0.t-bg-yellow
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}/assets/img/banner/camp.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}/assets/img/banner/camp-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/camp.jpg` alt='')
+  section.l-section.t-bg-yellow
+    div.l-container
+      div.p-top-news
+        div.p-top-news__item.u-hide-mq-max-md
+          img.p-top-news__item__tree(src=`${relativePath}assets/img/news/illust-leaf.png` alt="")
+          div.p-top-news__item__title-box.c-fade-up.js-inview
+            h2.p-top-news__item__title-box__title NEWS
+            p.p-top-news__item__title-box__ruby ニュース
+            a.c-more-btn.u-mt6(href="#")
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+        div.c-title.u-hide-mq-min-md.u-mt6.c-fade-up.js-inview
+          h1 NEWS
+          p ニュース
+        div.p-top-news__list
+          ul.c-news-list.c-fade-up.js-inview
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.t-bg-yellow
+    img(src=`${relativePath}assets/img/section/orange-white.svg` alt="")
+  section.l-section.l-section--gap_top-0.u-pt-sp6
+    div.l-container
+      div.c-title.c-fade-up.js-inview
+        h1 FACILITY
+        p 施設紹介
+      p.c-container-title.u-mt8.u-mt-sp2.c-fade-up.js-inview キャンプサイト 一覧
+      div.c-stay-shingle-page.u-mt3.u-mt-sp2
+        ul.c-stay-shingle-page__list
+          li.c-stay-shingle-page__list__item#white.c-fade-up.js-inview
+            p.c-stay-shingle-page__list__item__title
+              span.c-stay-shingle-page__list__item__title__circle.white
+              span.c-stay-shingle-page__list__item__title__txt
+                span.c-stay-shingle-page__list__item__title__txt__color [白]
+                span.c-stay-shingle-page__list__item__title__txt__title marshmallow/マシュマロ
+            div.c-stay-shingle-page__list__item__content
+              div.c-stay-shingle-page__list__item__content__img
+                div.c-stay-shingle-page__list__item__content__img__top
+                  img(src=`${relativePath}assets/img/stay/camp-item1.jpg` alt="")
+                div.c-stay-shingle-page__list__item__content__img__bottom
+                  img(src=`${relativePath}assets/img/stay/camp-item2.jpg` alt="")
+                  img(src=`${relativePath}assets/img/stay/camp-item3.jpg` alt="")
+
+              div.c-stay-shingle-page__list__item__content__txt
+                p.c-stay-shingle-page__list__item__content__txt__p 緑と白を基調としたサイト。TASO FOREST CAMPの最上部に位置します。広々とした専用空間は木漏れ日が優しい木立に囲まれ、ほどよいプライベート感。優雅なひとときをお過ごしください。
+                div.c-stay-shingle-page__list__item__content__txt__about.black
+                  ul.c-stay-shingle-page__list__item__content__txt__about__list
+                    li.c-stay-shingle-page__list__item__content__txt__about__list__item
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__title.black エリア
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__content 山沿いエリア
+                    li.c-stay-shingle-page__list__item__content__txt__about__list__item
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__title.black 最大人数
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__content 1棟あたり最大8人 / 3棟でMAX24名まで
+                  p.c-stay-shingle-page__list__item__content__txt__about__money
+                    span.black 1棟あたり
+                    span.red.font-lg 35,000
+                    span.red.yen 円〜
+                    span.black (税込)
+                ul.c-stay-shingle-page__list__item__content__txt__about__set
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.black
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold 寝具：
+                      span シングルベッド×2台、ソファベッド1台、コット＆シュラフ1セット
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.black
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold  備品：
+                      span  エアコン、電源、ドレッサー、冷蔵庫、ドライヤー、タオル(人数×1枚）、フェイスタオル(人数×1枚）
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.black
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold BBQ備品：
+                      span BBQ用コンロ＆網＆鉄板、ケトル、ケトル用ガスコンロ、お皿(8枚）フォーク8枚、マグカップ(人数分）
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.black
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold お風呂：
+                      span お湯が使える専用ジェットバス
+                a.c-stay-shingle-page__list__item__content__txt__about__btn.black(href='')
+                  img.c-stay-shingle-page__list__item__content__txt__about__btn__icon(src=`${relativePath}/assets/img/icon/calendar-y.svg` alt='')
+                  p.c-stay-shingle-page__list__item__content__txt__about__btn__txt 今すぐ予約する
+
+          li.c-stay-shingle-page__list__item#red.c-fade-up.js-inview
+            p.c-stay-shingle-page__list__item__title
+              span.c-stay-shingle-page__list__item__title__circle.red
+              span.c-stay-shingle-page__list__item__title__txt
+                span.c-stay-shingle-page__list__item__title__txt__color [赤]
+                span.c-stay-shingle-page__list__item__title__txt__title mont blanc/モンブラン
+
+            div.c-stay-shingle-page__list__item__content
+              div.c-stay-shingle-page__list__item__content__img
+                div.c-stay-shingle-page__list__item__content__img__top
+                  img(src=`${relativePath}assets/img/stay/camp-item4.jpg` alt="")
+                div.c-stay-shingle-page__list__item__content__img__bottom
+                  img(src=`${relativePath}assets/img/stay/camp-item5.jpg` alt="")
+                  img(src=`${relativePath}assets/img/stay/camp-item6.jpg` alt="")
+
+              div.c-stay-shingle-page__list__item__content__txt
+                p.c-stay-shingle-page__list__item__content__txt__p 赤と白を基調としたサイト。このサイト専用の展望台を併設しています。テントにはキングサイズベッドとソファ（ソファベッド）をご用意。エキストラテントを併用いただくことで、最大8名様まで宿泊可能です。
+                div.c-stay-shingle-page__list__item__content__txt__about.red
+                  ul.c-stay-shingle-page__list__item__content__txt__about__list
+                    li.c-stay-shingle-page__list__item__content__txt__about__list__item
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__title.red エリア
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__content 山沿いエリア
+                    li.c-stay-shingle-page__list__item__content__txt__about__list__item
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__title.red 最大人数
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__content 1棟あたり最大8人 / 3棟でMAX24名まで
+                  p.c-stay-shingle-page__list__item__content__txt__about__money
+                    span.black 1棟あたり
+                    span.red.font-lg 35,000
+                    span.red.yen 円〜
+                    span.black (税込)
+                ul.c-stay-shingle-page__list__item__content__txt__about__set
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.red
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold 寝具：
+                      span シングルベッド×2台、ソファベッド1台、コット＆シュラフ1セット
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.red
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold  備品：
+                      span  エアコン、電源、ドレッサー、冷蔵庫、ドライヤー、タオル(人数×1枚）、フェイスタオル(人数×1枚）
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.red
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold BBQ備品：
+                      span BBQ用コンロ＆網＆鉄板、ケトル、ケトル用ガスコンロ、お皿(8枚）フォーク8枚、マグカップ(人数分）
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.red
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold お風呂：
+                        span お湯が使える専用ジェットバス
+                a.c-stay-shingle-page__list__item__content__txt__about__btn.red(href='')
+                  img.c-stay-shingle-page__list__item__content__txt__about__btn__icon(src=`${relativePath}/assets/img/icon/calendar-y.svg` alt='')
+                  p.c-stay-shingle-page__list__item__content__txt__about__btn__txt 今すぐ予約する
+
+          li.c-stay-shingle-page__list__item#orange.c-fade-up.js-inview
+            p.c-stay-shingle-page__list__item__title
+              span.c-stay-shingle-page__list__item__title__circle.orange
+              span.c-stay-shingle-page__list__item__title__txt
+                span.c-stay-shingle-page__list__item__title__txt__color [オレンジ]
+                span.c-stay-shingle-page__list__item__title__txt__title pumpkin/パンプキン
+
+            div.c-stay-shingle-page__list__item__content
+              div.c-stay-shingle-page__list__item__content__img
+                div.c-stay-shingle-page__list__item__content__img__top
+                  img(src=`${relativePath}assets/img/stay/camp-item7.jpg` alt="")
+                div.c-stay-shingle-page__list__item__content__img__bottom
+                  img(src=`${relativePath}assets/img/stay/camp-item8.jpg` alt="")
+                  img(src=`${relativePath}assets/img/stay/camp-item9.jpg` alt="")
+
+              div.c-stay-shingle-page__list__item__content__txt
+                p.c-stay-shingle-page__list__item__content__txt__p オレンジと白を基調としたサイト。TASO FOREST CAMPの中で一番海に近いサイトです。海や空を満喫したあとは、お湯も使える専用ジェットバスで快適にお過ごしください。
+                div.c-stay-shingle-page__list__item__content__txt__about.orange
+                  ul.c-stay-shingle-page__list__item__content__txt__about__list
+                    li.c-stay-shingle-page__list__item__content__txt__about__list__item
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__title.orange エリア
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__content 山沿いエリア
+                    li.c-stay-shingle-page__list__item__content__txt__about__list__item
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__title.orange 最大人数
+                      p.c-stay-shingle-page__list__item__content__txt__about__list__item__content 1棟あたり最大8人 / 3棟でMAX24名まで
+                  p.c-stay-shingle-page__list__item__content__txt__about__money
+                    span.black 1棟あたり
+                    span.red.font-lg 35,000
+                    span.red.yen 円〜
+                    span.black (税込)
+                ul.c-stay-shingle-page__list__item__content__txt__about__set
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.orange
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold 寝具：
+                      span シングルベッド×2台、ソファベッド1台、コット＆シュラフ1セット
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.orange
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold  備品：
+                      span  エアコン、電源、ドレッサー、冷蔵庫、ドライヤー、タオル(人数×1枚）、フェイスタオル(人数×1枚）
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.orange
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold BBQ備品：
+                      span BBQ用コンロ＆網＆鉄板、ケトル、ケトル用ガスコンロ、お皿(8枚）フォーク8枚、マグカップ(人数分）
+                  li.c-stay-shingle-page__list__item__content__txt__about__set__item
+                    span.c-stay-shingle-page__list__item__content__txt__about__set__item__circle.orange
+                    p.c-stay-shingle-page__list__item__content__txt__about__set__item__txt
+                      span.bold お風呂：
+                      span お湯が使える専用ジェットバス
+                a.c-stay-shingle-page__list__item__content__txt__about__btn.orange(href='')
+                  img.c-stay-shingle-page__list__item__content__txt__about__btn__icon(src=`${relativePath}/assets/img/icon/calendar-y.svg` alt='')
+                  p.c-stay-shingle-page__list__item__content__txt__about__btn__txt 今すぐ予約する
+
+  section.l-section.l-section--gap_top-0.l-section--gap_bottom-0
+    div.l-container.l-container--full
+      div.c-stay-shingle-page__movie
+        div.c-stay-shingle-page__movie__label
+          img(src=`${relativePath}assets/img/activity/label.png` alt="")
+        div.c-stay-shingle-page__movie__content
+          img.c-stay-shingle-page__movie__content__img(src=`${relativePath}assets/img/stay/movie-camp.jpg` alt="")
+        div.c-stay-shingle-page__movie__bg.camp
+          img(src=`${relativePath}assets/img/stay/movie-camp-bg.jpg` alt="")
+  section.l-section.t-bg-yellow.u-pt-sp8
+    div.l-container.l-container--full
+      div.c-title.c-fade-up.js-inview
+        h1 ENJOY
+        p 過ごし方
+      div.p-enjoy__swiper.p-enjoy__swiper--p0.c-fade-up.js-inview
+        div.top-enjoy-swiper-to-l
+          ul.top-enjoy-swiper-wrapper.swiper-wrapper
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-01.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-02.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-03.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-04.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-05.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-06.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-07.jpg` alt='')
+        div.top-enjoy-swiper-to-r
+          ul.top-enjoy-swiper-wrapper.swiper-wrapper
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-08.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-09.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-10.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-11.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-12.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-13.jpg` alt='')
+            li.swiper-slide
+              span.top-enjoy-swiper-wrapper__swiper-slide__line
+              img(src=`${relativePath}assets/img/enjoy/slide-14.jpg` alt='')
+      a.p-enjoy__btn(href="")
+        p 過ごし方を見る
+  section.l-section
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}/assets/img/banner/camp.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}/assets/img/banner/camp-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/camp.jpg` alt='')

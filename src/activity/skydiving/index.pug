@@ -1,0 +1,219 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "activity";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv.l-kv--lg
+    div.l-kv__container.l-kv__container--lg
+      div.p-kv-title
+        div.p-kv-title__logo
+          img.js-ofi(src=`${relativePath}assets/img/activity/sky.svg` alt="")
+        p.p-kv-title__p.u-mt2 伊勢志摩スカイダイビングクラブ
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/activity/kv-sky.jpg` alt="")
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-6
+    img(src=`${relativePath}assets/img/section/activity-sky.svg` alt="")
+    div.p-decoration
+      img.p-decoration__activity(src=`${relativePath}assets/img/play/text-play.png` alt="")
+  section.l-section.l-section--gap_top-0.t-bg-activity-sky.u-pt-sp6
+    div.l-container.l-container--left-full
+      div.p-decoration.c-fade-up.js-inview
+        img.p-decoration__activity-bird(src=`${relativePath}assets/img/activity/illust-bird.png` alt="")
+      div.c-title.c-title--to-r.c-fade-up.js-inview
+        h1 SKYDIVING
+        p スカイダイビング
+      div.p-activity-page.u-mt4.u-mt-sp2.c-fade-up.js-inview
+        div.p-activity-page__img-box
+          p.p-activity-page__img-box__label.sky 空
+          p.p-activity-page__img-box__season.sky 期間：通年
+          img(src=`${relativePath}assets/img/activity/sky.jpg` alt="")
+        div.p-activity-page__txt-box
+          h2.p-activity-page__txt-box__title
+            span.p-activity-page__txt-box__title__back DIVING
+            span.p-activity-page__txt-box__title__front
+              | 伊勢志摩の
+              span 日本最高級の絶景から
+              span スカイダイビング
+          p.p-activity-page__txt-box__p.u-mt8.u-mb2 関西で有数のプロのインストラクターとのタンデムスカイダイビングをご体験いただけます。地球が丸く見えるほどの高さからのダイビングはスリル満点。人生を変えると言われるほどの興奮を体感してください！
+          div.p-activity-page__txt-box__content
+            ul.p-activity-page__txt-box__content__list
+              li.p-activity-page__txt-box__content__list__item
+                p.p-activity-page__txt-box__content__list__item__title.sky 体験時間
+                p.p-activity-page__txt-box__content__list__item__content 約20分（1ジャンプ）
+              li.p-activity-page__txt-box__content__list__item
+                p.p-activity-page__txt-box__content__list__item__title.sky 所要時間
+                p.p-activity-page__txt-box__content__list__item__content 約2時間
+              li.p-activity-page__txt-box__content__list__item
+                p.p-activity-page__txt-box__content__list__item__title.sky 対象
+                p.p-activity-page__txt-box__content__list__item__content 16才以上、体重45~100kg
+            h2.p-activity-page__txt-box__content__money
+              span.red.font-lg 59,800
+              span.red.yen 円
+              span.black (税込)
+          a.p-activity-page__txt-box__content__btn.sky.u-mt2(href='')
+            img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt='')
+            p.p-activity-page__txt-box__content__btn__txt 今すぐ予約する
+  section.l-section.t-bg-activity-sky
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}/assets/img/banner/sky.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}/assets/img/banner/sky-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/sky.jpg` alt='')
+  section.l-section.t-bg-activity-sky
+    div.l-container
+      div.p-top-news
+        div.p-top-news__item.u-hide-mq-max-md
+          img.p-top-news__item__tree(src=`${relativePath}assets/img/news/illust-leaf.png` alt="")
+          div.p-top-news__item__title-box.c-fade-up.js-inview
+            h2.p-top-news__item__title-box__title NEWS
+            p.p-top-news__item__title-box__ruby ニュース
+            a.c-more-btn.u-mt6(href="#")
+              p.c-more-btn__txt 詳しく見る
+              div.c-more-btn__arrow
+        div.c-title.u-hide-mq-min-md.u-mt6.c-fade-up.js-inview
+          h1 NEWS
+          p ニュース
+        div.p-top-news__list.c-fade-up.js-inview
+          ul.c-news-list
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+            li
+              a.c-news-list__item(href="#")
+                p.c-news-list__item__data 2022/12/31
+                div.c-news-list__item__content
+                  p.c-news-list__item__content__title ここにタイトルが入ります
+                  div.c-news-list__item__content__txt-box
+                    p.c-news-list__item__content__txt-box__txt ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいりますここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります。ここにニュースの内容がはいります
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.t-bg-activity-sky
+    img(src=`${relativePath}assets/img/section/blue-white.svg` alt="")
+  section.l-section.l-section--gap_top-0
+    div.l-container.l-container--mini
+      p.c-container-title.c-fade-up.js-inview 体験の流れ
+      ul.p-activity-page-list
+        li.p-activity-page-list__item.c-fade-up.js-inview
+          div.p-activity-page-list__item__img
+            img(src=`${relativePath}assets/img/activity/sky-item1.jpg` alt="")
+          div.p-activity-page-list__item__txt-box
+            h2.p-activity-page-list__item__txt-box__title 安全講習
+            div.p-activity-page-list__item__txt-box__content
+              p.p-activity-page-list__item__txt-box__content__p 受付いただいた後、安全講習がございます。正しい知識を身につけていただくことで、初めての方でも安心して、スカイダイビングを体験いただけます。
+        li.p-activity-page-list__item.c-fade-up.js-inview
+          div.p-activity-page-list__item__img
+            img(src=`${relativePath}assets/img/activity/sky-item2.jpg` alt="")
+          div.p-activity-page-list__item__txt-box
+            h2.p-activity-page-list__item__txt-box__title 最終確認
+            div.p-activity-page-list__item__txt-box__content
+              p.p-activity-page-list__item__txt-box__content__p 装備やハーネス着用をしっかり確認。楽しさだけでなく安全管理も徹底しています。
+              p.p-activity-page-list__item__txt-box__content__p 2019年は129名の方に体験いただいております。
+        li.p-activity-page-list__item.c-fade-up.js-inview
+          div.p-activity-page-list__item__img
+            img(src=`${relativePath}assets/img/activity/sky-item3.jpg` alt="")
+          div.p-activity-page-list__item__txt-box
+            h2.p-activity-page-list__item__txt-box__title ヘリコプターで大空へ
+            div.p-activity-page-list__item__txt-box__content
+              p.p-activity-page-list__item__txt-box__content__p いよいよヘリコプターで高度10,000ft（3,000m）の上空へ！地平線が丸く見えるほどの高さから見渡す世界はまさに絶景。インストラクターによってヘリコプターの扉が開かれ、いよいよスカイダイビングの体勢に入ります。ドキドキもMAX!!!!!
+        li.p-activity-page-list__item.c-fade-up.js-inview
+          div.p-activity-page-list__item__img
+            img(src=`${relativePath}assets/img/activity/sky-item4.jpg` alt="")
+          div.p-activity-page-list__item__txt-box
+            h2.p-activity-page-list__item__txt-box__title スカイダイブ
+            div.p-activity-page-list__item__txt-box__content
+              p.p-activity-page-list__item__txt-box__content__p レッツスカイダイビング!!!!!!!!!!!!!!!!!時速250kmのフリーフォールが数十秒間続きます。
+              p.p-activity-page-list__item__txt-box__content__p アドレナリンは全開です！
+        li.p-activity-page-list__item.c-fade-up.js-inview
+          div.p-activity-page-list__item__img
+            img(src=`${relativePath}assets/img/activity/sky-item5.jpg` alt="")
+          div.p-activity-page-list__item__txt-box
+            h2.p-activity-page-list__item__txt-box__title パラシュートでゆっくり遊覧
+            div.p-activity-page-list__item__txt-box__content
+              p.p-activity-page-list__item__txt-box__content__p パラシュート展開!気温も一気にあがり、景色をゆったりと眺められる優雅なひととき。上空から南伊勢の美しく独特な海岸線の地形や、五ヶ所湾の海の蒼さを存分に満喫してください。
+        li.p-activity-page-list__item.c-fade-up.js-inview
+          div.p-activity-page-list__item__img
+            img(src=`${relativePath}assets/img/activity/sky-item6.jpg` alt="")
+          div.p-activity-page-list__item__txt-box
+            h2.p-activity-page-list__item__txt-box__title ふんわり着陸
+            div.p-activity-page-list__item__txt-box__content
+              p.p-activity-page-list__item__txt-box__content__p ドロップポイントにソフトランディング。記念すべきスカイダイビングは、インストラクターの左腕のGoProでしっかり映像と静止画で記録されています。ぜひ、お友達やご家族に見せて盛り上がってください。
+  section.l-section.l-section--gap_top-0.l-section--gap_bottom-0
+    div.l-container.l-container--full
+      div.p-activity-page-movie
+        div.p-activity-page-movie__label
+          img(src=`${relativePath}assets/img/activity/label.png` alt="")
+        div.p-activity-page-movie__content
+          img.p-activity-page-movie__content__img(src=`${relativePath}assets/img/activity/movie-sky.png` alt="")
+          a.p-activity-page-movie__content__btn.sky(href="")
+            p.p-activity-page-movie__content__btn__txt.sky 詳しくはスカイダイビング特設サイトへ
+        div.p-activity-page-movie__bg
+          img(src=`${relativePath}assets/img/activity/movie-sky-bg.jpg` alt="")
+  section.l-section
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}/assets/img/banner/sky.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}/assets/img/banner/sky-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/sky.jpg` alt='')
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0
+    img(src=`${relativePath}assets/img/section/activity-helicopter.svg` alt="")
+  section.l-section.l-section--gap_top-0.t-bg-activity-sky.u-pt-sp4
+    div.l-container.l-container--left-full
+      div.c-title.c-title--to-r.c-fade-up.js-inview
+        h1 HELICOPTER
+        p ヘリコプター
+      div.p-activity-page.u-mt4
+        div.p-activity-page__img-box.c-fade-up.js-inview
+          img(src=`${relativePath}assets/img/activity/helicopter.jpg` alt="")
+        div.p-activity-page__txt-box.c-fade-up.js-inview
+          h2.p-activity-page__txt-box__title
+            span.p-activity-page__txt-box__title__back SKY
+            span.p-activity-page__txt-box__title__front
+              | 伊勢志摩鳥羽
+              span ヘリコプター遊覧
+          p.p-activity-page__txt-box__p.u-mt6.u-mb2 フライトツアー「伊勢志摩鳥羽 天空の旅」をはじめ、チャーターフライトやナイトフライトなどが楽しめるので、スカイクルージングに興味がある人にオススメです。地上では見えない場所、歩いて行けない場所。そんな特別な景色を見にいきませんか？
+          div.p-activity-page__txt-box__content
+            ul.p-activity-page__txt-box__content__list
+              li.p-activity-page__txt-box__content__list__item
+                p.p-activity-page__txt-box__content__list__item__title.sky 所要時間
+                p.p-activity-page__txt-box__content__list__item__content 約3分
+            h2.p-activity-page__txt-box__content__money
+              span.red.font-lg 6,000
+              span.red.yen 円~
+              span.black (税込)
+          p.p-activity-page__txt-box__p.p-activity-page__txt-box__p--font-weight400.u-mt2 貸し切りやコースなどが選択可能！
+          p.p-activity-page__txt-box__p.p-activity-page__txt-box__p--font-weight400 詳しくはお問い合わせください！
+          a.p-activity-page__txt-box__content__btn.sky.u-mt2(href='')
+            img.p-activity-page__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt='')
+            p.p-activity-page__txt-box__content__btn__txt 今すぐ予約する
+  section.l-section.t-bg-activity-sky
+    div.l-container
+      div.p-bnr
+        a.p-bnr__inner(href='')
+          picture
+            source(media='(min-width:768px)' srcset=`${relativePath}/assets/img/banner/sky.jpg`)
+            source(media='(min-width:350px)' srcset=`${relativePath}/assets/img/banner/sky-sp.jpg`)
+            img(src=`${relativePath}/assets/img/banner/sky.jpg` alt='')

@@ -1,0 +1,46 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "company";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv
+    div.l-kv__container
+      div.p-kv-title
+        h1.p-kv-title__item.p-kv-title__item--news COMPANY
+        p.p-kv-title__p.u-mt2 会社概要
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/kv/company.jpg` alt="")
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- enjoy
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-5
+    img(src=`${relativePath}assets/img/section/white-dark-blue.svg` alt="")
+  section.l-section.l-section--gap_top-0.u-pt-sp8
+    div.l-container
+      div.p-company
+        ul.p-company__list
+          li.p-company__list__item
+            p.p-company__list__item__title 会社名
+            p.p-company__list__item__content 伊勢志摩観光開発株式会社
+          li.p-company__list__item
+            p.p-company__list__item__title 住所
+            p.p-company__list__item__content
+              span 〒516-0222
+              span 三重県度会郡南伊勢町田曽浦119-1
+          li.p-company__list__item
+            p.p-company__list__item__title 電話番号
+            p.p-company__list__item__content 0599-77-6208

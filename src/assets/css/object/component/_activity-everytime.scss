@@ -1,0 +1,188 @@
+/* ======================================================================
+
+  #
+  - component
+
+====================================================================== */
+@use '../../foundation/tool/global';
+
+.c-activity-everytime {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-top: 8rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-activity-everytime {
+    gap: 5rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+.c-activity-everytime__item {
+  flex: 1;
+}
+
+.c-activity-everytime__item__img-box {
+  position: relative;
+}
+
+.c-activity-everytime__item__img-box__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  font-family: global.$font-family-hina;
+  font-size: 3.2rem;
+  font-weight: normal;
+  color: global.$color-white;
+  border-radius: 50%;
+  transform: translate(-30%, -40%);
+
+  &.sky {
+    background-color: global.$color-sky;
+  }
+
+  &.sea {
+    background-color: global.$color-purple;
+  }
+
+  &.land {
+    background-color: global.$color-green;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-activity-everytime__item__img-box__label {
+    font-size: 3rem;
+    transform: translate(-15%, -50%);
+  }
+}
+
+.c-activity-everytime__item__img-box__period {
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding: 0.1rem 0.6rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: global.$color-white;
+  transform: translateY(50%);
+
+  &.sky {
+    background-color: global.$color-sky;
+  }
+
+  &.sea {
+    background-color: global.$color-purple;
+  }
+
+  &.land {
+    background-color: global.$color-green;
+  }
+}
+
+.c-activity-everytime__item__btn {
+  position: relative;
+  display: block;
+  background-color: global.$color-green-light;
+}
+
+.c-activity-everytime__item__btn.c-activity-everytime__item__btn--disable {
+  background-color: global.$color-gray;
+}
+
+.c-activity-everytime__item__btn__icon {
+  position: absolute;
+  top: 50%;
+  left: 2.8rem;
+  display: block;
+  width: 2.2rem;
+  transform: translate(-50%, -50%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-activity-everytime__item__btn__icon {
+    left: 2rem;
+  }
+}
+
+.c-activity-everytime__item__btn__txt {
+  position: relative;
+  padding: 0.8rem 4rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: global.$color-white;
+  text-align: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-activity-everytime__item__btn.c-activity-everytime__item__btn--disable {
+  .c-activity-everytime__item__btn__txt {
+    font-size: 1.4rem;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-activity-everytime__item__btn__txt {
+    padding: 0.8rem 0rem;
+    font-size: 1.5rem;
+  }
+}
+
+.c-activity-everytime__item__txt-box {
+  padding: 4rem 2rem 2rem;
+  background-color: #fff;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-activity-everytime__item__txt-box {
+    padding: 3rem 2rem 2rem;
+  }
+}
+
+.c-activity-everytime__item__txt-box__title {
+  position: relative;
+  padding-bottom: 1rem;
+  font-family: global.$font-family-noto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: global.$color-txt;
+  border-bottom: 1px dashed #7e5b39;
+
+  span {
+    font-size: 1.6rem;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-activity-everytime__item__txt-box__title {
+    font-size: 1.8rem;
+  }
+}
+
+.c-activity-everytime__item__txt-box__content {
+  position: relative;
+  padding-top: 1.5rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: global.$color-txt;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-activity-everytime__item__txt-box__content {
+    font-size: 1.5rem;
+  }
+}

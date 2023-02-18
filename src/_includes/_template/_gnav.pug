@@ -1,0 +1,138 @@
+//- **********************************************************************
+//- ナビゲーション
+//- **********************************************************************
+nav.p-gnav#js-gnav
+  ul.p-gnav__list
+    li#js-gnav-play.p-gnav__divider.play
+      a(href=`${relativePath}activity`)
+        img.p-gnav__icon(src=`${relativePath}assets/img/icon/play.svg` alt="")
+        p.p-gnav__item.js-gnav__item 遊ぶ
+    li#js-gnav-eat.p-gnav__divider.eat
+      a(href=`${relativePath}eat`)
+        img.p-gnav__icon(src=`${relativePath}assets/img/icon/eat.svg` alt="")
+        p.p-gnav__item.js-gnav__item 食べる
+    li#js-gnav-stay.p-gnav__divider.stay
+      a(href=`${relativePath}stay`)
+        img.p-gnav__icon(src=`${relativePath}assets/img/icon/hotel.svg` alt="")
+        p.p-gnav__item.js-gnav__item 泊まる
+    li.p-gnav__divider.map
+      a(href=`${relativePath}#map`)
+        img.p-gnav__icon(src=`${relativePath}assets/img/icon/map.svg` alt="")
+        p.p-gnav__item.js-gnav__item アクセス
+    li#js-gnav-menu.p-gnav__divider.menu
+      a(href="")
+        img.p-gnav__icon(src=`${relativePath}assets/img/icon/menu.svg` alt="")
+        p.p-gnav__item.js-gnav__item(href="#") MENU
+    li.p-gnav__divider.p-gnav__divider--btn
+      a(href="")
+        img.p-gnav__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt="")
+        p.p-gnav__item.p-gnav__item--btn.js-gnav__item(href=`${relativePath}reserve`) 予約・料金する
+  div.p-gnav__list.p-gnav__list--sp.l-footer
+    div.l-footer__top
+      div.l-footer__container.l-footer__container--has_grid
+        div.l-footer__grid
+          //-
+          div.c-logo.p-logo.p-logo--type_footer
+            a.c-logo__inner(href=`${relativePath}`)
+              img.c-logo__item(src=`${relativePath}assets/img/logo/logo-w.svg` alt="logo")
+          div.p-footer-content
+            p.p-footer-content__txt [ TASO白浜リゾート ]
+            p.p-footer-content__txt 三重県度会郡南伊勢町田曽浦119-1
+            p.p-footer-content__tel TEL:0599-77-6208
+            a.p-footer-content__btn(href=`${relativePath}reserve`)
+              img.p-footer-content__btn__icon(src=`${relativePath}assets/img/icon/calender-blue.svg` alt="")
+              p.p-footer-content__btn__txt 予約・料金する
+        div.l-footer__grid
+          //-
+          div.p-sitemap
+            ul.p-sitemap__list
+              li.p-sitemap__divider
+                a(href=`${relativePath}enjoy`)
+                  div.p-sitemap__item
+                    div.p-sitemap__item__summary
+                      p.p-sitemap__item__summary__txt コンセプト
+              li.p-sitemap__divider
+                details(open).p-sitemap__item
+                  summary.p-sitemap__item__summary
+                    p.p-sitemap__item__summary__txt 遊+食+泊
+                  div.p-sitemap__item__flex
+                    div.p-sitemap__item__flex__item
+                      details.p-sitemap__item__flex__inner
+                        summary.p-sitemap__item__list-title.green
+                          p.p-sitemap__item__list-title__txt 遊ぶ
+                        ul.p-sitemap__item__list
+                          li.p-sitemap__item__list__item
+                            a(href=`${relativePath}activity/skydiving`) スカイダイビング
+                          li.p-sitemap__item__list__item
+                            a(href=`${relativePath}activity/marine`) マリンスポーツ
+                          li.p-sitemap__item__list__item
+                            a(href=`${relativePath}activity/buggy`) バギー
+                          li.p-sitemap__item__list__item
+                            a(href=`${relativePath}activity/#other`) その他
+                      details.p-sitemap__item__flex__inner
+                        summary.p-sitemap__item__list-title.pink
+                          p.p-sitemap__item__list-title__txt 食べる
+                        ul.p-sitemap__item__list
+                          li.p-sitemap__item__list__item
+                            a(href=`${relativePath}eat/#morning`)  モーニング
+                          li.p-sitemap__item__list__item
+                            a(href=`${relativePath}eat/#lunch`)  ランチ
+                          li.p-sitemap__item__list__item
+                            a(href=`${relativePath}eat/#cafe`)  カフェ
+                          li.p-sitemap__item__list__item
+                            a(href=`${relativePath}eat/#bbq`)  食材提供
+                    div.p-sitemap__item__flex__item
+                      details.p-sitemap__item__flex__inner
+                        summary.p-sitemap__item__list-title.purple
+                          p.p-sitemap__item__list-title__txt 泊まる
+                        ul.p-sitemap__item__list
+                          li.p-sitemap__item__list__item
+                            details.p-sitemap__item__list__item__details
+                              summary.p-sitemap__item__list__item__details__summary
+                                p 田曽フォレストマリーナ
+                              ul.p-sitemap__item__list__item__child-list
+                                li.p-sitemap__item__list__item__child-list__item
+                                  a(href=`${relativePath}stay/marina/#white`) [白]ヤマハ
+                                li.p-sitemap__item__list__item__child-list__item
+                                  a(href=`${relativePath}stay/marina/#green`) [緑]ピーターソン
+                                li.p-sitemap__item__list__item__child-list__item
+                                  a(href=`${relativePath}stay/marina/#blue`) [青]デヘラー
+                          li.p-sitemap__item__list__item
+                            details.p-sitemap__item__list__item__details
+                              summary.p-sitemap__item__list__item__details__summary
+                                p 田曽フォレストキャンプ
+                              ul.p-sitemap__item__list__item__child-list
+                                li.p-sitemap__item__list__item__child-list__item
+                                  a(href=`${relativePath}stay/camp/#white`) [白]マシュマロ
+                                li.p-sitemap__item__list__item__child-list__item
+                                  a(href=`${relativePath}stay/camp/#red`) [赤]モンブラン
+                                li.p-sitemap__item__list__item__child-list__item
+                                  a(href=`${relativePath}stay/camp/#orange`)  [オレンジ]パンプキン
+                          li.p-sitemap__item__list__item
+                            a(href=`${relativePath}stay/villa`) オーシャンヴィラ 倭
+                          //- li.p-sitemap__item__list__item
+                          //-   details.p-sitemap__item__list__item__details
+                          //-     summary.p-sitemap__item__list__item__details__summary
+                          //-       p その他宿泊場所
+                          //-     ul.p-sitemap__item__list__item__child-list
+                          //-       li.p-sitemap__item__list__item__child-list__item
+                          //-         a(href="#") フリーキャンプ（シーサイド）
+                          //-       li.p-sitemap__item__list__item__child-list__item
+                          //-         a(href="#") フリーキャンプ（フォレストサイド）
+                          //-       li.p-sitemap__item__list__item__child-list__item
+                          //-         a(href="#") 田曽ビーチハウス
+              li.p-sitemap__divider
+                a(href="")
+                  div.p-sitemap__item
+                    div.p-sitemap__item__summary
+                      p.p-sitemap__item__summary__txt 周辺での遊び
+              li.p-sitemap__divider
+                a(href=`${relativePath}#map`)
+                  div.p-sitemap__item
+                    div.p-sitemap__item__summary
+                      p.p-sitemap__item__summary__txt アクセス
+              li.p-sitemap__divider
+                a(href=`${relativePath}reserve`)
+                  div.p-sitemap__item
+                    div.p-sitemap__item__summary
+                      p.p-sitemap__item__summary__txt お問い合わせ　

@@ -1,0 +1,178 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "enjoy";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv
+    div.l-kv__container
+      div.p-kv-title
+        h1.p-kv-title__item.p-kv-title__item--enjoy ENJOY
+        p.p-kv-title__p.u-mt2 過ごし方
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/enjoy/kv.jpg` alt="")
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- enjoy
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12
+    img(src=`${relativePath}assets/img/section/enjoy.svg` alt="")
+    div.p-decoration
+      img.p-decoration__enjoy-page(src=`${relativePath}assets/img/enjoy/illust-girls.png` alt="")
+  section.l-section.l-section--gap_top-0.t-bg-yellow
+    div.l-container
+      div.p-enjoy-page
+        div.p-enjoy-page__content
+          div.p-enjoy-page__content__txt
+            h2.p-enjoy-page__content__txt__title.c-fade-up.js-inview
+              span.p-enjoy-page__content__txt__title__back VARIOUS
+              span.p-enjoy-page__content__txt__title__front 手ぶらでキャンプや
+                span アウトドアを満喫して♪
+            p.p-enjoy-page__content__txt__p.c-fade-up.js-inview マリンスポーツやスカイダイビングなど、南伊勢の豊かな自然を堪能する体験があなたを待っています。遊び疲れたら、BBQカフェで、おいしいお肉に舌鼓をうつのもよいでしょう。そして夜には、いままで見たこともないような満点の星空。周囲に気兼ねなく仲間たちと思う存分ワイワイ楽しんでください。
+          div.p-enjoy-page__content__img-box.c-fade-up.js-inview
+            img.p-enjoy-page__content__img-box__img(src=`${relativePath}assets/img/enjoy/illust-tree1.png` alt="")
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.t-bg-yellow
+    img(src=`${relativePath}assets/img/section/green-blue.svg` alt="")
+    div.p-decoration.p-decoration--concept
+      img.p-decoration__concept-flag.p-decoration__concept-flag--enjoy(src=`${relativePath}assets/img/news/illust-flag.png` alt="")
+  section.l-section.l-section--gap_top-0.l-section--gap_bottom-0.t-bg-sky-blue
+    div.l-container.l-container--left-full
+      div.p-enjoy-page
+        div.p-enjoy-page__play
+          div.p-enjoy-page__play__content
+            div.p-enjoy-page__play__content__img-box.c-fade-up.js-inview
+              picture
+                //- source(media='(min-width:768px)' srcset=`${relativePath}assets/img/enjoy/sky.jpg`)
+                //- source(media='(min-width:350px)' srcset=`${relativePath}assets/img/enjoy/sky.png`)
+                img.p-enjoy-page__play__content__img-box__img(src=`${relativePath}assets/img/enjoy/sky.jpg` alt="")
+            div.p-enjoy-page__play__content__txt.c-fade-up.js-inview
+              img.p-enjoy-page__play__content__txt__label(src=`${relativePath}assets/img/play/text-play.png` alt="")
+              h2.p-enjoy-page__play__content__txt__title
+                span.p-enjoy-page__play__content__txt__title__back SKY
+                span.p-enjoy-page__play__content__txt__title__front 海や空で、
+                  span 未体験への誘い
+              p.p-enjoy-page__play__content__txt__p.u-mt3 TASO FOREST CAMPのすぐ目の前に、近畿エリアで唯一の伊勢志摩スカイダイビングクラブがあり、全国から愛好家が集まります。高度3,000mからの自由落下の後、パラシュートを展開。たっぷり時間をかけて、伊勢志摩の美しい海岸線や、海の碧さを楽しみながら滑空。スリルと絶景を一度に味わえると好評です。
+    div.l-container.l-container--right-full
+      div.p-enjoy-page
+        div.p-enjoy-page__bottom
+          div.p-enjoy-page__bottom__content.p-enjoy-page__bottom__content.p-enjoy-page__bottom__content--reverse
+            div.p-enjoy-page__bottom__content__txt.c-fade-up.js-inview
+              h2.p-enjoy-page__bottom__content__txt__title
+                span.p-enjoy-page__bottom__content__txt__title__back.p-enjoy-page__bottom__content__txt__title__back--left SEA
+                span.p-enjoy-page__bottom__content__txt__title__front マリンアクティビティも
+                  span 充実
+              p.p-enjoy-page__bottom__content__txt__p.u-mt3 TASO FOREST CAMPのすぐ目の前に、近畿エリアで唯一の伊勢志摩スカイダイビングクラブがあり、全国から愛好家が集まります。高度3,000mからの自由落下の後、パラシュートを展開。たっぷり時間をかけて、伊勢志摩の美しい海岸線や、海の碧さを楽しみながら滑空。スリルと絶景を一度に味わえると好評です。
+              img.p-enjoy-page__bottom__content__txt__img.left(src=`${relativePath}assets/img/enjoy/buggy.jpg` alt="")
+            div.p-enjoy-page__bottom__content__img-box.c-fade-up.js-inview
+              picture
+                //- source(media='(min-width:768px)' srcset=`${relativePath}assets/img/stay/main.jpg`)
+                //- source(media='(min-width:350px)' srcset=`${relativePath}assets/img/stay/main-sp.png`)
+                img.p-enjoy-page__bottom__content__img-box__img(src=`${relativePath}assets/img/enjoy/sea.jpg` alt="")
+  section.l-section.l-section--gap_top-lg.l-section--gap_bottom-0.t-bg-sky-blue
+    div.l-container.l-container--full
+      picture
+        source(media='(min-width:768px)' srcset=`${relativePath}assets/img/section/sky-red-pink.svg`)
+        source(media='(min-width:350px)' srcset=`${relativePath}assets/img/section/sky-red-pink-sp.svg`)
+        img(src=`${relativePath}assets/img/section/sky-red-pink.svg` alt="")
+  //- **********************************************************************
+  //- eat
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-0.t-bg-light-pink
+    div.l-container.l-container--right-full
+      div.p-eat
+        div.p-eat__content
+          div.p-eat__content__txt.c-fade-up.js-inview
+            div.p-eat__content__txt__eat.u-hide-mq-max-md
+              img(src=`${relativePath}assets/img/eat/text-eat.png` alt="")
+            h2.p-eat__content__txt__title
+              span.p-eat__content__txt__title__back MEAT
+              span.p-eat__content__txt__title__front 本場アメリカンスタイル
+                span のお肉を味わえる
+            p.p-eat__content__txt__p 隣接するステーキカフェ WOOD FIRE MEAT BEER では、本場アメリカンスタイルの厚切りT-BONEステーキをお楽しみいただけます。もちろん、キャンプサイトのBBQコンロで、ご自身で焼いていただくことも。周りの視線を気にせず、骨つきの塊肉にかぶりつく時、眠っていた本能の歓びに驚かれることでしょう。
+          div.p-eat__content__img-box.u-mt-sp0.c-fade-up.js-inview
+            div.p-eat__content__txt__eat.u-hide-mq-min-md
+              img(src=`${relativePath}assets/img/eat/text-eat.png` alt="")
+            picture
+              //- source(media='(min-width:768px)' srcset=`${relativePath}assets/img/eat/main.jpg`)
+              //- source(media='(min-width:350px)' srcset=`${relativePath}assets/img/eat/main-sp.png`)
+              img.p-eat__content__img-box__img(src=`${relativePath}assets/img/enjoy/meat.jpg` alt="")
+    div.l-container.l-container--left-full
+      div.p-enjoy-page
+        div.p-enjoy-page__bottom.c-fade-up.js-inview
+          div.p-enjoy-page__bottom__content
+            div.p-enjoy-page__bottom__content__img-box
+              picture
+                //- source(media='(min-width:768px)' srcset=`${relativePath}assets/img/stay/main.jpg`)
+                //- source(media='(min-width:350px)' srcset=`${relativePath}assets/img/stay/main-sp.png`)
+                img.p-enjoy-page__bottom__content__img-box__img(src=`${relativePath}assets/img/enjoy/fish1.jpg` alt="")
+            div.p-enjoy-page__bottom__content__txt.u-mt0
+              h2.p-enjoy-page__bottom__content__txt__title
+                span.p-enjoy-page__bottom__content__txt__title__back FISH
+                span.p-enjoy-page__bottom__content__txt__title__front 南伊勢ならではの海産物
+                  span を堪能！
+              p.p-enjoy-page__bottom__content__txt__p.u-mt3 三重県下一の水揚げを誇る漁港をはじめ、海に恵まれた南伊勢ならではの海産物もレパートリー豊か。旬の魚介の刺身、貝類の缶箱蒸し、アオサのお味噌汁、伊勢海老などなど、連泊しても食べ尽くせない海の幸が、あなたの訪れを待っています。
+              img.p-enjoy-page__bottom__content__txt__img.right(src=`${relativePath}assets/img/enjoy/fish2.jpg` alt="")
+
+  section.l-section.l-section--gap_top-lg.l-section--gap_bottom-0.t-bg-light-pink
+    div.l-container.l-container--full
+      picture
+        source(media='(min-width:768px)' srcset=`${relativePath}assets/img/section/purple-w.svg`)
+        source(media='(min-width:350px)' srcset=`${relativePath}assets/img/section/purple-sp.svg`)
+        img(src=`${relativePath}assets/img/section/purple-w.svg` alt="")
+    div.p-decoration.c-fade-up.js-inview
+      img.p-decoration__stay-flag-pc(src=`${relativePath}assets/img/stay/illust-flag-pc.svg` alt="")
+
+  //- **********************************************************************
+  //- stay
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-l.l-section--gap_bottom-lg.u-pt-sp0
+    div.l-container.l-container--left-full
+      div.p-stay
+        div.p-stay__content
+          div.p-stay__content__img-box.u-mt-sp0
+            picture
+              //- source(media='(min-width:768px)' srcset=`${relativePath}assets/img/stay/main.jpg`)
+              //- source(media='(min-width:350px)' srcset=`${relativePath}assets/img/stay/main-sp.png`)
+              img.p-stay__content__img-box__img.c-fade-up.js-inview(src=`${relativePath}assets/img/enjoy/hotel1.jpg` alt="")
+            img.p-stay__content__img-box__label.c-fade-up.js-inview(src=`${relativePath}assets/img/stay/text-hotel.png` alt="")
+            img.p-decoration__stay-flag-sp(src=`${relativePath}assets/img/stay/illust-flag-sp.svg` alt="")
+          div.p-stay__content__txt
+            img.p-stay__content__txt__star.p-stay__content__txt__star--page(src=`${relativePath}assets/img/stay/illust-star.png` alt="")
+            h2.p-stay__content__txt__title.c-fade-up.js-inview
+              span.p-stay__content__txt__title__back HOTEL
+              span.p-stay__content__txt__title__front 一棟貸しの場所で
+                span 素敵なひとときを…
+            p.p-stay__content__txt__p.u-mt3 どうか腕時計は外して、あなただけの、あなたのための時間と空間を満喫してください。お風呂や電気・空調設備もととのった場所でゆったりしたひとときを。
+    div.l-container.l-container--right-full
+      div.p-enjoy-page
+        div.p-enjoy-page__bottom
+          div.p-enjoy-page__bottom__content.p-enjoy-page__bottom__content--reverse
+            div.p-enjoy-page__bottom__content__txt
+              h2.p-enjoy-page__bottom__content__txt__title.c-fade-up.js-inview
+                span.p-enjoy-page__bottom__content__txt__title__back.p-enjoy-page__bottom__content__txt__title__back--gray.p-enjoy-page__bottom__content__txt__title__back--left FREE
+                span.p-enjoy-page__bottom__content__txt__title__front 贅沢にアウトドアを
+                  span お楽しみください
+              p.p-enjoy-page__bottom__content__txt__p.u-mt3 デッキチェアで一日中、部屋に積みっぱなしになっていた本に読みふけるのもよし。木立の隙間から見える美しい海をボーッと眺めているだけでも、充ち足りた気分になることでしょう。
+              p.p-enjoy-page__bottom__content__txt__p.u-mt3.u-mt-sp1 あなたにとって最高の休日をお過ごしください。
+              img.p-enjoy-page__bottom__content__txt__img.left.c-fade-up.js-inview(src=`${relativePath}assets/img/enjoy/hotel2.jpg` alt="")
+            div.p-enjoy-page__bottom__content__img-box.c-fade-up.js-inview
+              picture
+                //- source(media='(min-width:768px)' srcset=`${relativePath}assets/img/stay/main.jpg`)
+                //- source(media='(min-width:350px)' srcset=`${relativePath}assets/img/stay/main-sp.png`)
+                img.p-enjoy-page__bottom__content__img-box__img(src=`${relativePath}assets/img/enjoy/hotel3.jpg` alt="")

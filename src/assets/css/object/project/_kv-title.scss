@@ -1,0 +1,121 @@
+/* ****************************************************************************************************
+
+  # kv-title
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-kv-title {
+  text-align: center;
+}
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.p-kv-title__item {
+  font-size: 9.2rem;
+  font-family: global.$font-family-garamond;
+  font-weight: 500;
+  color: global.$color-white;
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-kv-title__item {
+    font-size: 5rem;
+  }
+}
+
+.p-kv-title__item.p-kv-title__item--activity {
+  text-shadow: 0.5rem 0.5rem global.$color-green-light;
+}
+
+.p-kv-title__item.p-kv-title__item--stay {
+  text-shadow: 0.5rem 0.5rem global.$color-purple;
+}
+
+.p-kv-title__item.p-kv-title__item--news {
+  text-shadow: 0.5rem 0.5rem #0d6a87;
+}
+
+.p-kv-title__item.p-kv-title__item--reserve {
+  text-shadow: 0.5rem 0.5rem #0d6a87;
+}
+
+.p-kv-title__item.p-kv-title__item--enjoy {
+  text-shadow: 0.5rem 0.5rem #0d6a87;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-kv-title__item.p-kv-title__item--activity {
+    text-shadow: 0.3rem 0.3rem global.$color-green-light;
+  }
+
+  .p-kv-title__item.p-kv-title__item--stay {
+    text-shadow: 0.3rem 0.3rem global.$color-purple;
+  }
+
+  .p-kv-title__item.p-kv-title__item--reserve {
+    text-shadow: 0.3rem 0.3rem #0d6a87;
+  }
+
+  .p-kv-title__item.p-kv-title__item--enjoy {
+    text-shadow: 0.3rem 0.3rem #0d6a87;
+  }
+}
+
+.p-kv-title__logo {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.p-kv-title__logo.p-kv-title__logo--lg {
+  width: 60rem;
+}
+
+.p-kv-title__logo.p-kv-title__logo--md {
+  width: 50rem;
+}
+
+.p-kv-title__logo.p-kv-title__logo--sm {
+  width: 30rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-kv-title__logo {
+    width: 20rem;
+  }
+  .p-kv-title__logo.p-kv-title__logo--lg {
+    width: 20rem;
+  }
+  .p-kv-title__logo.p-kv-title__logo--md {
+    width: 20rem;
+  }
+  .p-kv-title__logo.p-kv-title__logo--sm {
+    width: 20rem;
+  }
+}
+
+.p-kv-title__p {
+  font-size: 3.8rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-white;
+  position: relative;
+  span {
+    font-size: 2.8rem;
+    display: block;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-kv-title__p {
+    font-size: 1.8rem;
+    span {
+      font-size: 1.4rem;
+    }
+  }
+}

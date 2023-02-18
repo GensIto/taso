@@ -1,0 +1,109 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "reserve";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv.l-kv--lg
+    div.l-kv__container
+      div.p-kv-title
+        h1.p-kv-title__item.p-kv-title__item--reserve RESERVE
+        p.p-kv-title__p.u-mt2 料金・ご予約
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/reserve/kv.jpg` alt="")
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-6
+    img(src=`${relativePath}assets/img/section/white-dark-blue.svg` alt="")
+  section.l-section.l-section--gap_top-0.u-pt-sp6
+    div.l-container
+      div.c-title
+        h1 ACTIVITY
+        p アクティビティ料金
+      ul.c-reserve
+        li.c-reserve__item
+          div.c-reserve__item__img-box
+            img(src=`${relativePath}assets/img/stay/free-camp/free-camp-sea.jpg` alt="")
+            h3.c-reserve__item__txt-box__title.u-hide-mq-min-md シーサイド
+          div.c-reserve__item__txt-box
+            h3.c-reserve__item__txt-box__title.u-hide-mq-max-md シーサイド
+            div.c-reserve__item__txt-box__content
+              a.c-reserve__item__txt-box__content__link(href="")
+                ul.c-reserve__item__txt-box__content__list.activity
+                  li.c-reserve__item__txt-box__content__list__item
+                    p.c-reserve__item__txt-box__content__list__item__title.activity 価格
+                    p.c-reserve__item__txt-box__content__list__item__txt 1区画 8,000円〜
+                  li.c-reserve__item__txt-box__content__list__item
+                    p.c-reserve__item__txt-box__content__list__item__title.activity 最大人数
+                    p.c-reserve__item__txt-box__content__list__item__txt 1区画あたり最大6名様まで
+                  div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-3.u-mt-sp1
+                    div.c-more-btn__arrow.c-more-btn__arrow--mini
+                    p.c-more-btn__txt 詳しく見る
+              a.c-reserve__item__txt-box__content__btn.activity(href="")
+                img.c-reserve__item__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                p.c-reserve__item__txt-box__content__btn__txt 予約する
+      div.c-title
+        h1 FOOD
+        p 食材提供料金
+      ul.c-reserve
+        li.c-reserve__item
+          div.c-reserve__item__img-box
+            img(src=`${relativePath}assets/img/stay/free-camp/free-camp-sea.jpg` alt="")
+            h3.c-reserve__item__txt-box__title.u-hide-mq-min-md シーサイド
+          div.c-reserve__item__txt-box
+            h3.c-reserve__item__txt-box__title.u-hide-mq-max-md シーサイド
+            div.c-reserve__item__txt-box__content
+              a.c-reserve__item__txt-box__content__link(href="")
+                ul.c-reserve__item__txt-box__content__list.food
+                  li.c-reserve__item__txt-box__content__list__item
+                    p.c-reserve__item__txt-box__content__list__item__title.food 価格
+                    p.c-reserve__item__txt-box__content__list__item__txt 1区画 8,000円〜
+                  li.c-reserve__item__txt-box__content__list__item
+                    p.c-reserve__item__txt-box__content__list__item__title.food 最大人数
+                    p.c-reserve__item__txt-box__content__list__item__txt 1区画あたり最大6名様まで
+                  div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-3.u-mt-sp1
+                    div.c-more-btn__arrow.c-more-btn__arrow--mini
+                    p.c-more-btn__txt 詳しく見る
+              a.c-reserve__item__txt-box__content__btn.food(href="")
+                img.c-reserve__item__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                p.c-reserve__item__txt-box__content__btn__txt 予約する
+      div.c-title
+        h1 STAY
+        p 一棟貸し料金
+      ul.c-reserve
+        li.c-reserve__item
+          div.c-reserve__item__img-box
+            img(src=`${relativePath}assets/img/stay/free-camp/free-camp-sea.jpg` alt="")
+            h3.c-reserve__item__txt-box__title.u-hide-mq-min-md シーサイド
+          div.c-reserve__item__txt-box
+            h3.c-reserve__item__txt-box__title.u-hide-mq-max-md シーサイド
+            div.c-reserve__item__txt-box__content
+              a.c-reserve__item__txt-box__content__link(href="")
+                ul.c-reserve__item__txt-box__content__list.stay
+                  li.c-reserve__item__txt-box__content__list__item
+                    p.c-reserve__item__txt-box__content__list__item__title.stay 価格
+                    p.c-reserve__item__txt-box__content__list__item__txt 1区画 8,000円〜
+                  li.c-reserve__item__txt-box__content__list__item
+                    p.c-reserve__item__txt-box__content__list__item__title.stay 最大人数
+                    p.c-reserve__item__txt-box__content__list__item__txt 1区画あたり最大6名様まで
+                  div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-3.u-mt-sp1
+                    div.c-more-btn__arrow.c-more-btn__arrow--mini
+                    p.c-more-btn__txt 詳しく見る
+              a.c-reserve__item__txt-box__content__btn.stay(href="")
+                img.c-reserve__item__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                p.c-reserve__item__txt-box__content__btn__txt 予約する

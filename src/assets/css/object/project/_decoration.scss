@@ -1,0 +1,247 @@
+/* ****************************************************************************************************
+
+  # decoration
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration.p-decoration--concept {
+    margin-bottom: 4rem;
+  }
+}
+
+.p-decoration__concept-girl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20rem;
+  transform: translate(50%, 20%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__concept-girl {
+    width: 7rem;
+    transform: translate(20%, 60%);
+  }
+}
+
+.p-decoration__concept-flag {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40rem;
+  transform: translateY(55%);
+}
+
+.p-decoration__concept-flag.p-decoration__concept-flag--enjoy {
+  top: 0;
+  bottom: auto;
+  transform: translateY(0);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__concept-flag.p-decoration__concept-flag--enjoy {
+    display: none;
+  }
+}
+
+.p-decoration__concept-flag.p-decoration__concept-flag--eat {
+  top: 0;
+  bottom: auto;
+  transform: translateY(10rem);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__concept-flag.p-decoration__concept-flag--eat {
+    width: 40%;
+    transform: translateY(45%);
+  }
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__concept-flag {
+    width: 50%;
+    transform: translateY(45%);
+  }
+}
+
+.p-decoration__stay-flag-pc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40rem;
+  transform: translateY(25%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__stay-flag-pc {
+    display: none;
+  }
+}
+
+.p-decoration__stay-flag-sp {
+  display: none;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__stay-flag-sp {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    transform: translateY(50%);
+  }
+}
+
+.p-decoration__enjoy-tree {
+  position: absolute;
+  bottom: 0;
+  right: 6%;
+  width: 26%;
+  transform: translateY(30%);
+  z-index: 1;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__enjoy-tree {
+    width: 30%;
+    transform: translateY(10%);
+  }
+}
+
+.p-decoration__enjoy-bottom-tree {
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+  width: 13%;
+  transform: translateY(-20%);
+  z-index: 1;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__enjoy-bottom-tree {
+    left: 12%;
+    width: 25%;
+    transform: translateY(-10%);
+  }
+}
+
+.p-decoration__enjoy-car {
+  position: absolute;
+  bottom: 0;
+  left: 23%;
+  width: 19%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__enjoy-car {
+    left: 47%;
+    width: 40%;
+    transform: translateY(-30%);
+  }
+}
+
+.p-decoration__activity {
+  display: block;
+  position: absolute;
+  top: -3rem;
+  left: 4vw;
+  width: 24rem;
+}
+
+.p-decoration__stay {
+  display: block;
+  position: absolute;
+  top: -3rem;
+  left: 4vw;
+  width: 24rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__activity {
+    display: block;
+    position: absolute;
+    top: 0rem;
+    left: 4vw;
+    width: 8rem;
+  }
+  .p-decoration__stay {
+    display: block;
+    position: absolute;
+    top: -2rem;
+    left: 4vw;
+    width: 10rem;
+  }
+}
+
+.p-decoration__activity-bird {
+  display: block;
+  position: absolute;
+  top: -10rem;
+  right: 8vw;
+  width: 20rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__activity-bird {
+    top: -12rem;
+    right: 1vw;
+    width: 10rem;
+  }
+}
+
+.p-decoration__stay-page {
+  display: block;
+  position: absolute;
+  top: -10rem;
+  right: 8vw;
+  width: 20rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__stay-page {
+    display: block;
+    position: absolute;
+    top: -8rem;
+    right: 4vw;
+    width: 8rem;
+  }
+}
+
+.p-decoration__enjoy-page {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 23rem;
+  transform: translateY(-20%);
+  z-index: 1;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__enjoy-page {
+    left: 4vw;
+    width: 10rem;
+    transform: translateY(-50%);
+  }
+}
+
+.p-decoration__enjoy-eat {
+  position: absolute;
+  top: 0;
+  left: 6vw;
+  width: 33rem;
+  transform: translateY(-20%);
+  z-index: 1;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-decoration__enjoy-eat {
+    left: 4vw;
+    width: 15rem;
+    transform: translateY(-50%);
+  }
+}

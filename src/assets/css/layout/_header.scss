@@ -1,0 +1,72 @@
+/* ****************************************************************************************************
+
+  # header
+  - layout
+
+**************************************************************************************************** */
+@use '../foundation/tool/global';
+
+.l-header {
+  @include global.z-index(header);
+
+  // position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: global.$color-white;
+}
+
+.l-header.is-fixed {
+  // position: fixed;
+  // transform: translate(0, -105%);
+}
+
+.header-is-fixed .l-header.is-fixed {
+  // transition: global.$transition-duration global.$transition-timing-function;
+}
+
+.site-scroll-up .l-header.is-fixed {
+  // transition: 0.48s global.$ease-out-custom;
+  // transform: translate(0, 0);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .l-header {
+    position: fixed;
+  }
+
+  .l-header.is-fixed {
+    transform: translate(0, 0%);
+  }
+}
+
+/* gnav展開時
+---------------------------------------------------------------------- */
+// .gnav-is-active .l-header {
+//   background-color: global.$color-white;
+// }
+
+/* ======================================================================
+
+  container
+
+====================================================================== */
+.l-header__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 7rem;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 0 4vw;
+}
+
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-header__container {
+    height: 12rem;
+    padding: 0;
+    justify-content: flex-start;
+  }
+}

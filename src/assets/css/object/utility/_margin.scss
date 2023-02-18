@@ -1,0 +1,81 @@
+/* ****************************************************************************************************
+
+  # margin
+  - utility
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+/* ======================================================================
+
+  上方向のマージン
+
+====================================================================== */
+@for $i from 0 through 15 {
+  .u-mt#{$i} {
+    margin-top: 1rem * $i !important;
+  }
+}
+
+@for $i from 0 through 15 {
+  .u-mt-#{$i} {
+    margin-top: -1rem * $i !important;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  @for $i from 0 through 15 {
+    .u-mt-sp#{$i} {
+      margin-top: 1rem * $i !important;
+    }
+  }
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  @for $i from 0 through 15 {
+    .u-mt-sp-#{$i} {
+      margin-top: -1rem * $i !important;
+    }
+  }
+}
+
+/* ======================================================================
+
+  右方向のマージン
+
+====================================================================== */
+@for $i from 0 through 10 {
+  .u-mr#{$i} {
+    margin-right: 1rem * $i !important;
+  }
+}
+
+/* ======================================================================
+
+  下方向のマージン
+
+====================================================================== */
+@for $i from 0 through 10 {
+  .u-mb#{$i} {
+    margin-bottom: 1rem * $i !important;
+  }
+}
+
+/* ======================================================================
+
+  左方向のマージン
+
+====================================================================== */
+@for $i from 0 through 10 {
+  .u-ml#{$i} {
+    margin-left: 1rem * $i !important;
+  }
+}
+
+.u-ml-auto {
+  margin-left: auto;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .u-ml-sp-auto {
+    margin-left: auto;
+  }
+}

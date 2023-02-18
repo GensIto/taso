@@ -1,0 +1,350 @@
+/* ****************************************************************************************************
+
+  # contact
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-contact {
+}
+
+.p-contact__description {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 400;
+  color: global.$color-txt;
+  position: relative;
+  text-align: center;
+  a {
+    color: #0d6a87;
+    text-decoration: underline;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__description {
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+}
+
+.p-contact__h3 {
+  font-size: 1.8rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-txt;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-top: 2rem;
+  &:first-child {
+    margin-top: 0;
+  }
+  &::after {
+    content: '';
+    width: 2.5rem;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #009e91;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__h3 {
+    font-size: 1.6rem;
+  }
+}
+
+.p-contact__p {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 400;
+  color: global.$color-txt;
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__p {
+    font-size: 1.4rem;
+  }
+}
+
+.p-contact__step {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__step {
+    gap: 3rem;
+  }
+}
+
+.p-contact__step__item {
+  width: 13rem;
+  height: 13rem;
+  position: relative;
+  border: 1px solid #f2dc3e;
+  background-color: #fff;
+  border-radius: 50%;
+  p {
+    font-size: 1.6rem;
+    font-family: global.$font-family-noto;
+    font-weight: 500;
+    color: global.$color-txt;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__step__item {
+    width: 9rem;
+    height: 9rem;
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.p-contact__step__item + .p-contact__step__item {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) translateX(-100%);
+    background-color: #f2dc3e;
+    width: 10rem;
+    height: 1px;
+    z-index: -1;
+  }
+}
+.p-contact__step__item.current {
+  background-color: #f2dc3e;
+}
+
+.p-contact__input-list {
+  border-top: 1px solid #0d6a86;
+  margin: 6rem 0;
+}
+.p-contact__input-list__item {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  &:last-child {
+    border-bottom: 1px dashed #0d6a86;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__input-list__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+.p-contact__input-list__item.p-contact__input-list__item--stretch {
+  align-items: stretch;
+}
+.p-contact__input-list__item + .p-contact__input-list__item {
+  border-top: 1px dashed #0d6a86;
+}
+
+.p-contact__input-list__item__wrap {
+  width: 75%;
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__input-list__item__wrap {
+    width: 100%;
+  }
+}
+
+.p-contact__input-list__item__title {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-txt;
+  position: relative;
+  width: 25%;
+  span {
+    margin-right: 2rem;
+    font-size: 1.4rem;
+    font-family: global.$font-family-noto;
+    font-weight: 500;
+    color: global.$color-txt;
+    position: relative;
+    background-color: #0d6a86;
+    padding: 0.5rem 1rem;
+    color: #fff;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__input-list__item__title {
+    width: 100%;
+  }
+}
+
+.p-contact__input-list__item__input {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__input-list__item__input {
+    width: 100%;
+  }
+}
+
+.p-contact__input-list__item__privacy-box {
+  width: 75%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__input-list__item__privacy-box {
+    width: 100%;
+  }
+}
+
+.p-contact__btn {
+  width: 40rem;
+  margin: 0 auto;
+  position: relative;
+  input {
+    width: 100%;
+    background-color: #f2dc3e;
+    padding: 1rem 2rem;
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: global.$font-family-noto;
+    font-weight: bold;
+    color: global.$color-txt;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &::after {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(../img/icon/toggle-green.svg);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.p-contact__input-list__item__form-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-contact__btn {
+    width: 100%;
+    input {
+      width: 100%;
+    }
+  }
+}
+
+/* フォームの各項目 */
+.p-contact__input-list__item__form-group__input {
+  display: none;
+  cursor: pointer;
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+}
+
+.p-contact__input-list__item__form-group__label {
+  position: relative;
+  cursor: pointer;
+}
+
+.p-contact__input-list__item__form-group__label:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  background-color: #cacaca;
+  vertical-align: middle;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 5px;
+  -webkit-appearance: none;
+}
+
+.p-contact__input-list__item__form-group__label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  width: 0.6rem;
+  height: 1.4rem;
+  border: solid #0079bf;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-50%, -50%);
+  opacity: 0;
+}
+
+/* チェックされた項目 */
+.p-contact__input-list__item__form-group__input:checked
+  + .p-contact__input-list__item__form-group__label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  width: 0.6rem;
+  height: 1.4rem;
+  border: solid #0079bf;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* プライバシーポリシー */
+.p-contact__input-list__item__privacy {
+  height: 300px;
+  width: 100%;
+  overflow-y: scroll;
+  background-color: #f3f3f3;
+  margin-top: 2rem;
+  padding: 3rem;
+}

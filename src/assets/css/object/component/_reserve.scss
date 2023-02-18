@@ -1,0 +1,265 @@
+/* ======================================================================
+
+  # reserve
+  - component
+
+====================================================================== */
+@use '../../foundation/tool/global';
+
+.c-reserve {
+  margin-top: 1rem;
+  margin-bottom: 15rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve {
+    padding-bottom: 3rem;
+    margin-bottom: 5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.c-reserve__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 2rem 0;
+  border-bottom: 1px dashed global.$color-blue;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+
+.c-reserve__item__img-box {
+  width: 20%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__img-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    align-items: center;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.c-reserve__item__txt-box {
+  width: 80%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box {
+    width: 100%;
+  }
+}
+
+.c-reserve__item__txt-box__title {
+  font-size: 2.4rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__title {
+    font-size: 1.8rem;
+  }
+}
+
+.c-reserve__item__txt-box__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-top: 1rem;
+}
+
+.c-reserve__item__txt-box__content__link {
+  width: 70%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__content__link {
+    width: 100%;
+  }
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__content {
+    flex-direction: column;
+    gap: 0rem;
+    margin-top: 0;
+  }
+}
+
+.c-reserve__item__txt-box__content__list {
+  padding: 2rem;
+}
+
+.c-reserve__item__txt-box__content__list.activity {
+  background-color: #d7edec;
+}
+.c-reserve__item__txt-box__content__list.food {
+  background-color: #f8eaef;
+}
+.c-reserve__item__txt-box__content__list.stay {
+  background-color: #f4f5f8;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__content__list {
+    width: 100%;
+  }
+}
+
+.c-reserve__item__txt-box__content__list__item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.c-reserve__item__txt-box__content__list__item.c-reserve__item__txt-box__content__list__item--start {
+  align-items: flex-start;
+  margin-top: 3px;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__content__list__item.c-reserve__item__txt-box__content__list__item--start {
+    margin-top: 2px;
+  }
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__content__list__item.c-reserve__item__txt-box__content__list__item--sp-start {
+    align-items: flex-start;
+    .c-reserve__item__txt-box__content__list__item__title {
+      margin-top: 2px;
+    }
+  }
+}
+
+.c-reserve__item__txt-box__content__list__item__title {
+  display: block;
+  width: 9rem;
+  padding: 0.1rem 1rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: global.$color-white;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+.c-reserve__item__txt-box__content__list__item__title.activity {
+  background-color: #009e91;
+}
+.c-reserve__item__txt-box__content__list__item__title.food {
+  background-color: #c66c95;
+}
+.c-reserve__item__txt-box__content__list__item__title.stay {
+  background-color: #5e71a9;
+}
+
+.c-reserve__item__txt-box__content__list__item__txt {
+  padding-bottom: 0.2rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: global.$color-txt;
+  span {
+    display: block;
+    span {
+      padding-left: 0.8rem;
+    }
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__content__list__item__txt {
+    font-size: 1.5rem;
+    span {
+      text-indent: -0.8rem;
+      span {
+        padding-left: 0;
+        display: inline;
+      }
+    }
+  }
+}
+
+.c-reserve__item__txt-box__content__btn {
+  position: relative;
+  display: block;
+  width: 30%;
+}
+.c-reserve__item__txt-box__content__btn.activity {
+  background-color: #009e91;
+}
+
+.c-reserve__item__txt-box__content__btn.food {
+  background-color: #c66c95;
+}
+.c-reserve__item__txt-box__content__btn.stay {
+  background-color: #5e71a9;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__content__btn {
+    width: 100%;
+  }
+}
+
+.c-reserve__item__txt-box__content__btn__icon {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  display: block;
+  width: 2.2rem;
+  transform: translate(-50%, -50%);
+}
+
+.c-reserve__item__txt-box__content__btn__icon.c-reserve__item__txt-box__content__btn__icon--tel {
+  width: 2rem;
+  left: 2rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__content__btn__icon {
+    width: 2rem;
+  }
+}
+
+.c-reserve__item__txt-box__content__btn__txt {
+  position: relative;
+  padding: 0.8rem 0 0.8rem 2rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: global.$color-white;
+  text-align: center;
+  span {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+
+.c-reserve__item__txt-box__content__btn__txt.c-reserve__item__txt-box__content__btn__txt--right {
+  text-align: right;
+  padding-right: 0.6rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-reserve__item__txt-box__content__btn__txt {
+    font-size: 1.6rem;
+  }
+}

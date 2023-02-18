@@ -1,0 +1,76 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "shinglePage";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv
+    div.l-kv__container
+      div.p-kv-title
+        h1.p-kv-title__item.p-kv-title__item--news NEWS
+        p.p-kv-title__p.u-mt2 ニュース
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/activity/kv-sky.jpg` alt="")
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- enjoy
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12.u-mt-sp-5
+    img(src=`${relativePath}assets/img/section/white-dark-blue.svg` alt="")
+  section.l-section.l-section--gap_top-0.u-pt-sp8
+    div.l-container
+      div.p-notification
+
+        div.p-notification__main
+          div.p-notification__main__label-box
+            p.p-notification__main__label-box__day 2023/11/11
+            p.p-notification__main__label-box__label 2023/11/11
+          p.c-container-title.c-fade-up.js-inview ニュースのジャンル
+          div.p-notification__main__content
+            img(src="https://placehold.jp/800x600.png", alt="")
+            p テストテストテストテストテストテストテストテストテスト
+            p テストテストテストテストテストテストテストテストテスト
+            p テストテストテストテストテストテストテストテストテスト
+            p テストテストテストテストテストテストテストテストテスト
+          div.p-notification__main__pagination
+            a(href="").p-notification__main__pagination__prev
+              p 前の記事へ
+            a(href="").p-notification__main__pagination__archive
+              p 一覧に戻る
+            a(href="").p-notification__main__pagination__next
+              p 次の記事へ
+        div.p-notification__side-bar
+          p.p-notification__side-bar__title 最新記事
+          ul.p-notification__side-bar__list
+            li.p-notification__side-bar__list__item
+              p.p-notification__side-bar__list__item__p 全て
+            li.p-notification__side-bar__list__item
+              p.p-notification__side-bar__list__item__p 全て
+            li.p-notification__side-bar__list__item
+              p.p-notification__side-bar__list__item__p 全て
+            li.p-notification__side-bar__list__item
+              ul.p-notification__side-bar__list__item__in-list
+                li.p-notification__side-bar__list__item__in-list__item
+                  p.p-notification__side-bar__list__item__in-list__item__p 遊ぶ
+            li.p-notification__side-bar__list__item
+              ul.p-notification__side-bar__list__item__in-list
+          <p class="p-notification__side-bar__title u-mt3">年代別</p>
+          <details class="p-notification__side-bar__details" >
+            <summary class="p-notification__side-bar__summary">2023</summary>
+            <ul class="p-notification__side-bar__list">
+              li.p-notification__side-bar__list__item__in-list__item.p-notification__side-bar__list__item__in-list__item--date
+                a(href="") 2023/12/31
+            </ul>
+          </details>

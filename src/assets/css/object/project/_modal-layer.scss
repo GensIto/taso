@@ -1,0 +1,39 @@
+/* ****************************************************************************************************
+
+  # modal-layer
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-modal-layer {
+}
+
+.p-modal-layer.active {
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  pointer-events: none;
+  transition: 0.4s;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.4s;
+  pointer-events: none;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-modal-layer {
+    display: none;
+    height: 0;
+    width: 0;
+    z-index: -10;
+  }
+  .p-modal-layer.active {
+    display: none;
+    height: 0;
+    width: 0;
+    z-index: -10;
+  }
+}

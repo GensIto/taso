@@ -1,0 +1,126 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "activity";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-kv
+    div.l-kv__container
+      div.p-kv-title
+        h1.p-kv-title__item.p-kv-title__item--activity ACTIVITY
+        p.p-kv-title__p アクティビティ一覧
+    div.l-kv__image
+      img(src=`${relativePath}assets/img/activity/kv-sky.jpg` alt="")
+
+  include /_includes/_template/_sp-fixed-btn
+  include /_includes/_template/_gnav-screen
+  //- **********************************************************************
+  //- アクティビティ
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.u-mt-12
+    img(src=`${relativePath}assets/img/section/ativity-index.svg` alt="")
+    div.p-decoration
+      img.p-decoration__activity(src=`${relativePath}assets/img/play/text-play.png` alt="")
+  section.l-section.l-section--gap_top-0.t-bg-sky-blue
+    div.l-container
+      div.p-activity
+        div.p-activity__content
+          div.p-activity__content__txt
+            img.u-hide-mq-min-md.p-activity__content__img-box__img(src=`${relativePath}assets/img/play/illust-bird-09.png` alt="")
+            h2.p-activity__content__txt__title.c-fade-up.js-inview
+              span.p-activity__content__txt__title__back ACTIVITY
+              span.p-activity__content__txt__title__front 空に海に陸!
+                span 五感で味わい尽くす田曽白浜
+            p.p-activity__content__txt__p.c-fade-up.js-inview 田曽白浜リゾートは関西で指折りの、スカイダイビングができる場所です。
+            p.p-activity__content__txt__p.c-fade-up.js-inview また、波静かな田曽白浜の海では、SUPやカヤックなどのマリンアクティビティが楽しめます。
+            p.p-activity__content__txt__p.c-fade-up.js-inview さらに、オフロードバギーも楽しむことができます。
+            p.p-activity__content__txt__p.c-fade-up.js-inview 自然豊かな田曽白浜ならではの体験がいっぱい！
+          div.p-activity__content__img-box
+            img.p-activity__content__img-box__img(src=`${relativePath}assets/img/play/illust-bird-09.png` alt="")
+        ul.c-activity-everytime
+          li.c-activity-everytime__item.c-fade-up.js-inview
+            a(href=`${relativePath}activity/skydiving`)
+              div.c-activity-everytime__item__img-box
+                img(src=`${relativePath}assets/img/play/banner-1.jpg` alt="")
+                p.c-activity-everytime__item__img-box__label.sky 空
+                p.c-activity-everytime__item__img-box__period.sky 期間:通年
+              div.c-activity-everytime__item__txt-box
+                h2.c-activity-everytime__item__txt-box__title スカイダイビング/ヘリ
+                p.c-activity-everytime__item__txt-box__content 伊勢志摩スカイダイビングクラブでは、プロのインストラクターとのタンデムスカイダイビングを体験いただけます。また、ヘリコプター遊覧プランもあります！
+                div.c-more-btn.c-more-btn--mini.u-mt1.u-ml-auto
+                  p.c-more-btn__txt 詳しく見る
+                  div.c-more-btn__arrow.c-more-btn__arrow--mini
+            a.c-activity-everytime__item__btn(href="")
+              img.c-activity-everytime__item__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt="")
+              p#js-match-align-everytime.c-activity-everytime__item__btn__txt 今すぐ予約する
+
+          li.c-activity-everytime__item.c-fade-up.js-inview
+            a(href=`${relativePath}activity/marine`)
+              div.c-activity-everytime__item__img-box
+                img(src=`${relativePath}assets/img/play/banner-2.jpg` alt="")
+                p.c-activity-everytime__item__img-box__label.sea 海
+                p.c-activity-everytime__item__img-box__period.sea マリンスポーツ
+                  span [全種2時間遊び放題]
+              div.c-activity-everytime__item__txt-box
+                h2.c-activity-everytime__item__txt-box__title スカイダイビング/ヘリ
+                p.c-activity-everytime__item__txt-box__content 田曽白浜リゾートの豊富なアクティビティをお得に遊び尽くせるプランです。バナナボートやSUP、シーカヤック、水上トランポリンなど●種類のスポーツが体験し放題。
+                div.c-more-btn.c-more-btn--mini.u-mt1.u-ml-auto
+                  p.c-more-btn__txt 詳しく見る
+                  div.c-more-btn__arrow.c-more-btn__arrow--mini
+            a.c-activity-everytime__item__btn.c-activity-everytime__item__btn--disable(href="")
+              img.c-activity-everytime__item__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt="")
+              p#js-match-everytime.c-activity-everytime__item__btn__txt 夏期限定アクティビティ（現在停止中）
+
+          li.c-activity-everytime__item.c-fade-up.js-inview
+            a(href=`${relativePath}activity/buggy`)
+              div.c-activity-everytime__item__img-box
+                img(src=`${relativePath}assets/img/play/banner-3.jpg` alt="")
+                p.c-activity-everytime__item__img-box__label.land 陸
+                p.c-activity-everytime__item__img-box__period.land 期間:通年
+              div.c-activity-everytime__item__txt-box
+                h2.c-activity-everytime__item__txt-box__title バギー
+                p.c-activity-everytime__item__txt-box__content 緑豊かな伊勢志摩国立公園に位置する南伊勢の田曽地区。海からの風が心地よいこの山林をオフロードバギーで駆け抜ける爽快なアトラクションが登場！
+                div.c-more-btn.c-more-btn--mini.u-mt1.u-ml-auto
+                  p.c-more-btn__txt 詳しく見る
+                  div.c-more-btn__arrow.c-more-btn__arrow--mini
+            a.c-activity-everytime__item__btn(href="")
+              img.c-activity-everytime__item__btn__icon(src=`${relativePath}assets/img/icon/calendar-w.svg` alt="")
+              p#js-match-align-everytime.c-activity-everytime__item__btn__txt 今すぐ予約する
+  section.l-section.l-section--gap_bottom-0.l-section--gap_top-0.t-bg-sky-blue#other
+    img(src=`${relativePath}assets/img/section/dark-green-white.svg` alt="")
+  section.l-section.l-section--gap_top-0
+    div.l-container
+      p.c-container-title.c-fade-up.js-inview その他のアクティビティ・体験
+      ul.c-other-activity
+        li.c-other-activity__item.c-fade-up.js-inview
+          div.c-other-activity__item__img-box
+            img(src=`${relativePath}assets/img/stay/free-camp/free-camp-sea.jpg` alt="")
+            h3.c-other-activity__item__txt-box__title.u-hide-mq-min-md シーサイド
+          div.c-other-activity__item__txt-box
+            h3.c-other-activity__item__txt-box__title.u-hide-mq-max-md ワイン作り体験
+            div.c-other-activity__item__txt-box__content
+              a.c-other-activity__item__txt-box__content__link(href="")
+                ul.c-other-activity__item__txt-box__content__list
+                  li.c-other-activity__item__txt-box__content__list__item
+                    p.c-other-activity__item__txt-box__content__list__item__title 所要時間
+                    p.c-other-activity__item__txt-box__content__list__item__txt 1時間
+                  li.c-other-activity__item__txt-box__content__list__item
+                    p.c-other-activity__item__txt-box__content__list__item__title 価格
+                    p.c-other-activity__item__txt-box__content__list__item__txt 3,000円 / 1人
+                  div.c-more-btn.c-more-btn--mini.u-ml-auto.u-mt-3.u-mt-sp1
+                    div.c-more-btn__arrow.c-more-btn__arrow--mini
+                    p.c-more-btn__txt 詳しく見る
+              a.c-other-activity__item__txt-box__content__btn(href="")
+                img.c-other-activity__item__txt-box__content__btn__icon(src=`${relativePath}assets/img/icon/calendar-y.svg` alt="")
+                p.c-other-activity__item__txt-box__content__btn__txt 予約する

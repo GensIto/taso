@@ -1,0 +1,249 @@
+/* ****************************************************************************************************
+
+  # gnav-card
+  - components
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.c-gnav-card {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card {
+    margin-top: 2rem;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+}
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card.c-gnav-card--eat {
+    margin-top: 4rem;
+    gap: 3rem;
+  }
+}
+
+/* ****************************************************************************************************
+
+ # item
+
+**************************************************************************************************** */
+
+/* ### base
+---------------------------------------------------------------------- */
+.c-gnav-card__item {
+  position: relative;
+  width: 33.333%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__item {
+    width: 100%;
+  }
+}
+
+/* ### half
+---------------------------------------------------------------------- */
+.c-gnav-card__item.c-gnav-card__item--half {
+  width: 50%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__item.c-gnav-card__item--half {
+    width: 100%;
+  }
+}
+
+/* ****************************************************************************************************
+
+ # label
+
+**************************************************************************************************** */
+
+/* ### base
+---------------------------------------------------------------------- */
+.c-gnav-card__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  font-family: global.$font-family-hina;
+  font-size: 3.2rem;
+  font-weight: normal;
+  color: global.$color-white;
+  border-radius: 50%;
+  transform: translate(-30%, -40%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__label {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.4rem;
+  }
+}
+
+.c-gnav-card__label.c-gnav-card__label--img {
+  width: 10rem;
+  height: 9rem;
+  border-radius: 0;
+  transform: translate(10%, -40%);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__label.c-gnav-card__label--img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.c-gnav-card__label.sky {
+  background-color: global.$color-sky;
+}
+
+.c-gnav-card__label.sea {
+  background-color: global.$color-purple;
+}
+
+.c-gnav-card__label.land {
+  background-color: global.$color-green;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__item__inner {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .c-gnav-card__item__inner.c-gnav-card__item__inner--col {
+    flex-direction: column;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__item__img {
+    width: 35%;
+  }
+  .c-gnav-card__item__img.c-gnav-card__item__img--full {
+    width: 100%;
+  }
+}
+
+.c-gnav-card__item__txt {
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3.5rem;
+  font-family: global.$font-family-noto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: global.$color-txt;
+  background-color: global.$color-white;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    content: '';
+    background-image: url('../img/icon/toggle-green.svg');
+    transform: translateY(-50%);
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__item__txt {
+    font-size: 1.3rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .c-gnav-card__item__txt.c-gnav-card__item__txt--full {
+    width: 100%;
+  }
+}
+
+.c-gnav-card__item__txt__small {
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__item__txt__small {
+    padding-left: 0;
+    font-size: 1.3rem;
+  }
+}
+
+.c-gnav-card__item__link-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgba($color: global.$color-white, $alpha: 0.5);
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__item__link-list {
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.c-gnav-card__item__link-list.c-gnav-card__item__link-list--two-row {
+  grid-template-columns: 1fr 1fr;
+}
+
+.c-gnav-card__item__link-list__item {
+  flex: 1;
+}
+
+.c-gnav-card__item__link-list__item__txt {
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3.5rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: global.$color-txt;
+  background-color: global.$color-white;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    content: '';
+    background-image: url('../img/icon/toggle-green.svg');
+    transform: translateY(-50%);
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-gnav-card__item__link-list__item__txt {
+    padding-top: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 100%;
+
+    &::after {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+/* ****************************************************************************************************
+
+  # fade-up
+  - component
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.c-fade-up {
+  position: relative;
+  top: 2.2rem;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s,
+    top 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .c-fade-up {
+    transition: opacity 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s,
+      top 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.1s;
+  }
+}
+
+.c-fade-up.in-view {
+  top: 0;
+  opacity: 1;
+}

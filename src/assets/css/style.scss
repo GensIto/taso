@@ -1,0 +1,222 @@
+@charset "UTF-8";
+// FLOCSS参考
+// https://github.com/hiloki/flocss
+//
+// Dart Sass参考: Sassを@importから@useに置き換えるための手引き
+// https://kojika17.com/2020/05/next-generation-sass-module-system.html
+
+/* ****************************************************************************************************
+
+  # foundation
+  - リセットcssやベース
+  - 変数、mixinや関数はfoundation/tool/_global.cssで管理
+  - 必要なscssファイルで@use "/hoge/_global";として読み込む
+
+**************************************************************************************************** */
+
+/* ## reset, base
+---------------------------------------------------------------------- */
+// @use "foundation/base/_fonts";
+@use 'foundation/base/_sanitize';
+@use 'foundation/base/_base';
+
+/* ****************************************************************************************************
+
+  # layout
+  - デザインの大枠（ワイヤーフレームで表現されるようなエリア）
+  - 要素の具体的なスタイルはobject/project/で指定
+
+**************************************************************************************************** */
+
+@use 'layout/_body'; // レイヤー以外のコンテンツ
+@use 'layout/_container';
+@use 'layout/_footer';
+@use 'layout/_header';
+@use 'layout/_kv';
+@use 'layout/_home-kv';
+@use 'layout/_main'; // ヘッダーとフッターを除いたコンテンツ
+@use 'layout/_section';
+
+/* ****************************************************************************************************
+
+  # object
+  - component: プロジェクトを跨いで使用できるような汎用的なもの
+  - project: プロジェクト固有のスタイルを指定（主にここを編集する）
+
+**************************************************************************************************** */
+
+/* ======================================================================
+
+  ## component
+
+====================================================================== */
+// a
+@use 'object/component/_accordion';
+@use 'object/component/_activity-everytime';
+@use 'object/component/_activity-season';
+// d
+// c
+@use 'object/component/_camp-list';
+@use 'object/component/_container-title';
+// e
+@use 'object/component/_eat-card-list';
+@use 'object/component/_environ-list';
+// h
+// f
+@use 'object/component/_free-camp';
+@use 'object/component/_fade-in';
+@use 'object/component/_fade-up';
+// g
+@use 'object/component/_gnav-screen';
+@use 'object/component/_gnav-card';
+@use 'object/component/_gnav-menu-list';
+// j
+// l
+@use 'object/component/_logo';
+// n
+@use 'object/component/_news-list';
+// m
+@use 'object/component/_more-btn';
+// o
+@use 'object/component/_other-activity';
+// p
+// r
+@use 'object/component/_reserve';
+// s
+@use 'object/component/_sp-fixed-btn';
+@use 'object/component/_stay-shingle-page';
+// t
+@use 'object/component/_title';
+
+/* ======================================================================
+
+  ## project
+
+====================================================================== */
+// a
+@use 'object/project/_activity/_activity';
+@use 'object/project/_activity/_activity-page';
+@use 'object/project/_activity/_activity-page-list';
+@use 'object/project/_activity/_activity-page-movie';
+@use 'object/project/_activity/_activity-kv';
+// b
+@use 'object/project/_bnr';
+@use 'object/project/_bnr-list';
+// c
+@use 'object/project/_copy';
+@use 'object/project/_company';
+@use 'object/project/_contact';
+@use 'object/project/_concept/_concept-title';
+@use 'object/project/_concept/_concept-content';
+@use 'object/project/_concept/_concept-description';
+@use 'object/project/_concept/_concept-map';
+@use 'object/project/_concept/_concept-map-title';
+// d
+@use 'object/project/_decoration';
+// e
+@use 'object/project/_eat';
+@use 'object/project/_eat/_eat-page';
+@use 'object/project/_eat/_eat-page-bottom';
+@use 'object/project/_eat/_eat-page-section';
+@use 'object/project/_enjoy';
+@use 'object/project/_enjoy-page';
+@use 'object/project/_environ';
+// f
+@use 'object/project/_footer-link';
+@use 'object/project/_footer-content';
+// g
+@use 'object/project/_gnav';
+// h
+@use 'object/project/_hamburger';
+// i
+// k
+@use 'object/project/_kv-title';
+// l
+@use 'object/project/_loading';
+@use 'object/project/_logo' as pLogo;
+// m
+// n
+@use 'object/project/_notification';
+// o
+// p
+@use 'object/project/_modal-layer';
+// q
+// r
+// s
+@use 'object/project/_stay';
+@use 'object/project/_stay/_stay-page';
+@use 'object/project/_sitemap';
+// t
+@use 'object/project/_top-news';
+@use 'object/project/_top-gmap';
+// v
+// y
+// w
+
+/* ======================================================================
+
+  ## scope
+  - ページや場所固有の使いまわせそうにないもの
+  - (影響範囲が分からなくなるため使いまわすのはNG)
+
+====================================================================== */
+// a
+// b
+// c
+// d
+// f
+// g
+// h
+@use 'object/scope/_home-kv-title';
+// i
+// j
+// k
+// l
+// m
+// n
+// o
+// p
+// r
+// s
+// t
+// v
+// w
+
+/* ======================================================================
+
+  ## theme
+  - クラスを付与で文字色が変わったりする、色などに関するスタイル
+
+====================================================================== */
+
+@use 'object/theme/_bg';
+@use 'object/theme/_border';
+@use 'object/theme/_color';
+@use 'object/theme/_highlight';
+
+/* ======================================================================
+
+  ## utility
+  - pcのときは非表示、余白の設定などの汎用クラス
+
+====================================================================== */
+
+@use 'object/utility/_align';
+@use 'object/utility/_anchor-txt';
+@use 'object/utility/_clearfix';
+@use 'object/utility/_clip';
+@use 'object/utility/_hide';
+@use 'object/utility/_margin';
+@use 'object/utility/_padding';
+@use 'object/utility/_txt-align';
+@use 'object/utility/_txt-bold';
+@use 'object/utility/_z-index';
+
+/* ****************************************************************************************************
+
+  ## plugin
+  - プラグイン用のcss
+
+**************************************************************************************************** */
+
+@use 'plugin/_modal';

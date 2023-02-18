@@ -1,0 +1,62 @@
+/* ======================================================================
+
+  #
+  - component
+
+====================================================================== */
+@use '../../foundation/tool/global';
+
+.c-activity-season {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-activity-season {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.c-activity-season__item {
+  flex: 1;
+}
+
+.c-activity-season__item__txt {
+  position: relative;
+  padding-left: 2.2rem;
+  margin-top: 1rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: global.$color-txt;
+
+  &::after {
+    position: absolute;
+    top: 52%;
+    left: 0;
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    content: '';
+    background-image: url(../img/icon/toggle-green.svg);
+    transform: translateY(-50%);
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .c-activity-season__item__txt {
+    font-size: 1.3rem;
+    text-align: left;
+    span {
+      display: block;
+    }
+
+    &::after {
+      top: 1.2rem;
+    }
+  }
+}

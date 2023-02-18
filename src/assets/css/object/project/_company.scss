@@ -1,0 +1,64 @@
+/* ****************************************************************************************************
+
+  # company
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-company {
+}
+
+.p-company__list {
+  border-top: 1px solid #0d6a86;
+}
+
+.p-company__list__item {
+  display: flex;
+  align-items: stretch;
+  &:last-child {
+    border-bottom: 1px dashed #0d6a86;
+  }
+}
+
+.p-company__list__item + .p-company__list__item {
+  border-top: 1px dashed #0d6a86;
+}
+
+.p-company__list__item__title {
+  background-color: #edf4f6;
+  width: 35%;
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  position: relative;
+  padding: 2rem 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-company__list__item__title {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+}
+
+.p-company__list__item__content {
+  width: 65%;
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  position: relative;
+  padding: 2rem 3rem;
+  span {
+    display: block;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-company__list__item__content {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+}

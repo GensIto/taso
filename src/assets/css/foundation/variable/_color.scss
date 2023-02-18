@@ -1,0 +1,77 @@
+/* ****************************************************************************************************
+
+  # color
+  - foundation > variable > base
+
+**************************************************************************************************** */
+
+$color-white: #fff;
+$color-black: #000;
+$color-gray: gray !default;
+$color-gray-light: #f4f5f8 !default;
+$color-gray-med: darkgray !default;
+$color-gray-dark: dimgray !default;
+
+/* 赤
+---------------------------------------------------------------------- */
+$color-red: #cc4a44 !default;
+
+/* ピンク
+---------------------------------------------------------------------- */
+$color-pink: #c66c95 !default;
+$color-pink-light: #f8eaef !default;
+
+/* ベージュ
+---------------------------------------------------------------------- */
+$color-beige: beige !default;
+
+/* 紫
+---------------------------------------------------------------------- */
+$color-purple: #5e71a9 !default;
+
+/* 青
+---------------------------------------------------------------------- */
+$color-blue: #0d6a87 !default;
+$color-blue-light: #f4f5f8 !default;
+
+/* 空
+---------------------------------------------------------------------- */
+$color-sky: #346f9b !default;
+/* 水色
+---------------------------------------------------------------------- */
+$color-sky-blue: #d8eeed !default;
+$color-blue-light: #f4f5f8 !default;
+$color-activity-sky: #e8f5fd !default;
+$color-activity-marine: #e8f3ff !default;
+
+/* オレンジ
+---------------------------------------------------------------------- */
+$color-orange: #ffe9cd !default;
+$color-orange-light: #fff5e9 !default;
+
+/* 黄色
+---------------------------------------------------------------------- */
+$color-yellow: #ffeaaa !default;
+$color-yellow-light: #fffaeb !default;
+
+/* 緑
+---------------------------------------------------------------------- */
+$color-green: #3e8b7e !default;
+$color-green-light: #009e91 !default;
+$color-green-sky: #d7edec !default;
+
+/* txt
+---------------------------------------------------------------------- */
+$color-txt: #333333 !default;
+$color-txt-dark: #000 !default;
+$color-txt-light: lightgray !default;
+$color-link: red !default;
+
+/* border
+---------------------------------------------------------------------- */
+$color-border: gray !default;
+$color-border-dark: dimgray !default;
+
+/* input系列
+---------------------------------------------------------------------- */
+$color-input-bg: $color-gray-light !default;

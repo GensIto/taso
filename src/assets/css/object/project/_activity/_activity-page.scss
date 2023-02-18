@@ -1,0 +1,318 @@
+/* ****************************************************************************************************
+
+  # activity
+  - project
+
+**************************************************************************************************** */
+@use '../../../foundation/tool/global';
+// ```
+
+.p-activity-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-page {
+    gap: 2rem;
+    flex-direction: column;
+  }
+}
+
+.p-activity-page__img-box {
+  position: relative;
+  width: 65%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-page__img-box {
+    width: 100%;
+  }
+}
+
+.p-activity-page__img-box__label {
+  position: absolute;
+  top: -4rem;
+  left: 2vw;
+  display: flex;
+  justify-content: center;
+  width: 14rem;
+  height: 14rem;
+  font-family: 'Hina Mincho', serif;
+  font-size: 7.2rem;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 50%;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-page__img-box__label {
+    font-size: 3rem;
+    width: 6rem;
+    height: 6rem;
+    top: -3rem;
+    left: 4vw;
+  }
+}
+
+.p-activity-page__img-box__label.sky {
+  background-color: global.$color-sky;
+}
+
+.p-activity-page__img-box__label.sea {
+  background-color: global.$color-purple;
+}
+.p-activity-page__img-box__label.buggy {
+  background-color: global.$color-green;
+}
+
+.p-activity-page__img-box__season {
+  font-size: 2.4rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-page__img-box__season {
+    font-size: 1.2rem;
+  }
+}
+
+.p-activity-page__img-box__season.sky {
+  background-color: global.$color-sky;
+}
+.p-activity-page__img-box__season.sea {
+  background-color: global.$color-purple;
+}
+.p-activity-page__img-box__season.buggy {
+  background-color: global.$color-green;
+}
+
+.p-activity-page__txt-box {
+  width: 40%;
+  margin-top: -2rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-page__txt-box {
+    width: 100%;
+    margin-top: 0;
+    @include global.content-width-padding();
+  }
+}
+
+.p-activity-page__txt-box__title {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.p-activity-page__txt-box__p {
+  font-size: 1.8rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-txt;
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-page__txt-box__p {
+    font-size: 1.4rem;
+  }
+}
+
+.p-activity-page__txt-box__p.p-activity-page__txt-box__p--font-weight400 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.p-activity-page__txt-box__title__back {
+  position: relative;
+  left: -1%;
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(10rem, 3.182rem + 10.91vw, 13rem);
+  font-weight: 500;
+  color: global.$color-white;
+  word-break: keep-all;
+  line-height: 1;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-page__txt-box__title__back {
+    font-size: 4.7rem;
+    word-break: break-all;
+  }
+}
+
+.p-activity-page__txt-box__title__front {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  display: block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #333;
+  span {
+    display: block;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-page__txt-box__title__front {
+    font-size: 2rem;
+  }
+}
+
+.p-activity-page__txt-box__content {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.p-activity-page__txt-box__content__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.p-activity-page__txt-box__content__list__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.p-activity-page__txt-box__content__list__item.p-activity-page__txt-box__content__list__item--start {
+  align-items: flex-start;
+}
+
+.p-activity-page__txt-box__content__list__item__title {
+  display: block;
+  width: 8rem;
+  padding: 0.1rem 1rem;
+  font-family: global.$font-family-noto;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.p-activity-page__txt-box__content__list__item__title.sky {
+  background-color: global.$color-sky;
+}
+.p-activity-page__txt-box__content__list__item__title.sea {
+  background-color: global.$color-purple;
+}
+.p-activity-page__txt-box__content__list__item__title.buggy {
+  background-color: global.$color-green;
+}
+
+.p-activity-page__txt-box__content__list__item__content {
+  font-size: 1.6rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-txt;
+  position: relative;
+  span {
+    display: block;
+  }
+}
+
+.p-activity-page__txt-box__content__money {
+  margin-top: 1rem;
+  .red {
+    color: global.$color-red;
+  }
+  .black {
+    color: global.$color-txt;
+    font-size: 1.6;
+    font-family: global.$font-family-noto;
+    font-weight: 400;
+  }
+  .font-lg {
+    font-size: 3.2rem;
+    font-family: global.$font-family-noto;
+    font-weight: bold;
+  }
+  .yen {
+    font-size: 2.6rem;
+    font-family: global.$font-family-noto;
+    font-weight: bold;
+  }
+  .font-sm {
+    font-size: 1.6rem;
+  }
+  .font-md {
+    font-size: 2.2rem;
+  }
+  .font-bold {
+    font-weight: bold;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-activity-page__txt-box__content__money {
+    .black {
+      font-size: 1.6rem;
+    }
+    .font-lg {
+      font-size: 2rem;
+    }
+    .yen {
+      font-size: 1.8rem;
+    }
+    .font-sm {
+      font-size: 1.4rem;
+    }
+    .font-md {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.p-activity-page__txt-box__content__btn {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.p-activity-page__txt-box__content__btn.sky {
+  background-color: global.$color-sky;
+}
+
+.p-activity-page__txt-box__content__btn.sea {
+  background-color: global.$color-purple;
+}
+.p-activity-page__txt-box__content__btn.buggy {
+  // background-color: global.$color-green;
+  background-color: #e68f2d;
+}
+
+.p-activity-page__txt-box__content__btn__icon {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  display: block;
+  width: 2.2rem;
+  transform: translate(-50%, -50%);
+}
+
+.p-activity-page__txt-box__content__btn__txt {
+  position: relative;
+  padding: 0.8rem 0;
+  font-family: global.$font-family-noto;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}

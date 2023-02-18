@@ -1,0 +1,69 @@
+/* ****************************************************************************************************
+
+  # top-news
+  category: project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-top-news {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-news {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.p-top-news__item {
+  min-width: fit-content;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-news__item {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+.p-top-news__list {
+  width: 75%;
+  min-width: auto;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-top-news__list {
+    width: 100%;
+  }
+}
+
+.p-top-news__item__tree {
+  width: 18rem;
+}
+
+.p-top-news__item__title-box {
+  padding-left: 4rem;
+  margin-left: 4rem;
+  transform: translateY(-2rem);
+}
+
+.p-top-news__item__title-box__title {
+  position: relative;
+  font-family: global.$font-family-garamond;
+  font-size: 6.2rem;
+  font-weight: 500;
+  color: global.$color-txt;
+}
+
+.p-top-news__item__title-box__ruby {
+  position: relative;
+  font-family: global.$font-family-noto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: global.$color-txt;
+}

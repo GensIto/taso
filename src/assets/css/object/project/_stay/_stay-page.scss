@@ -1,0 +1,98 @@
+/* ****************************************************************************************************
+
+  # stay
+  - project
+
+**************************************************************************************************** */
+@use '../../../foundation/tool/global';
+
+/* ****************************************************************************************************
+
+ # index
+
+**************************************************************************************************** */
+
+.p-stay-page__txt {
+  position: relative;
+}
+
+.p-stay-page__txt__title {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay-page__txt__title {
+    margin-bottom: 5rem;
+    line-height: 1;
+  }
+}
+
+.p-stay-page__txt__title__back {
+  font-size: 13rem;
+  font-family: global.$font-family-garamond;
+  font-weight: 500;
+  color: #f3f4f7;
+  position: relative;
+  left: -4%;
+  line-height: 1;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay-page__txt__title__back {
+    font-size: 4.9rem;
+    left: 0;
+  }
+}
+
+.p-stay-page__txt__title__front {
+  font-size: 3.2rem;
+  font-family: global.$font-family-noto;
+  font-weight: bold;
+  color: global.$color-txt;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  span {
+    display: block;
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay-page__txt__title__front {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    bottom: -80%;
+  }
+}
+
+.p-stay-page__txt__p {
+  font-size: 1.8rem;
+  font-family: global.$font-family-noto;
+  font-weight: 500;
+  color: global.$color-txt;
+  position: relative;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay-page__txt__p {
+    font-size: 1.5rem;
+  }
+}
+
+.p-stay-page__img-box__img {
+  display: block;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 15rem;
+}
+
+@media print, screen and (max-width: global.$breakpoint-min-md) {
+  .p-stay-page__img-box__img {
+    top: -5%;
+    width: 8rem;
+  }
+}
